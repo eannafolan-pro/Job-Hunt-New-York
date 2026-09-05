@@ -4,6 +4,14 @@
 
 export const SALARY_FLOOR = 100_000;
 
+// Which end of the posted range must clear SALARY_FLOOR.
+//   'min' — the bottom of the range (strict: a $85k-$105k role is not a $100k job)
+//   'max' — the top of the range (loose: keeps wide ranges that top out high)
+//   'mid' — the midpoint
+// The first live scrape returned $85k-$105k SDR roles under 'max'; 'mid' drops
+// those while keeping wide-but-real ranges like a $90k-$130k strategy associate.
+export const SALARY_BASIS = 'mid';
+
 // A posting must look like it is in New York City.
 export const NYC_PATTERNS = [
   /new york/i,
@@ -39,6 +47,7 @@ export const CATEGORIES = [
       /private (equity|credit)/i, /credit analyst/i, /underwrit/i,
       /equity research/i, /capital markets/i, /investor relations/i,
       /portfolio (analyst|associate|manager)/i, /asset management/i,
+      /credit risk/i, /securities lending/i,
       /financial (reporting|operations|crime)/i, /\brevenue accounting/i,
     ],
   },
@@ -79,10 +88,20 @@ export const EXCLUDE_TITLE = [
   // Too junior / wrong shape.
   /\bintern\b/i, /internship/i, /co.?op\b/i, /apprentice/i,
   /summer (analyst|associate|program)/i, /\bnew grad\b/i, /campus/i,
-  // Wrong discipline — engineering-heavy roles that trip the analytics keywords.
-  /software engineer/i, /\bdeveloper\b/i, /data engineer/i, /machine learning/i,
-  /\bdevops\b/i, /site reliability/i, /security engineer/i, /\bdesigner\b/i,
-  /recruiter/i, /\bnurse\b/i, /\battorney\b/i, /\bcounsel\b/i,
+  // Wrong discipline. The live run showed the analytics/GTM keywords pulling in
+  // technical and marketing roles ("GTM Business Systems Engineer", "Treasury
+  // Application Support Engineer", "Senior Growth Marketing Manager"), so these
+  // are broader than they first look.
+  /\bengineer(ing)?\b/i, /\bdeveloper\b/i, /machine learning/i, /\bdevops\b/i,
+  /site reliability/i, /\bdesigner\b/i, /\barchitect\b/i, /\bscientist\b/i,
+  /\btechnician\b/i, /administrator/i, /business systems/i, /systems analyst/i,
+  /solutions consultant/i, /\bsupport\b/i, /\bqa\b/i, /\bux\b/i, /\bui\b/i,
+  // Marketing was not one of the selected lanes.
+  /\bmarketing\b/i, /\bbrand\b/i, /\bcontent\b/i, /\bsocial media\b/i,
+  /\bcommunications\b/i, /\bcreative\b/i,
+  // Other functions that share vocabulary with the target lanes.
+  /recruit(er|ing)/i, /\bnurse\b/i, /\battorney\b/i, /\bcounsel\b/i,
+  /\bpeople\b/i, /\bhr\b/i, /human resources/i, /\bpayroll\b/i,
 ];
 
 // ---------------------------------------------------------------- visa

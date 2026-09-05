@@ -53,12 +53,13 @@ t('rejects upstate', () => assert.equal(isNYC('Albany, New York'), false));
 t('rejects empty', () => assert.equal(isNYC(''), false));
 
 console.log('\ncategorisation');
-t('restructuring -> finance', () => assert.equal(categorize('Restructuring Analyst', ''), 'finance'));
-t('FP&A -> finance', () => assert.equal(categorize('Senior Analyst, FP&A', ''), 'finance'));
-t('M&A -> finance', () => assert.equal(categorize('M&A Associate', ''), 'finance'));
-t('AE -> sales', () => assert.equal(categorize('Account Executive, Mid-Market', ''), 'sales_bd'));
-t('bizops -> strategy', () => assert.equal(categorize('Business Operations Associate', ''), 'ops_strategy'));
-t('unrelated -> null', () => assert.equal(categorize('Pastry Chef', 'we bake bread'), null));
+t('restructuring -> finance', () => assert.equal(categorize('Restructuring Analyst'), 'finance'));
+t('FP&A -> finance', () => assert.equal(categorize('Senior Analyst, FP&A'), 'finance'));
+t('M&A -> finance', () => assert.equal(categorize('M&A Associate'), 'finance'));
+t('AE -> sales', () => assert.equal(categorize('Account Executive, Mid-Market'), 'sales_bd'));
+t('bizops -> strategy', () => assert.equal(categorize('Business Operations Associate'), 'ops_strategy'));
+t('unrelated -> null', () => assert.equal(categorize('Pastry Chef'), null));
+t('no body fallback — vague title stays null', () => assert.equal(categorize('Product Manager | Tax'), null));
 
 console.log('\nend-to-end refine()');
 const co = { name: 'Testco', ats: 'greenhouse' };

@@ -11,7 +11,7 @@ import { fileURLToPath } from 'node:url';
 import { COMPANIES } from './companies.mjs';
 import {
   SALARY_FLOOR, NYC_PATTERNS, NOT_NYC_PATTERNS, CATEGORIES,
-  EXCLUDE_TITLE, NO_SPONSORSHIP_PATTERNS, CITIZENSHIP_BLOCK_PATTERNS,
+  SALARY_BASIS, EXCLUDE_TITLE, NO_SPONSORSHIP_PATTERNS, CITIZENSHIP_BLOCK_PATTERNS,
   J1_FRIENDLY_PATTERNS, STRONG_MATCH_PATTERNS,
 } from './config.mjs';
 
@@ -140,13 +140,12 @@ function isNYC(location) {
   return matchesAny(loc, NYC_PATTERNS);
 }
 
-function categorize(title, body) {
+// Title only. An earlier version fell back to matching the description, but the
+// first live scrape showed that pulling in nurse practitioners, hardware product
+// managers and procurement roles — 46 of 124 results, almost all irrelevant.
+function categorize(title) {
   for (const cat of CATEGORIES) {
     if (matchesAny(title, cat.patterns)) return cat.id;
-  }
-  // Weaker signal: fall back to the description for otherwise vague titles.
-  for (const cat of CATEGORIES) {
-    if (matchesAny(body.slice(0, 1200), cat.patterns)) return cat.id;
   }
   return null;
 }
@@ -204,7 +203,7 @@ async function fromAshby(co) {
 
 async function fromSmartRecruiters(co) {
   const list = await withRetry(() => fetchJSON(
-    `https://api.smartrecruiters.com/v1/companies/${co.token}/postings?limit=100&country=us`));
+    `https://api.smartrecruiters.com/v1/companies/${co.token}/postings?limit=100`));
   const out = [];
   for (const j of (list.content || [])) {
     const city = j.location?.city || '';
@@ -308,12 +307,16 @@ function refine(raw, co) {
   // clearance requirement, so these are dropped rather than flagged.
   if (matchesAny(body, CITIZENSHIP_BLOCK_PATTERNS)) return null;
 
-  const category = categorize(title, body);
+  const category = categorize(title);
   if (!category) return null;
 
   const salary = parseSalary(raw.salaryHint ? `${raw.salaryHint} salary ${body}` : body);
   // Keep unpriced roles out — the floor is the whole point of the list.
-  if (!salary || salary.max < SALARY_FLOOR) return null;
+  if (!salary) return null;
+  const basis = SALARY_BASIS === 'max' ? salary.max
+    : SALARY_BASIS === 'mid' ? Math.round((salary.min + salary.max) / 2)
+    : salary.min;
+  if (basis < SALARY_FLOOR) return null;
 
   return {
     id: raw.externalId,

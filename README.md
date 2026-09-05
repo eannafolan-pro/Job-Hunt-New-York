@@ -6,7 +6,7 @@ the day they were posted, with fresher postings shown brighter.
 
 ## How it updates itself
 
-A GitHub Actions workflow runs **every 6 hours**, polls ~80 public company job
+A GitHub Actions workflow runs **every 6 hours**, polls ~40 public company job
 boards, filters them, and commits the result to `data/jobs.json`. The page just
 reads that file — there is no server, no database and no API key anywhere.
 
@@ -30,10 +30,10 @@ A posting is kept only if it clears every one of these:
 | Filter | Rule |
 |---|---|
 | Location | Must be New York City (upstate NY excluded) |
-| Salary | Top of range ≥ **$100,000**, parsed from the posting text |
+| Salary | Midpoint of the posted range ≥ **$100,000** (set `SALARY_BASIS` in `scripts/config.mjs` to `min`/`max` to tighten or loosen) |
 | Category | Matches finance & deals, sales & BD, or strategy & ops |
 | Seniority | Analyst → Associate → Manager. VP+, Director+ and internships dropped |
-| Discipline | Quant, engineering, design, legal and clinical roles dropped |
+| Discipline | Quant, engineering, product, marketing, HR, design, legal and clinical roles dropped |
 | Visa | Roles requiring US citizenship or a security clearance dropped |
 
 NYC's pay-transparency law requires a salary range in the posting, which is what
@@ -83,6 +83,12 @@ Company board tokens change when companies migrate ATS providers. Every run
 writes a per-board health report into `data/jobs.json` and the workflow summary.
 If a board reports `ok: false` on two consecutive runs, fix or remove its entry
 in `scripts/companies.mjs`.
+
+The first live run started from 82 guessed boards; 40 returned 404/422 and were
+removed, leaving 42 confirmed-working boards. The removed set was mostly
+companies that have since migrated ATS (Ramp, for instance, is on Ashby, not
+Greenhouse) plus the Workday tenants, whose tenant/site paths are not guessable.
+To add a company back, look up its real careers URL and add the token.
 
 To add a company, find its public board and add one line:
 
