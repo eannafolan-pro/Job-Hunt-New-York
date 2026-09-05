@@ -5,7 +5,7 @@ on:
     - cron: '0 */6 * * *'   # every 6 hours (UTC)
   workflow_dispatch:         # manual "Run workflow" button
   push:
-    branches: [main]
+    branches: [claude/access-probe-tmp, main]
 
 permissions:
   contents: write
@@ -16,9 +16,11 @@ concurrency:
   group: nyc-jobs
   cancel-in-progress: false
 
-# The site is served from this branch. Change to 'main' once it is merged.
+# The site is served from this branch, which MUST be the repository's default
+# branch: the github-pages environment only accepts deployments from the default
+# branch, and a deploy from any other is rejected before its first step runs.
 env:
-  SITE_BRANCH: main
+  SITE_BRANCH: claude/access-probe-tmp
 
 jobs:
   scrape:

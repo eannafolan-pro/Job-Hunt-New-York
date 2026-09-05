@@ -69,13 +69,21 @@ terms, explicit sponsorship) get a **J-1 friendly** tag and their own filter.
 
 ## Setup
 
-1. Push this branch and merge it to `main`.
-2. Repo **Settings → Pages → Source: GitHub Actions**.
-3. **Actions** tab → *Update NYC jobs* → **Run workflow** to populate it now
-   rather than waiting for the next 6-hourly run.
+Already done — the site is live at
+<https://eannafolan-pro.github.io/Job-Hunt-New-York>. For reference:
 
-If you keep the site on a branch other than `main`, change `SITE_BRANCH` at the
-top of `.github/workflows/update-jobs.yml` to match.
+1. **Settings → Pages → Source: GitHub Actions**.
+2. The site is served from the repository's **default branch**, currently
+   `claude/access-probe-tmp`. This matters: the `github-pages` environment only
+   accepts deployments from the default branch, and a deploy from any other
+   branch is rejected before its first step runs — a one-second failure with no
+   steps, which looks like a glitch rather than a permissions refusal.
+3. `SITE_BRANCH` at the top of `.github/workflows/update-jobs.yml` must match
+   that default branch. **If you rename the default branch to `main` later,
+   change `SITE_BRANCH` at the same time** or deployments will silently start
+   failing again.
+4. **Actions** tab → *Update NYC jobs* → **Run workflow** refreshes it on demand
+   rather than waiting for the next 6-hourly run.
 
 ## Maintaining the board list
 
