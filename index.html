@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NYC Job Calendar</title>
+<meta name="description" content="A self-updating calendar of high-paying New York City finance, sales and strategy roles.">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗽</text></svg>">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">
+      <h1>NYC Job Calendar</h1>
+      <div class="sub">
+        High-paying New York roles in <b>finance</b>, <b>sales &amp; BD</b> and <b>strategy &amp; ops</b>,
+        plotted on the day they were posted. Refreshes every 6 hours.
+      </div>
+    </div>
+    <div class="countdown">
+      <span class="big" id="countdown">—</span>
+      until the January move
+      <div id="updated">loading…</div>
+    </div>
+  </header>
+
+  <section class="stats" id="stats"></section>
+
+  <section class="controls">
+    <div class="row">
+      <div class="search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input type="search" id="q" placeholder="Search title, company or location…" autocomplete="off">
+      </div>
+      <div class="viewtabs" role="group" aria-label="View">
+        <button id="tab-cal" aria-pressed="true">Calendar</button>
+        <button id="tab-list" aria-pressed="false">List</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="chips" id="cats"></div>
+    </div>
+
+    <div class="row spread">
+      <div class="slider-wrap">
+        <label for="sal">Min salary</label>
+        <input type="range" id="sal" min="100000" max="300000" step="10000" value="100000">
+        <output id="salout">$100k</output>
+      </div>
+      <div class="chips">
+        <label class="toggle"><input type="checkbox" id="f-strong"> Strong match only</label>
+        <label class="toggle"><input type="checkbox" id="f-j1"> J-1 friendly</label>
+        <label class="toggle"><input type="checkbox" id="f-spon"> Hide "no sponsorship"</label>
+        <label class="toggle"><input type="checkbox" id="f-saved"> Saved only</label>
+        <label class="toggle"><input type="checkbox" id="f-open" checked> Open roles only</label>
+      </div>
+    </div>
+  </section>
+
+  <div class="calbar">
+    <h2 id="monthlabel">—</h2>
+    <div class="navbtns">
+      <div class="viewtabs" role="group" aria-label="Calendar range">
+        <button id="mode-rolling" aria-pressed="true">Last 6 weeks</button>
+        <button id="mode-month" aria-pressed="false">By month</button>
+      </div>
+      <button class="iconbtn" id="prev" aria-label="Previous month">‹</button>
+      <button class="iconbtn wide" id="today">Today</button>
+      <button class="iconbtn" id="next" aria-label="Next month">›</button>
+    </div>
+  </div>
+
+  <section id="view-cal">
+    <div class="cal">
+      <div class="dow">
+        <div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div>
+        <div>Fri</div><div>Sat</div><div>Sun</div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--finance)"></i> Finance &amp; Deals</span>
+      <span><i style="background:var(--sales)"></i> Sales &amp; BD</span>
+      <span><i style="background:var(--ops)"></i> Strategy &amp; Ops</span>
+      <span><i style="background:var(--gold)"></i> Strong match for your background</span>
+      <span>Older postings fade — brightest chips are the freshest.</span>
+    </div>
+  </section>
+
+  <section id="view-list" hidden><div class="list" id="list"></div></section>
+
+  <details class="sources" id="sources-panel">
+    <summary>Job board health <span id="srcsummary"></span></summary>
+    <div class="srcgrid" id="srcgrid"></div>
+  </details>
+
+  <footer class="foot-note">
+    Sourced from public Greenhouse, Lever, Ashby, SmartRecruiters and Workday boards.
+    Salaries are parsed from the posting text (NYC pay-transparency law requires a range).<br>
+    Always confirm salary, visa and start-date details with the employer.
+  </footer>
+
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
