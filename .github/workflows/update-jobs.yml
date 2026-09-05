@@ -1,0 +1,85 @@
+name: Update NYC jobs
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # every 6 hours (UTC)
+  workflow_dispatch:         # manual "Run workflow" button
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: nyc-jobs
+  cancel-in-progress: false
+
+# The site is served from this branch. Change to 'main' once it is merged.
+env:
+  SITE_BRANCH: main
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.SITE_BRANCH }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Verify parsing logic
+        run: node scripts/test-parsing.mjs
+
+      - name: Fetch job boards
+        run: node scripts/fetch-jobs.mjs
+
+      - name: Report board health
+        run: |
+          node -e "
+            const d = require('./data/jobs.json');
+            const bad = d.sources.filter(s => !s.ok);
+            const out = [];
+            out.push('## NYC job scrape');
+            out.push('- jobs: ' + d.counts.total + ' (' + d.counts.active + ' active)');
+            out.push('- boards ok: ' + d.counts.boardsOk + '/' + d.counts.boardsTotal);
+            if (bad.length) {
+              out.push('');
+              out.push('### Boards that failed');
+              for (const s of bad) out.push('- **' + s.company + '** (' + s.ats + '): ' + s.error);
+            }
+            console.log(out.join('\n'));
+          " >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/jobs.json; then
+            echo "No change to data/jobs.json"
+          else
+            git add data/jobs.json
+            git commit -m "chore: refresh NYC job listings [skip ci]"
+            git push origin HEAD:"$SITE_BRANCH"
+          fi
+
+  deploy:
+    needs: scrape
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.SITE_BRANCH }}
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,13 @@
+{
+  "name": "nyc-job-calendar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A self-updating calendar of high-paying NYC finance, sales and strategy roles.",
+  "scripts": {
+    "fetch": "node scripts/fetch-jobs.mjs",
+    "test": "node scripts/test-parsing.mjs",
+    "serve": "python3 -m http.server 8080"
+  },
+  "engines": { "node": ">=20" }
+}
