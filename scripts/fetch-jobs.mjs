@@ -21,7 +21,12 @@ const OUT = resolve(ROOT, 'data/jobs.json');
 
 const TIMEOUT_MS = 25_000;
 const CONCURRENCY = 6;
-const WORKDAY_DETAIL_CAP = 25;   // per-company cap on follow-up description fetches
+// Workday's list response has no description, so salary and category can only be
+// read from a per-job follow-up call. Capping that at 25 silently threw away
+// everything past the 25th NYC role at each bank — Citi returned 40 postings and
+// yielded one. The cap now applies to NYC matches only, and is high enough to
+// cover them.
+const WORKDAY_DETAIL_CAP = 200;
 
 // ---------------------------------------------------------------- http
 
@@ -329,14 +334,18 @@ function parseWorkdayPosted(s) {
 async function fromWorkday(co) {
   const base = `https://${co.host}/wday/cxs/${co.tenant}/${co.site}`;
   const collected = [];
-  for (let offset = 0; offset < 200; offset += 20) {
+  // Workday pages 20 at a time and reports a total. Stopping at 200 capped every
+  // large employer well below their actual New York headcount.
+  for (let offset = 0; offset < 1000; offset += 20) {
     const page = await withRetry(() => fetchJSON(`${base}/jobs`, {
       method: 'POST',
       body: { appliedFacets: {}, limit: 20, offset, searchText: 'New York' },
     }), offset === 0 ? 3 : 1);
     const posts = page.jobPostings || [];
     collected.push(...posts);
-    if (posts.length < 20 || collected.length >= (page.total || 0)) break;
+    if (!posts.length) break;
+    if (page.total && collected.length >= page.total) break;
+    if (posts.length < 20) break;
   }
 
   const jobs = collected.map(j => ({
