@@ -170,9 +170,11 @@ header.top {
 
 .chip:hover { color: var(--text); border-color: var(--text-faint); }
 .chip[aria-pressed="true"] { background: var(--text); color: #0b0e14; border-color: var(--text); }
-.chip[data-cat="finance"][aria-pressed="true"] { background: var(--finance); border-color: var(--finance); color: #06101d; }
-.chip[data-cat="sales_bd"][aria-pressed="true"] { background: var(--sales); border-color: var(--sales); color: #1d1103; }
-.chip[data-cat="ops_strategy"][aria-pressed="true"] { background: var(--ops); border-color: var(--ops); color: #04160f; }
+.chip[data-cat="ib"][aria-pressed="true"] { background: var(--finance); border-color: var(--finance); color: #06101d; }
+.chip[data-cat="vc"][aria-pressed="true"] { background: var(--hot); border-color: var(--hot); color: #2a0710; }
+.chip[data-cat="finance"][aria-pressed="true"] { background: var(--ops); border-color: var(--ops); color: #04160f; }
+.chip[data-cat="ops_strategy"][aria-pressed="true"] { background: var(--sales); border-color: var(--sales); color: #1d1103; }
+.chip[data-cat="sales_bd"][aria-pressed="true"] { background: var(--text-dim); border-color: var(--text-dim); color: #0b0e14; }
 
 .chip .n { opacity: .55; margin-left: 5px; font-family: var(--mono); font-size: 11px; }
 
@@ -205,7 +207,7 @@ input[type=range]::-moz-range-thumb {
 
 /* ---------------------------------------------------------------- calendar */
 
-.calbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; gap: 12px; }
+.calbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; gap: 12px; flex-wrap: wrap; }
 .calbar h2 { margin: 0; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
 .navbtns { display: flex; gap: 6px; }
 
@@ -265,9 +267,11 @@ input[type=range]::-moz-range-thumb {
   transition: transform .1s, background .12s;
 }
 .jchip:hover { background: var(--border-bright); transform: translateX(1px); }
-.jchip[data-cat="finance"] { border-left-color: var(--finance); }
-.jchip[data-cat="sales_bd"] { border-left-color: var(--sales); }
-.jchip[data-cat="ops_strategy"] { border-left-color: var(--ops); }
+.jchip[data-cat="ib"] { border-left-color: var(--finance); }
+.jchip[data-cat="vc"] { border-left-color: var(--hot); }
+.jchip[data-cat="finance"] { border-left-color: var(--ops); }
+.jchip[data-cat="ops_strategy"] { border-left-color: var(--sales); }
+.jchip[data-cat="sales_bd"] { border-left-color: var(--text-faint); }
 .jchip .co { color: var(--text-faint); }
 .jchip.star { box-shadow: inset 0 0 0 1px var(--gold); }
 
@@ -297,9 +301,11 @@ input[type=range]::-moz-range-thumb {
 .card:hover { border-color: var(--border-bright); background: var(--surface-2); }
 
 .card .bar { width: 3px; align-self: stretch; border-radius: 2px; background: var(--text-faint); flex: none; }
-.card[data-cat="finance"] .bar { background: var(--finance); }
-.card[data-cat="sales_bd"] .bar { background: var(--sales); }
-.card[data-cat="ops_strategy"] .bar { background: var(--ops); }
+.card[data-cat="ib"] .bar { background: var(--finance); }
+.card[data-cat="vc"] .bar { background: var(--hot); }
+.card[data-cat="finance"] .bar { background: var(--ops); }
+.card[data-cat="ops_strategy"] .bar { background: var(--sales); }
+.card[data-cat="sales_bd"] .bar { background: var(--text-faint); }
 
 .card .main { flex: 1; min-width: 0; }
 .card .t { font-weight: 600; font-size: 14.5px; letter-spacing: -0.01em; }

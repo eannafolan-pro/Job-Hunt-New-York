@@ -1,6 +1,12 @@
 // Search criteria for the NYC job calendar.
-// Tuned to: ~2 yrs post-grad, restructuring/turnaround + M&A background,
-// targeting analyst -> associate / senior analyst roles in NYC.
+// Tuned to: ~2 yrs post-grad (EY-Parthenon restructuring + EssilorLuxottica M&A),
+// targeting ANALYST / ASSOCIATE level only. Investment banking and venture
+// capital are the priority lanes; everything else is secondary.
+
+// A posting is placed on the calendar this many days after it went live, as an
+// "apply by" date. Postings in this market are typically filled or closed
+// within about three weeks, so this is the practical deadline to act on.
+export const APPLY_WINDOW_DAYS = 21;
 
 export const SALARY_FLOOR = 100_000;
 
@@ -32,34 +38,51 @@ export const NOT_NYC_PATTERNS = [
   /syracuse/i,
 ];
 
-// Roles are bucketed into these three lanes. Order matters: first match wins.
+// Roles are bucketed into these lanes. Order matters: first match wins, so the
+// two priority lanes are declared first and win any overlap.
 export const CATEGORIES = [
   {
-    id: 'finance',
-    label: 'Finance & Deals',
+    id: 'ib',
+    label: 'Investment Banking',
+    priority: true,
     patterns: [
-      /restructuring/i, /turnaround/i, /distressed/i, /insolvency/i, /liquidation/i,
-      /investment bank/i, /\bm&a\b/i, /mergers/i, /acquisitions/i,
-      /corporate development/i, /corp dev/i, /transaction (advisory|services)/i,
-      /valuation/i, /due diligence/i, /deal (team|desk)/i,
-      /financial analyst/i, /finance analyst/i, /\bfp&a\b/i, /financial planning/i,
-      /strategic finance/i, /treasury/i, /controller/i, /accounting/i, /accountant/i,
-      /private (equity|credit)/i, /credit analyst/i, /underwrit/i,
-      /equity research/i, /capital markets/i, /investor relations/i,
-      /portfolio (analyst|associate|manager)/i, /asset management/i,
-      /credit risk/i, /securities lending/i,
-      /financial (reporting|operations|crime)/i, /\brevenue accounting/i,
+      /investment bank/i, /\bibd\b/i, /\bm&a\b/i, /mergers and acquisitions/i,
+      /restructuring/i, /turnaround/i, /distressed/i, /special situations/i,
+      /capital markets/i, /\becm\b/i, /\bdcm\b/i, /equity capital markets/i,
+      /debt capital markets/i, /leveraged finance/i, /\blevfin\b/i,
+      /financial sponsors/i, /sponsor coverage/i, /coverage (analyst|associate)/i,
+      /debt advisory/i, /sell.?side/i, /\bunderwriting\b/i,
+      /corporate finance (analyst|associate)/i, /transaction (advisory|services)/i,
+      /valuation (analyst|associate|services)/i, /due diligence (analyst|associate)/i,
+      /deal (advisory|execution)/i, /merchant bank/i,
     ],
   },
   {
-    id: 'sales_bd',
-    label: 'Sales & BD',
+    id: 'vc',
+    label: 'VC & Investing',
+    priority: true,
     patterns: [
-      /account executive/i, /\bsales\b/i, /business development/i, /\bbd\b/i,
-      /partnerships/i, /relationship manager/i, /account manager/i,
-      /client (success|services|partner|solutions)/i, /customer success/i,
-      /sales development/i, /\bsdr\b/i, /\bbdr\b/i, /go.to.market/i, /\bgtm\b/i,
-      /revenue (lead|associate)/i, /commercial (analyst|associate)/i,
+      /venture capital/i, /\bventure\b/i, /growth equity/i, /private equity/i,
+      /private credit/i, /\bbuyout\b/i, /principal investing/i, /direct investing/i,
+      /investment (analyst|associate|professional|team)/i,
+      /investing (analyst|associate)/i, /\binvestments?\b.{0,12}(analyst|associate)/i,
+      /deal (team|flow|sourcing)/i, /sourcing (analyst|associate)/i,
+      /portfolio (operations|company|analyst|associate)/i,
+      /platform (analyst|associate)/i, /fund (analyst|associate)/i,
+      /\blp\b relations/i, /investor relations (analyst|associate)/i,
+      /research (analyst|associate).{0,20}(equity|credit|investment)/i,
+      /equity research/i, /credit (analyst|associate|research)/i,
+      /asset management (analyst|associate)/i, /hedge fund/i,
+    ],
+  },
+  {
+    id: 'finance',
+    label: 'Corporate Finance',
+    patterns: [
+      /financial analyst/i, /finance analyst/i, /\bfp&a\b/i, /financial planning/i,
+      /strategic finance/i, /corporate development/i, /corp dev/i,
+      /treasury/i, /accounting/i, /accountant/i, /financial reporting/i,
+      /credit risk/i, /securities lending/i, /\bvaluation\b/i,
     ],
   },
   {
@@ -67,11 +90,18 @@ export const CATEGORIES = [
     label: 'Strategy & Ops',
     patterns: [
       /strategy/i, /strategic (initiatives|projects)/i, /chief of staff/i,
-      /business operations/i, /bizops/i, /revenue operations/i, /\brevops\b/i,
-      /sales operations/i, /operations (analyst|associate|manager|specialist)/i,
-      /program manager/i, /project manager/i, /consultant/i, /consulting/i,
-      /business analyst/i, /\bbusiness intelligence/i, /analytics (analyst|associate)/i,
-      /special projects/i, /corporate strategy/i,
+      /business operations/i, /bizops/i, /corporate strategy/i,
+      /operations (analyst|associate)/i, /business analyst/i,
+      /consultant/i, /consulting/i, /special projects/i,
+    ],
+  },
+  {
+    id: 'sales_bd',
+    label: 'Sales & BD',
+    patterns: [
+      /account executive/i, /\bsales\b/i, /business development/i,
+      /partnerships/i, /relationship manager/i, /account manager/i,
+      /client (success|services|partner|solutions)/i, /customer success/i,
     ],
   },
 ];
@@ -80,11 +110,15 @@ export const CATEGORIES = [
 export const EXCLUDE_TITLE = [
   // Quant — explicitly not wanted.
   /quantitative/i, /\bquant\b/i, /algorithmic trading/i, /\bhft\b/i,
-  // Too senior for a ~2yr analyst.
+  // Too senior. At ~2 years the target is Analyst / Associate / Senior Analyst,
+  // so anything carrying people-management or ownership language is out —
+  // "Manager" included, which the live data showed slipping through as
+  // "Manager, Accounting" and "Portfolio Manager".
   /\bvp\b/i, /vice president/i, /\bsvp\b/i, /\bevp\b/i,
   /\bdirector\b/i, /head of/i, /\bchief\b/i, /managing director/i, /\bmd\b,/i,
-  /senior manager/i, /\bprincipal\b/i, /\bpartner\b(?!ships)/i, /\bexecutive\b(?! assistant)/i,
-  /\blead\b(?!s)/i, /\bstaff\b/i,
+  /\bmanager\b/i, /\bmanagement\b(?! (consultant|analyst|associate))/i,
+  /\bprincipal\b/i, /\bpartner\b(?!ships)/i, /\bexecutive\b(?! assistant)/i,
+  /\blead\b(?!s)/i, /\bstaff\b/i, /\bsenior manager\b/i,
   // Too junior / wrong shape.
   /\bintern\b/i, /internship/i, /co.?op\b/i, /apprentice/i,
   /summer (analyst|associate|program)/i, /\bnew grad\b/i, /campus/i,

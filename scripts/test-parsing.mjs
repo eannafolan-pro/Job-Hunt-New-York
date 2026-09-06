@@ -53,9 +53,16 @@ t('rejects upstate', () => assert.equal(isNYC('Albany, New York'), false));
 t('rejects empty', () => assert.equal(isNYC(''), false));
 
 console.log('\ncategorisation');
-t('restructuring -> finance', () => assert.equal(categorize('Restructuring Analyst'), 'finance'));
+t('restructuring -> ib', () => assert.equal(categorize('Restructuring Analyst'), 'ib'));
+t('M&A -> ib', () => assert.equal(categorize('M&A Associate'), 'ib'));
+t('leveraged finance -> ib', () => assert.equal(categorize('Leveraged Finance Analyst'), 'ib'));
+t('capital markets -> ib', () => assert.equal(categorize('Analyst, Equity Capital Markets'), 'ib'));
+t('venture capital -> vc', () => assert.equal(categorize('Venture Capital Analyst'), 'vc'));
+t('investment associate -> vc', () => assert.equal(categorize('Investment Associate'), 'vc'));
+t('growth equity -> vc', () => assert.equal(categorize('Growth Equity Analyst'), 'vc'));
+t('private equity -> vc', () => assert.equal(categorize('Private Equity Associate'), 'vc'));
+t('IB wins the overlap with VC', () => assert.equal(categorize('M&A Associate, Financial Sponsors'), 'ib'));
 t('FP&A -> finance', () => assert.equal(categorize('Senior Analyst, FP&A'), 'finance'));
-t('M&A -> finance', () => assert.equal(categorize('M&A Associate'), 'finance'));
 t('AE -> sales', () => assert.equal(categorize('Account Executive, Mid-Market'), 'sales_bd'));
 t('bizops -> strategy', () => assert.equal(categorize('Business Operations Associate'), 'ops_strategy'));
 t('unrelated -> null', () => assert.equal(categorize('Pastry Chef'), null));
@@ -71,13 +78,27 @@ const base = {
 };
 t('keeps a qualifying role', () => {
   const j = refine({ ...base }, co);
-  assert.equal(j.category, 'finance');
+  assert.equal(j.category, 'ib');
+  assert.ok(j.priority, 'IB is a priority lane');
   assert.equal(j.salaryMin, 130000);
   assert.equal(j.salaryText, '$130k – $170k');
   assert.ok(j.strongMatch);
 });
 t('drops VP-level titles', () => {
   assert.equal(refine({ ...base, title: 'VP, Restructuring' }, co), null);
+});
+t('drops Manager-level titles (too senior at ~2 yrs)', () => {
+  assert.equal(refine({ ...base, title: 'Manager, Restructuring' }, co), null);
+  assert.equal(refine({ ...base, title: 'Portfolio Manager' }, co), null);
+});
+t('keeps Analyst and Associate', () => {
+  assert.ok(refine({ ...base, title: 'Investment Banking Analyst' }, co));
+  assert.ok(refine({ ...base, title: 'Restructuring Associate' }, co));
+});
+t('secondary lanes are not flagged priority', () => {
+  const j = refine({ ...base, title: 'Senior Analyst, FP&A' }, co);
+  assert.equal(j.category, 'finance');
+  assert.equal(j.priority, false);
 });
 t('drops internships', () => {
   assert.equal(refine({ ...base, title: 'Restructuring Summer Analyst' }, co), null);

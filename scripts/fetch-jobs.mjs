@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 
 import { COMPANIES } from './companies.mjs';
 import {
-  SALARY_FLOOR, NYC_PATTERNS, NOT_NYC_PATTERNS, CATEGORIES,
+  SALARY_FLOOR, APPLY_WINDOW_DAYS, NYC_PATTERNS, NOT_NYC_PATTERNS, CATEGORIES,
   SALARY_BASIS, EXCLUDE_TITLE, NO_SPONSORSHIP_PATTERNS, CITIZENSHIP_BLOCK_PATTERNS,
   J1_FRIENDLY_PATTERNS, STRONG_MATCH_PATTERNS,
 } from './config.mjs';
@@ -318,6 +318,8 @@ function refine(raw, co) {
     : salary.min;
   if (basis < SALARY_FLOOR) return null;
 
+  const cat = CATEGORIES.find(c => c.id === category);
+
   return {
     id: raw.externalId,
     title,
@@ -326,6 +328,7 @@ function refine(raw, co) {
     location: raw.location.replace(/\s+/g, ' ').trim(),
     postedAt: raw.postedAt,
     category,
+    priority: !!cat?.priority,
     salaryMin: salary.min,
     salaryMax: salary.max,
     salaryText: formatSalary(salary),
@@ -388,9 +391,16 @@ async function main() {
       const firstSeen = prev?.firstSeen || nowISO;
       // Prefer the board's own posted date; fall back to when we first saw it.
       const posted = job.postedAt || prev?.postedAt || firstSeen;
+      // The calendar plots this, not the posted date: a job hunt needs a
+      // forward-looking deadline, and postings in this market close in
+      // roughly three weeks.
+      const applyBy = new Date(
+        new Date(posted).getTime() + APPLY_WINDOW_DAYS * 864e5).toISOString();
+
       byId.set(job.id, {
         ...job,
         postedAt: posted,
+        applyBy,
         firstSeen,
         lastSeen: nowISO,
         active: true,

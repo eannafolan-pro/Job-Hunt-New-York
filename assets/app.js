@@ -5,10 +5,15 @@
 'use strict';
 
 const CATEGORY_LABELS = {
-  finance: 'Finance & Deals',
-  sales_bd: 'Sales & BD',
+  ib: 'Investment Banking',
+  vc: 'VC & Investing',
+  finance: 'Corporate Finance',
   ops_strategy: 'Strategy & Ops',
+  sales_bd: 'Sales & BD',
 };
+
+// The two lanes the search is actually built around; the page opens on these.
+const PRIORITY_CATS = ['ib', 'vc'];
 
 const MOVE_DATE = new Date('2027-01-05T00:00:00Z');
 const DAY_MS = 86_400_000;
@@ -19,7 +24,8 @@ const state = {
   calMode: 'rolling',   // 'rolling' = trailing 6 weeks, 'month' = calendar month
   view: 'cal',
   q: '',
-  cats: new Set(Object.keys(CATEGORY_LABELS)),
+  cats: new Set(PRIORITY_CATS),
+  dateBasis: 'applyBy',   // 'applyBy' = forward-looking deadlines, 'postedAt' = when it went live
   minSalary: 100_000,
   strongOnly: false,
   j1Only: false,
@@ -65,6 +71,19 @@ function dayKey(d) {
   return `${x.getFullYear()}-${String(x.getMonth() + 1).padStart(2, '0')}-${String(x.getDate()).padStart(2, '0')}`;
 }
 function sameDay(a, b) { return dayKey(a) === dayKey(b); }
+
+// Which date a job sits on. applyBy looks forward; postedAt looks back.
+function jobDate(job) {
+  return new Date(state.dateBasis === 'postedAt'
+    ? job.postedAt
+    : (job.applyBy || job.postedAt));
+}
+
+// Days until the apply-by deadline. Negative means it has passed.
+function daysUntilDeadline(job) {
+  const d = new Date(job.applyBy || job.postedAt);
+  return Math.ceil((d - Date.now()) / DAY_MS);
+}
 
 function daysAgo(iso) {
   const t = new Date(iso).getTime();
@@ -116,12 +135,13 @@ function visibleJobs() {
 function groupByDay(jobs) {
   const map = new Map();
   for (const j of jobs) {
-    const k = dayKey(new Date(j.postedAt));
+    const k = dayKey(jobDate(j));
     if (!map.has(k)) map.set(k, []);
     map.get(k).push(j);
   }
   for (const list of map.values()) {
-    list.sort((a, b) => Number(b.strongMatch) - Number(a.strongMatch)
+    list.sort((a, b) => Number(b.priority) - Number(a.priority)
+      || Number(b.strongMatch) - Number(a.strongMatch)
       || (b.salaryMax || 0) - (a.salaryMax || 0));
   }
   return map;
@@ -141,16 +161,16 @@ function renderCountdown() {
 
 function renderStats() {
   const jobs = visibleJobs();
-  const freshCount = jobs.filter(j => (daysAgo(j.postedAt) ?? 99) <= 7).length;
+  const closingSoon = jobs.filter(j => { const d = daysUntilDeadline(j); return d >= 0 && d <= 7; }).length;
   const sals = jobs.map(j => j.salaryMax).filter(Boolean).sort((a, b) => a - b);
   const median = sals.length ? sals[Math.floor(sals.length / 2)] : 0;
   const strong = jobs.filter(j => j.strongMatch).length;
 
   const cards = [
     { k: 'Matching roles', v: jobs.length },
-    { k: 'Posted this week', v: freshCount, accent: true },
+    { k: 'Closing in 7 days', v: closingSoon, accent: true },
     { k: 'Median top of range', v: median ? money(median) : '—' },
-    { k: 'Strong matches', v: strong },
+    { k: 'IB + VC roles', v: jobs.filter(j => j.priority).length },
     { k: 'Saved', v: [...saved].filter(id => state.data.jobs.some(j => j.id === id)).length },
   ];
 
@@ -180,6 +200,7 @@ function renderCategoryChips() {
     b.addEventListener('click', () => {
       if (state.cats.has(id) && state.cats.size > 1) state.cats.delete(id);
       else state.cats.add(id);
+      store.write('njc.cats', [...state.cats]);
       render();
     });
     box.append(b);
@@ -213,6 +234,13 @@ function gridRange() {
   const today = new Date();
   if (state.calMode === 'rolling') {
     const WEEKS = 6;
+    if (state.dateBasis === 'applyBy') {
+      // Deadlines are ahead of us: start from the Monday of last week so a few
+      // just-missed roles stay visible, then run five weeks forward.
+      const monday = new Date(today.getFullYear(), today.getMonth(),
+        today.getDate() - ((today.getDay() + 6) % 7) - 7);
+      return { start: monday, cells: WEEKS * 7, monthOf: null };
+    }
     const endOfWeek = new Date(today.getFullYear(), today.getMonth(),
       today.getDate() + (7 - ((today.getDay() + 6) % 7) - 1));
     const start = new Date(endOfWeek.getFullYear(), endOfWeek.getMonth(),
@@ -291,10 +319,18 @@ function renderCalendar() {
 function jobChip(job) {
   const b = el('button', 'jchip');
   b.dataset.cat = job.category;
-  b.dataset.age = ageBand(job.postedAt);
-  if (job.strongMatch) b.classList.add('star');
+  // On deadlines, urgency reads forward: what is closing soonest is brightest.
+  if (state.dateBasis === 'applyBy') {
+    const d = daysUntilDeadline(job);
+    b.dataset.age = d < 0 ? 'stale' : d <= 3 ? 'fresh' : d <= 10 ? 'recent' : 'aging';
+  } else {
+    b.dataset.age = ageBand(job.postedAt);
+  }
+  if (job.strongMatch || job.priority) b.classList.add('star');
   if (job.active === false) b.classList.add('closed');
-  b.title = `${job.title} — ${job.company} — ${job.salaryText || 'salary n/a'}`;
+  const dl = daysUntilDeadline(job);
+  b.title = `${job.title} — ${job.company} — ${job.salaryText || 'salary n/a'}`
+    + (dl >= 0 ? ` — apply within ${dl} day${dl === 1 ? '' : 's'}` : ' — deadline passed');
   b.append(document.createTextNode(job.title));
   b.append(el('span', 'co', ` · ${job.company}`));
   b.addEventListener('click', () => openDrawer(job));
@@ -304,8 +340,11 @@ function jobChip(job) {
 // ---------------------------------------------------------------- render: list
 
 function renderList() {
-  const jobs = visibleJobs().slice().sort(
-    (a, b) => new Date(b.postedAt) - new Date(a.postedAt));
+  const jobs = visibleJobs().slice().sort((a, b) =>
+    state.dateBasis === 'applyBy'
+      // Soonest deadline first, priority lanes ahead of the rest.
+      ? Number(b.priority) - Number(a.priority) || jobDate(a) - jobDate(b)
+      : new Date(b.postedAt) - new Date(a.postedAt));
 
   const box = $('#list');
   box.replaceChildren();
@@ -324,8 +363,10 @@ function renderList() {
     meta.append(el('span', null, job.company));
     meta.append(el('span', null, job.location));
     meta.append(el('span', null, CATEGORY_LABELS[job.category]));
+    if (job.priority) meta.append(el('span', 'tag match', CATEGORY_LABELS[job.category]));
     if (job.strongMatch) meta.append(el('span', 'tag match', 'strong match'));
-    if ((daysAgo(job.postedAt) ?? 99) <= 3) meta.append(el('span', 'tag hot', 'new'));
+    if (dl >= 0 && dl <= 5) meta.append(el('span', 'tag hot', dl === 0 ? 'closes today' : `${dl}d left`));
+    else if ((daysAgo(job.postedAt) ?? 99) <= 3) meta.append(el('span', 'tag hot', 'new'));
     if (job.j1Friendly) meta.append(el('span', 'tag match', 'J-1 friendly'));
     if (job.noSponsorship) meta.append(el('span', 'tag nospon', 'says no sponsorship'));
     if (job.active === false) meta.append(el('span', 'tag closed', 'delisted'));
@@ -335,7 +376,10 @@ function renderList() {
 
     const right = el('div', 'right');
     right.append(el('div', 'sal', job.salaryText || '—'));
-    right.append(el('div', 'when', relativeDay(job.postedAt)));
+    const dl = daysUntilDeadline(job);
+    right.append(el('div', 'when', state.dateBasis === 'applyBy'
+      ? (dl < 0 ? 'deadline passed' : dl === 0 ? 'apply today' : `${dl}d left`)
+      : relativeDay(job.postedAt)));
     const star = el('button', 'starbtn', saved.has(job.id) ? '★' : '☆');
     star.setAttribute('aria-pressed', saved.has(job.id));
     star.title = 'Save this role';
@@ -404,6 +448,11 @@ function openDrawer(job) {
   const pair = (k, v) => { dl.append(el('dt', null, k), el('dd', null, v)); };
   pair('Salary', job.salaryText ? job.salaryText + (job.hourly ? ' (from hourly rate)' : '') : 'not stated');
   pair('Posted', `${new Date(job.postedAt).toLocaleDateString('en-US', { dateStyle: 'medium' })} · ${relativeDay(job.postedAt)}`);
+  const dld = daysUntilDeadline(job);
+  pair('Apply by', job.applyBy
+    ? `${new Date(job.applyBy).toLocaleDateString('en-US', { dateStyle: 'medium' })} · ` +
+      (dld < 0 ? 'passed' : dld === 0 ? 'today' : `${dld} days left`)
+    : '—');
   pair('Category', CATEGORY_LABELS[job.category]);
   pair('Source', job.source);
   pair('Status', job.active === false ? 'Delisted from the board' : 'Open');
@@ -484,6 +533,15 @@ function render() {
 
 // ---------------------------------------------------------------- wiring
 
+function setDateBasis(basis) {
+  state.dateBasis = basis;
+  state.expandedDays.clear();
+  $('#basis-apply').setAttribute('aria-pressed', basis === 'applyBy');
+  $('#basis-posted').setAttribute('aria-pressed', basis === 'postedAt');
+  store.write('njc.dateBasis', basis);
+  render();
+}
+
 function setCalMode(mode) {
   state.calMode = mode;
   state.expandedDays.clear();
@@ -531,6 +589,9 @@ function bind() {
     });
   }
 
+  $('#basis-apply').addEventListener('click', () => setDateBasis('applyBy'));
+  $('#basis-posted').addEventListener('click', () => setDateBasis('postedAt'));
+
   $('#mode-rolling').addEventListener('click', () => setCalMode('rolling'));
   $('#mode-month').addEventListener('click', () => setCalMode('month'));
 
@@ -569,6 +630,9 @@ function restorePrefs() {
   }
   state.view = store.read('njc.view', 'cal');
   state.calMode = store.read('njc.calMode', 'rolling');
+  state.dateBasis = store.read('njc.dateBasis', 'applyBy');
+  const savedCats = store.read('njc.cats', null);
+  if (Array.isArray(savedCats) && savedCats.length) state.cats = new Set(savedCats);
 }
 
 async function boot() {
@@ -580,6 +644,7 @@ async function boot() {
     if (res.ok) state.data = await res.json();
   } catch { /* fall through to the empty state */ }
 
+  setDateBasis(state.dateBasis);
   setCalMode(state.calMode);
   setView(state.view);
 }

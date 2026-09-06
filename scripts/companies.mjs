@@ -61,4 +61,52 @@ export const COMPANIES = [
   // ---------- Workday (traditional finance / advisory) ----------
   // Tenant + site paths are the least stable of the five adapters; expect some
   // of these to need correcting after the first live run.
+
+  // ---------- Investment banking, VC, PE and asset managers ----------
+  // Added for the IB/VC priority lanes. Tokens are unverified guesses: the
+  // bulge brackets and elite boutiques (GS, JPM, MS, Evercore, Moelis, PJT,
+  // Centerview, Lazard) run Workday or proprietary portals with no public JSON
+  // API, so they cannot be polled here at all. What follows is the subset of
+  // the buy side and mid-market that does tend to use a public ATS. Expect a
+  // high failure rate on the first run and prune from the health report.
+  { name: 'Insight Partners', ats: 'greenhouse', token: 'insightpartners' },
+  { name: 'General Catalyst', ats: 'greenhouse', token: 'generalcatalyst' },
+  { name: 'Bessemer Venture Partners', ats: 'greenhouse', token: 'bessemerventurepartners' },
+  { name: 'Battery Ventures', ats: 'greenhouse', token: 'batteryventures' },
+  { name: 'Index Ventures', ats: 'greenhouse', token: 'indexventures' },
+  { name: 'Union Square Ventures', ats: 'greenhouse', token: 'unionsquareventures' },
+  { name: 'FirstMark Capital', ats: 'greenhouse', token: 'firstmarkcapital' },
+  { name: 'Lerer Hippeau', ats: 'greenhouse', token: 'lererhippeau' },
+  { name: 'Greycroft', ats: 'greenhouse', token: 'greycroft' },
+  { name: 'Primary Venture Partners', ats: 'greenhouse', token: 'primaryventurepartners' },
+  { name: 'RRE Ventures', ats: 'greenhouse', token: 'rreventures' },
+  { name: 'Tiger Global', ats: 'greenhouse', token: 'tigerglobalmanagement' },
+  { name: 'Coatue', ats: 'greenhouse', token: 'coatuemanagement' },
+  { name: 'Thrive Capital', ats: 'greenhouse', token: 'thrivecapital' },
+  { name: 'Ares Management', ats: 'greenhouse', token: 'aresmanagement' },
+  { name: 'Blue Owl Capital', ats: 'greenhouse', token: 'blueowlcapital' },
+  { name: 'Sixth Street', ats: 'greenhouse', token: 'sixthstreet' },
+  { name: 'Golub Capital', ats: 'greenhouse', token: 'golubcapital' },
+  { name: 'Hamilton Lane', ats: 'greenhouse', token: 'hamiltonlane' },
+  { name: 'StepStone Group', ats: 'greenhouse', token: 'stepstonegroup' },
+  { name: 'Cambridge Associates', ats: 'greenhouse', token: 'cambridgeassociates' },
+  { name: 'Bridgepoint', ats: 'greenhouse', token: 'bridgepoint' },
+  { name: 'Lincoln International', ats: 'greenhouse', token: 'lincolninternational' },
+  { name: 'Perella Weinberg', ats: 'greenhouse', token: 'perellaweinbergpartners' },
+  { name: 'Solomon Partners', ats: 'greenhouse', token: 'solomonpartners' },
+  { name: 'Union Square Advisors', ats: 'greenhouse', token: 'unionsquareadvisors' },
+  { name: 'Cowen', ats: 'greenhouse', token: 'cowen' },
+  { name: 'Oppenheimer', ats: 'greenhouse', token: 'oppenheimer' },
+  { name: 'B. Riley', ats: 'greenhouse', token: 'brileyfinancial' },
+  { name: 'Canaccord Genuity', ats: 'greenhouse', token: 'canaccordgenuity' },
+  { name: 'Antares Capital', ats: 'greenhouse', token: 'antarescapital' },
+  { name: 'Angelo Gordon', ats: 'greenhouse', token: 'angelogordon' },
+  { name: 'Marathon Asset Management', ats: 'greenhouse', token: 'marathonassetmanagement' },
+  { name: 'Man Group', ats: 'greenhouse', token: 'mangroup' },
+  { name: 'Schonfeld', ats: 'greenhouse', token: 'schonfeld' },
+  { name: 'Jane Street', ats: 'greenhouse', token: 'janestreet' },
+  { name: 'Sculptor Capital', ats: 'lever', token: 'sculptor' },
+  { name: 'Corsair Capital', ats: 'lever', token: 'corsair' },
+  { name: 'Bain Capital Ventures', ats: 'ashby', token: 'baincapitalventures' },
+  { name: 'Andreessen Horowitz', ats: 'ashby', token: 'a16z' },
 ];
