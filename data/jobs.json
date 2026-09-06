@@ -1,506 +1,506 @@
 {
-  "generatedAt": "2026-09-06T14:52:53.122Z",
+  "generatedAt": "2026-09-06T14:55:51.135Z",
   "salaryFloor": 100000,
   "atsCache": {
     "Alvarez & Marsal": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "AlixPartners": {
       "ats": "greenhouse",
       "token": "alixpartners",
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "FTI Consulting": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Kroll": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Teneo": {
       "ats": "greenhouse",
       "token": "teneo",
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Interpath": {
       "ats": "greenhouse",
       "token": "interpath",
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Ankura": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Berkeley Research Group": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Riveron": {
       "ats": "ashby",
       "token": "riveron",
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Portage Point Partners": {
       "ats": "lever",
       "token": "portagepointpartners",
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "M3 Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Province": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "CR3 Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Getzler Henrich": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Hilco Global": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Gordon Brothers": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "B. Riley Financial": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Accordion": {
       "ats": "greenhouse",
       "token": "accordion",
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "SierraConstellation Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Carl Marks Advisors": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Quantuma": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Azets": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Deloitte": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "PwC": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "KPMG": {
       "ats": "lever",
       "token": "kpmg",
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "EY": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Grant Thornton": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "BDO": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Forvis Mazars": {
       "ats": "greenhouse",
       "token": "forvismazars",
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "RSM": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "PJT Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Houlihan Lokey": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Lazard": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Rothschild & Co": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Evercore": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Moelis & Company": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Perella Weinberg Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Centerview Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Guggenheim Securities": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Jefferies": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Ducera Partners": {
       "ats": "greenhouse",
       "token": "ducerapartners",
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Solomon Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Stifel": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Piper Sandler": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Cantor Fitzgerald": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "JPMorganChase": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Goldman Sachs": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Morgan Stanley": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Bank of America": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Citi": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Barclays": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Deutsche Bank": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "UBS": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "HSBC": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "BNP Paribas": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Wells Fargo": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "RBC Capital Markets": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Nomura": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Macquarie": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Oaktree Capital Management": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Apollo Global Management": {
       "ats": "greenhouse",
       "token": "apollo",
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Ares Management": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Cerberus Capital Management": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Fortress Investment Group": {
       "ats": "lever",
       "token": "fortress",
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Centerbridge Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Silver Point Capital": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Anchorage Capital Group": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Knighthead Capital": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Monarch Alternative Capital": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "King Street Capital Management": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Marathon Asset Management": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "GoldenTree Asset Management": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Bain Capital Credit": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Blackstone": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "KKR": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Carlyle": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Sixth Street": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "HPS Investment Partners": {
       "ats": "greenhouse",
       "token": "hpsinvestmentpartners",
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Davidson Kempner": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Attestor Capital": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "TPG Angelo Gordon": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Diameter Capital Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Beach Point Capital": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Lone Star Funds": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "H.I.G. Capital": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Platinum Equity": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Sun Capital Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Atlas Holdings": {
       "ats": "ashby",
       "token": "atlas",
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "AIB": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Bank of Ireland": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Pepper Advantage": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Davy": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Goodbody": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Investec": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "EssilorLuxottica": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Flutter Entertainment": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "CRH": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Smurfit Westrock": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Kerry Group": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     },
     "Ryanair": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:52:53.125Z"
+      "checkedAt": "2026-09-06T14:55:51.138Z"
     }
   },
   "targets": {
@@ -1058,14 +1058,14 @@
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3064
+      "ms": 3069
     },
     {
       "company": "Index Ventures",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3061
+      "ms": 3071
     },
     {
       "company": "Union Square Ventures",
@@ -1079,49 +1079,49 @@
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3066
+      "ms": 3061
     },
     {
       "company": "Lerer Hippeau",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3080
+      "ms": 3066
     },
     {
       "company": "Primary Venture Partners",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3092
+      "ms": 3066
     },
     {
       "company": "RRE Ventures",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3068
+      "ms": 3065
     },
     {
       "company": "Tiger Global",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3065
+      "ms": 3064
     },
     {
       "company": "Coatue",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3064
+      "ms": 3068
     },
     {
       "company": "Thrive Capital",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3066
+      "ms": 3167
     },
     {
       "company": "Ares Management",
@@ -1135,7 +1135,7 @@
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3058
+      "ms": 3074
     },
     {
       "company": "Sixth Street",
@@ -1156,77 +1156,77 @@
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3061
+      "ms": 3070
     },
     {
       "company": "StepStone Group",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3066
+      "ms": 3073
     },
     {
       "company": "Cambridge Associates",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3067
+      "ms": 3071
     },
     {
       "company": "Bridgepoint",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3063
+      "ms": 3071
     },
     {
       "company": "Perella Weinberg",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3067
+      "ms": 3075
     },
     {
       "company": "Solomon Partners",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3074
+      "ms": 3071
     },
     {
       "company": "Union Square Advisors",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3087
+      "ms": 3065
     },
     {
       "company": "Cowen",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3071
+      "ms": 3081
     },
     {
       "company": "Oppenheimer",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3070
+      "ms": 3077
     },
     {
       "company": "B. Riley",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3091
+      "ms": 3070
     },
     {
       "company": "Canaccord Genuity",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3063
+      "ms": 3065
     },
     {
       "company": "Antares Capital",
@@ -1240,35 +1240,35 @@
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3076
+      "ms": 3078
     },
     {
       "company": "Marathon Asset Management",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3066
+      "ms": 3071
     },
     {
       "company": "Sculptor Capital",
       "ats": "lever",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3623
+      "ms": 3638
     },
     {
       "company": "Corsair Capital",
       "ats": "lever",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3760
+      "ms": 3495
     },
     {
       "company": "Bain Capital Ventures",
       "ats": "ashby",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3052
+      "ms": 3125
     },
     {
       "company": "Oscar Health",
@@ -1276,7 +1276,7 @@
       "ok": true,
       "seen": 283,
       "kept": 6,
-      "ms": 205
+      "ms": 367
     },
     {
       "company": "Ramp",
@@ -1284,7 +1284,7 @@
       "ok": true,
       "seen": 142,
       "kept": 6,
-      "ms": 116
+      "ms": 87
     },
     {
       "company": "Point72",
@@ -1292,7 +1292,7 @@
       "ok": true,
       "seen": 231,
       "kept": 5,
-      "ms": 396
+      "ms": 159
     },
     {
       "company": "Accordion",
@@ -1300,7 +1300,7 @@
       "ok": true,
       "seen": 49,
       "kept": 5,
-      "ms": 53
+      "ms": 60
     },
     {
       "company": "Brex",
@@ -1308,7 +1308,7 @@
       "ok": true,
       "seen": 282,
       "kept": 4,
-      "ms": 647
+      "ms": 585
     },
     {
       "company": "Datadog",
@@ -1316,7 +1316,7 @@
       "ok": true,
       "seen": 441,
       "kept": 4,
-      "ms": 505
+      "ms": 425
     },
     {
       "company": "iCapital",
@@ -1324,7 +1324,7 @@
       "ok": true,
       "seen": 212,
       "kept": 3,
-      "ms": 377
+      "ms": 326
     },
     {
       "company": "Gemini",
@@ -1332,7 +1332,7 @@
       "ok": true,
       "seen": 36,
       "kept": 2,
-      "ms": 164
+      "ms": 1047
     },
     {
       "company": "Portage Point Partners",
@@ -1340,7 +1340,7 @@
       "ok": true,
       "seen": 50,
       "kept": 2,
-      "ms": 647
+      "ms": 572
     },
     {
       "company": "Ducera Partners",
@@ -1348,7 +1348,7 @@
       "ok": true,
       "seen": 7,
       "kept": 2,
-      "ms": 29
+      "ms": 26
     },
     {
       "company": "Betterment",
@@ -1356,7 +1356,7 @@
       "ok": true,
       "seen": 27,
       "kept": 1,
-      "ms": 277
+      "ms": 256
     },
     {
       "company": "Carta",
@@ -1364,7 +1364,7 @@
       "ok": true,
       "seen": 61,
       "kept": 1,
-      "ms": 402
+      "ms": 283
     },
     {
       "company": "Clear Street",
@@ -1372,7 +1372,7 @@
       "ok": true,
       "seen": 26,
       "kept": 1,
-      "ms": 377
+      "ms": 234
     },
     {
       "company": "Alloy",
@@ -1380,7 +1380,7 @@
       "ok": true,
       "seen": 25,
       "kept": 1,
-      "ms": 58
+      "ms": 68
     },
     {
       "company": "Coinbase",
@@ -1388,7 +1388,7 @@
       "ok": true,
       "seen": 192,
       "kept": 1,
-      "ms": 404
+      "ms": 361
     },
     {
       "company": "Ethic",
@@ -1396,7 +1396,7 @@
       "ok": true,
       "seen": 4,
       "kept": 1,
-      "ms": 35
+      "ms": 309
     },
     {
       "company": "Yext",
@@ -1404,7 +1404,7 @@
       "ok": true,
       "seen": 22,
       "kept": 1,
-      "ms": 108
+      "ms": 40
     },
     {
       "company": "Braze",
@@ -1412,7 +1412,7 @@
       "ok": true,
       "seen": 281,
       "kept": 1,
-      "ms": 626
+      "ms": 396
     },
     {
       "company": "Justworks",
@@ -1420,7 +1420,7 @@
       "ok": true,
       "seen": 98,
       "kept": 1,
-      "ms": 382
+      "ms": 166
     },
     {
       "company": "Vanta",
@@ -1428,7 +1428,7 @@
       "ok": true,
       "seen": 111,
       "kept": 1,
-      "ms": 159
+      "ms": 77
     },
     {
       "company": "OpenAI",
@@ -1436,7 +1436,7 @@
       "ok": true,
       "seen": 779,
       "kept": 1,
-      "ms": 420
+      "ms": 423
     },
     {
       "company": "Schonfeld",
@@ -1444,7 +1444,7 @@
       "ok": true,
       "seen": 67,
       "kept": 1,
-      "ms": 49
+      "ms": 62
     },
     {
       "company": "AlixPartners",
@@ -1452,7 +1452,7 @@
       "ok": true,
       "seen": 116,
       "kept": 1,
-      "ms": 76
+      "ms": 78
     },
     {
       "company": "Teneo",
@@ -1460,7 +1460,7 @@
       "ok": true,
       "seen": 51,
       "kept": 1,
-      "ms": 104
+      "ms": 100
     },
     {
       "company": "Chime",
@@ -1468,7 +1468,7 @@
       "ok": true,
       "seen": 65,
       "kept": 0,
-      "ms": 370
+      "ms": 336
     },
     {
       "company": "Affirm",
@@ -1476,7 +1476,7 @@
       "ok": true,
       "seen": 204,
       "kept": 0,
-      "ms": 519
+      "ms": 455
     },
     {
       "company": "SoFi",
@@ -1484,7 +1484,7 @@
       "ok": true,
       "seen": 61,
       "kept": 0,
-      "ms": 95
+      "ms": 112
     },
     {
       "company": "Robinhood",
@@ -1492,7 +1492,7 @@
       "ok": true,
       "seen": 128,
       "kept": 0,
-      "ms": 365
+      "ms": 333
     },
     {
       "company": "Fireblocks",
@@ -1500,7 +1500,7 @@
       "ok": true,
       "seen": 72,
       "kept": 0,
-      "ms": 139
+      "ms": 150
     },
     {
       "company": "Vestwell",
@@ -1508,7 +1508,7 @@
       "ok": true,
       "seen": 20,
       "kept": 0,
-      "ms": 167
+      "ms": 67
     },
     {
       "company": "MongoDB",
@@ -1516,7 +1516,7 @@
       "ok": true,
       "seen": 415,
       "kept": 0,
-      "ms": 599
+      "ms": 241
     },
     {
       "company": "Squarespace",
@@ -1524,7 +1524,7 @@
       "ok": true,
       "seen": 28,
       "kept": 0,
-      "ms": 84
+      "ms": 68
     },
     {
       "company": "Peloton",
@@ -1532,7 +1532,7 @@
       "ok": true,
       "seen": 47,
       "kept": 0,
-      "ms": 75
+      "ms": 147
     },
     {
       "company": "SeatGeek",
@@ -1540,7 +1540,7 @@
       "ok": true,
       "seen": 20,
       "kept": 0,
-      "ms": 39
+      "ms": 41
     },
     {
       "company": "Attentive",
@@ -1548,7 +1548,7 @@
       "ok": true,
       "seen": 37,
       "kept": 0,
-      "ms": 42
+      "ms": 137
     },
     {
       "company": "Movable Ink",
@@ -1556,7 +1556,7 @@
       "ok": true,
       "seen": 34,
       "kept": 0,
-      "ms": 38
+      "ms": 119
     },
     {
       "company": "Bombas",
@@ -1564,7 +1564,7 @@
       "ok": true,
       "seen": 13,
       "kept": 0,
-      "ms": 51
+      "ms": 85
     },
     {
       "company": "Dataiku",
@@ -1572,7 +1572,7 @@
       "ok": true,
       "seen": 24,
       "kept": 0,
-      "ms": 136
+      "ms": 84
     },
     {
       "company": "Celonis",
@@ -1580,7 +1580,7 @@
       "ok": true,
       "seen": 274,
       "kept": 0,
-      "ms": 556
+      "ms": 308
     },
     {
       "company": "Flatiron Health",
@@ -1588,7 +1588,7 @@
       "ok": true,
       "seen": 32,
       "kept": 0,
-      "ms": 153
+      "ms": 79
     },
     {
       "company": "Kraken",
@@ -1596,7 +1596,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 765
+      "ms": 746
     },
     {
       "company": "Varo Bank",
@@ -1604,7 +1604,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 666
+      "ms": 742
     },
     {
       "company": "Fundrise",
@@ -1612,7 +1612,7 @@
       "ok": true,
       "seen": 3,
       "kept": 0,
-      "ms": 716
+      "ms": 676
     },
     {
       "company": "Mercury",
@@ -1620,7 +1620,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 127
+      "ms": 151
     },
     {
       "company": "Deel",
@@ -1628,7 +1628,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 23
+      "ms": 22
     },
     {
       "company": "Visa",
@@ -1636,7 +1636,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 412
+      "ms": 385
     },
     {
       "company": "Publicis Groupe",
@@ -1644,7 +1644,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 362
+      "ms": 348
     },
     {
       "company": "WPP",
@@ -1652,7 +1652,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 333
+      "ms": 342
     },
     {
       "company": "General Catalyst",
@@ -1660,7 +1660,7 @@
       "ok": true,
       "seen": 1,
       "kept": 0,
-      "ms": 32
+      "ms": 23
     },
     {
       "company": "Bessemer Venture Partners",
@@ -1668,7 +1668,7 @@
       "ok": true,
       "seen": 4,
       "kept": 0,
-      "ms": 27
+      "ms": 30
     },
     {
       "company": "Battery Ventures",
@@ -1676,7 +1676,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 24
+      "ms": 26
     },
     {
       "company": "Greycroft",
@@ -1684,7 +1684,7 @@
       "ok": true,
       "seen": 2,
       "kept": 0,
-      "ms": 25
+      "ms": 23
     },
     {
       "company": "Lincoln International",
@@ -1692,7 +1692,7 @@
       "ok": true,
       "seen": 41,
       "kept": 0,
-      "ms": 44
+      "ms": 56
     },
     {
       "company": "Man Group",
@@ -1700,7 +1700,7 @@
       "ok": true,
       "seen": 55,
       "kept": 0,
-      "ms": 68
+      "ms": 61
     },
     {
       "company": "Jane Street",
@@ -1708,7 +1708,7 @@
       "ok": true,
       "seen": 232,
       "kept": 0,
-      "ms": 77
+      "ms": 81
     },
     {
       "company": "Andreessen Horowitz",
@@ -1716,7 +1716,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 10
+      "ms": 46
     },
     {
       "company": "Interpath",
@@ -1724,7 +1724,7 @@
       "ok": true,
       "seen": 22,
       "kept": 0,
-      "ms": 67
+      "ms": 71
     },
     {
       "company": "Riveron",
@@ -1732,7 +1732,7 @@
       "ok": true,
       "seen": 74,
       "kept": 0,
-      "ms": 68
+      "ms": 109
     },
     {
       "company": "KPMG",
@@ -1740,7 +1740,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 113
+      "ms": 100
     },
     {
       "company": "Forvis Mazars",
@@ -1748,7 +1748,7 @@
       "ok": true,
       "seen": 188,
       "kept": 0,
-      "ms": 77
+      "ms": 83
     },
     {
       "company": "Apollo Global Management",
@@ -1756,7 +1756,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 27
+      "ms": 29
     },
     {
       "company": "Fortress Investment Group",
@@ -1764,7 +1764,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 87
+      "ms": 86
     },
     {
       "company": "HPS Investment Partners",
@@ -1772,7 +1772,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 21
+      "ms": 26
     },
     {
       "company": "Atlas Holdings",
@@ -1780,7 +1780,7 @@
       "ok": true,
       "seen": 8,
       "kept": 0,
-      "ms": 15
+      "ms": 42
     }
   ],
   "jobs": [
@@ -1897,13 +1897,15 @@
       "salaryMax": 171000,
       "salaryText": "$145k – $171k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-09-25T13:16:43.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -2059,13 +2061,15 @@
       "salaryMax": 130000,
       "salaryText": "$90k – $130k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-09-24T16:14:44.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -2141,13 +2145,15 @@
       "salaryMax": 112000,
       "salaryText": "$95k – $112k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": true,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "ashby",
       "applyBy": "2026-09-22T22:33:54.415Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -2203,13 +2209,15 @@
       "salaryMax": 100000,
       "salaryText": "$100k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-09-22T18:20:38.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -2285,13 +2293,15 @@
       "salaryMax": 124000,
       "salaryText": "$105k – $124k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-09-21T18:11:54.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -2327,13 +2337,15 @@
       "salaryMax": 195000,
       "salaryText": "$125k – $195k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-09-18T16:38:21.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -2489,13 +2501,15 @@
       "salaryMax": 108000,
       "salaryText": "$108k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
       "applyBy": "2026-09-16T21:11:28.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -2571,13 +2585,15 @@
       "salaryMax": 130900,
       "salaryText": "$131k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-09-15T20:24:28.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -2633,13 +2649,15 @@
       "salaryMax": 105000,
       "salaryText": "$95k – $105k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-09-14T16:45:50.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -2715,13 +2733,15 @@
       "salaryMax": 114434,
       "salaryText": "$87k – $114k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
       "applyBy": "2026-09-11T17:29:26.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -2737,13 +2757,15 @@
       "salaryMax": 120629,
       "salaryText": "$92k – $121k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": true,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-09-11T13:36:58.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -2939,13 +2961,15 @@
       "salaryMax": 129950,
       "salaryText": "$104k – $130k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-09-08T21:50:26.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -3021,13 +3045,15 @@
       "salaryMax": 110000,
       "salaryText": "$110k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": true,
       "j1Friendly": true,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-09-05T06:20:36.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -3083,13 +3109,15 @@
       "salaryMax": 335000,
       "salaryText": "$302k – $335k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "ashby",
       "applyBy": "2026-09-04T16:41:37.064Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -3105,13 +3133,15 @@
       "salaryMax": 150000,
       "salaryText": "$100k – $150k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-09-02T21:09:57.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -3167,13 +3197,15 @@
       "salaryMax": 200000,
       "salaryText": "$108k – $200k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "ashby",
       "applyBy": "2026-09-02T20:22:32.685Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -3209,13 +3241,15 @@
       "salaryMax": 133670,
       "salaryText": "$102k – $134k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": true,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-09-02T13:36:13.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -3331,13 +3365,15 @@
       "salaryMax": 177000,
       "salaryText": "$116k – $177k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "ashby",
       "applyBy": "2026-08-31T20:47:19.474Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -3453,13 +3489,15 @@
       "salaryMax": 192000,
       "salaryText": "$104k – $192k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "ashby",
       "applyBy": "2026-08-28T01:12:02.946Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -3775,13 +3813,15 @@
       "salaryMax": 130000,
       "salaryText": "$110k – $130k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-08-20T19:22:32.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -3937,13 +3977,15 @@
       "salaryMax": 150000,
       "salaryText": "$110k – $150k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-08-14T19:21:39.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -4159,13 +4201,15 @@
       "salaryMax": 133670,
       "salaryText": "$102k – $134k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": true,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-08-11T04:29:39.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -4181,13 +4225,15 @@
       "salaryMax": 132000,
       "salaryText": "$92k – $132k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-08-10T22:41:19.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -4283,13 +4329,15 @@
       "salaryMax": 108000,
       "salaryText": "$108k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-08-07T19:50:05.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -4465,13 +4513,15 @@
       "salaryMax": 100000,
       "salaryText": "$100k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-07-31T13:48:32.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -4967,13 +5017,15 @@
       "salaryMax": 176000,
       "salaryText": "$86k – $176k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "ashby",
       "applyBy": "2026-07-08T15:11:56.824Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -4989,13 +5041,15 @@
       "salaryMax": 114434,
       "salaryText": "$87k – $114k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
       "applyBy": "2026-07-08T14:05:48.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -5071,13 +5125,15 @@
       "salaryMax": 115000,
       "salaryText": "$85k – $115k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
       "applyBy": "2026-07-01T19:24:06.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -5093,13 +5149,15 @@
       "salaryMax": 134200,
       "salaryText": "$122k – $134k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
       "applyBy": "2026-06-26T22:08:06.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -5115,13 +5173,15 @@
       "salaryMax": 125000,
       "salaryText": "$94k – $125k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": true,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-06-25T22:54:15.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -5137,13 +5197,15 @@
       "salaryMax": 126560,
       "salaryText": "$101k – $127k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-06-25T19:02:48.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -5159,13 +5221,15 @@
       "salaryMax": 230000,
       "salaryText": "$140k – $230k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": true,
       "source": "ashby",
       "applyBy": "2026-06-25T17:51:00.028Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -5181,13 +5245,15 @@
       "salaryMax": 132000,
       "salaryText": "$92k – $132k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-06-25T13:56:55.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -5263,13 +5329,15 @@
       "salaryMax": 192000,
       "salaryText": "$104k – $192k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": true,
       "source": "ashby",
       "applyBy": "2026-06-19T18:37:46.619Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -5525,13 +5593,15 @@
       "salaryMax": 125000,
       "salaryText": "$125k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": true,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-05-29T17:09:53.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:16:29.056Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -5567,13 +5637,15 @@
       "salaryMax": 114130,
       "salaryText": "$91k – $114k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-05-27T00:44:29.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -5609,13 +5681,15 @@
       "salaryMax": 130000,
       "salaryText": "$85k – $130k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": true,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-05-20T22:05:09.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -5671,13 +5745,15 @@
       "salaryMax": 100000,
       "salaryText": "$100k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-05-18T19:36:43.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -5693,13 +5769,15 @@
       "salaryMax": 250000,
       "salaryText": "$200k – $250k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
       "applyBy": "2026-05-18T13:25:55.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -5835,13 +5913,15 @@
       "salaryMax": 260000,
       "salaryText": "$240k – $260k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
       "applyBy": "2026-05-04T20:27:25.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -5897,13 +5977,15 @@
       "salaryMax": 125000,
       "salaryText": "$125k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": true,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-04-30T20:55:26.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -5919,13 +6001,15 @@
       "salaryMax": 127150,
       "salaryText": "$97k – $127k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-04-29T01:37:24.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -5961,13 +6045,15 @@
       "salaryMax": 135000,
       "salaryText": "$120k – $135k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
       "applyBy": "2026-04-27T23:47:08.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -6123,13 +6209,15 @@
       "salaryMax": 200000,
       "salaryText": "$145k – $200k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-03-24T20:19:26.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -6205,13 +6293,15 @@
       "salaryMax": 200000,
       "salaryText": "$113k – $200k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": true,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-03-03T23:13:17.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -6227,13 +6317,15 @@
       "salaryMax": 195000,
       "salaryText": "$145k – $195k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": true,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2026-02-23T15:31:47.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -6249,13 +6341,15 @@
       "salaryMax": 145000,
       "salaryText": "$115k – $145k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
       "applyBy": "2026-02-17T20:14:56.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -6411,13 +6505,15 @@
       "salaryMax": 150000,
       "salaryText": "$150k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2025-12-12T17:53:38.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:16:29.056Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -6433,13 +6529,15 @@
       "salaryMax": 181930,
       "salaryText": "$146k – $182k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2025-09-25T17:05:00.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -6455,13 +6553,15 @@
       "salaryMax": 124000,
       "salaryText": "$124k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
       "applyBy": "2025-09-02T14:03:10.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -6477,13 +6577,15 @@
       "salaryMax": 250000,
       "salaryText": "$200k – $250k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
       "applyBy": "2025-08-29T13:23:01.000Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -6519,13 +6621,15 @@
       "salaryMax": 250000,
       "salaryText": "$175k – $250k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": true,
       "strongMatch": true,
       "source": "lever",
       "applyBy": "2023-04-05T03:46:58.030Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
@@ -6541,13 +6645,15 @@
       "salaryMax": 210000,
       "salaryText": "$120k – $210k",
       "hourly": false,
+      "statedDeadline": null,
       "noSponsorship": false,
       "j1Friendly": true,
       "strongMatch": true,
       "source": "lever",
       "applyBy": "2022-09-20T19:31:42.223Z",
+      "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
-      "lastSeen": "2026-09-06T14:52:53.122Z",
+      "lastSeen": "2026-09-06T14:55:51.135Z",
       "active": true
     },
     {
