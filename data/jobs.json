@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T22:52:21.596Z",
+  "generatedAt": "2026-09-06T00:15:53.182Z",
   "salaryFloor": 100000,
   "counts": {
     "total": 221,
@@ -14,7 +14,7 @@
       "ok": true,
       "seen": 142,
       "kept": 21,
-      "ms": 102
+      "ms": 94
     },
     {
       "company": "Datadog",
@@ -22,7 +22,7 @@
       "ok": true,
       "seen": 441,
       "kept": 13,
-      "ms": 324
+      "ms": 699
     },
     {
       "company": "Oscar Health",
@@ -30,7 +30,7 @@
       "ok": true,
       "seen": 283,
       "kept": 13,
-      "ms": 440
+      "ms": 300
     },
     {
       "company": "Brex",
@@ -38,7 +38,7 @@
       "ok": true,
       "seen": 282,
       "kept": 10,
-      "ms": 418
+      "ms": 952
     },
     {
       "company": "Justworks",
@@ -46,7 +46,7 @@
       "ok": true,
       "seen": 98,
       "kept": 7,
-      "ms": 143
+      "ms": 159
     },
     {
       "company": "Alloy",
@@ -54,7 +54,7 @@
       "ok": true,
       "seen": 25,
       "kept": 4,
-      "ms": 81
+      "ms": 64
     },
     {
       "company": "Point72",
@@ -62,7 +62,7 @@
       "ok": true,
       "seen": 231,
       "kept": 4,
-      "ms": 179
+      "ms": 299
     },
     {
       "company": "iCapital",
@@ -70,7 +70,7 @@
       "ok": true,
       "seen": 212,
       "kept": 3,
-      "ms": 331
+      "ms": 297
     },
     {
       "company": "Braze",
@@ -78,7 +78,7 @@
       "ok": true,
       "seen": 281,
       "kept": 3,
-      "ms": 334
+      "ms": 591
     },
     {
       "company": "Betterment",
@@ -86,7 +86,7 @@
       "ok": true,
       "seen": 27,
       "kept": 2,
-      "ms": 165
+      "ms": 366
     },
     {
       "company": "Carta",
@@ -94,7 +94,7 @@
       "ok": true,
       "seen": 61,
       "kept": 2,
-      "ms": 200
+      "ms": 443
     },
     {
       "company": "Gemini",
@@ -102,7 +102,7 @@
       "ok": true,
       "seen": 36,
       "kept": 2,
-      "ms": 77
+      "ms": 86
     },
     {
       "company": "Ethic",
@@ -110,7 +110,7 @@
       "ok": true,
       "seen": 4,
       "kept": 2,
-      "ms": 110
+      "ms": 54
     },
     {
       "company": "Chime",
@@ -118,7 +118,7 @@
       "ok": true,
       "seen": 65,
       "kept": 1,
-      "ms": 234
+      "ms": 481
     },
     {
       "company": "Clear Street",
@@ -126,7 +126,7 @@
       "ok": true,
       "seen": 26,
       "kept": 1,
-      "ms": 178
+      "ms": 381
     },
     {
       "company": "Coinbase",
@@ -134,7 +134,7 @@
       "ok": true,
       "seen": 192,
       "kept": 1,
-      "ms": 305
+      "ms": 335
     },
     {
       "company": "Fireblocks",
@@ -142,7 +142,7 @@
       "ok": true,
       "seen": 71,
       "kept": 1,
-      "ms": 110
+      "ms": 158
     },
     {
       "company": "Squarespace",
@@ -150,7 +150,7 @@
       "ok": true,
       "seen": 28,
       "kept": 1,
-      "ms": 77
+      "ms": 62
     },
     {
       "company": "Peloton",
@@ -158,7 +158,7 @@
       "ok": true,
       "seen": 47,
       "kept": 1,
-      "ms": 349
+      "ms": 108
     },
     {
       "company": "SeatGeek",
@@ -166,7 +166,7 @@
       "ok": true,
       "seen": 20,
       "kept": 1,
-      "ms": 201
+      "ms": 57
     },
     {
       "company": "Yext",
@@ -174,7 +174,7 @@
       "ok": true,
       "seen": 22,
       "kept": 1,
-      "ms": 247
+      "ms": 45
     },
     {
       "company": "Vanta",
@@ -182,7 +182,7 @@
       "ok": true,
       "seen": 111,
       "kept": 1,
-      "ms": 143
+      "ms": 154
     },
     {
       "company": "OpenAI",
@@ -190,7 +190,7 @@
       "ok": true,
       "seen": 779,
       "kept": 1,
-      "ms": 411
+      "ms": 390
     },
     {
       "company": "Affirm",
@@ -198,7 +198,7 @@
       "ok": true,
       "seen": 205,
       "kept": 0,
-      "ms": 304
+      "ms": 608
     },
     {
       "company": "SoFi",
@@ -206,7 +206,7 @@
       "ok": true,
       "seen": 61,
       "kept": 0,
-      "ms": 203
+      "ms": 115
     },
     {
       "company": "Robinhood",
@@ -214,7 +214,7 @@
       "ok": true,
       "seen": 128,
       "kept": 0,
-      "ms": 211
+      "ms": 284
     },
     {
       "company": "Vestwell",
@@ -222,7 +222,7 @@
       "ok": true,
       "seen": 20,
       "kept": 0,
-      "ms": 78
+      "ms": 115
     },
     {
       "company": "MongoDB",
@@ -230,7 +230,7 @@
       "ok": true,
       "seen": 415,
       "kept": 0,
-      "ms": 386
+      "ms": 556
     },
     {
       "company": "Attentive",
@@ -238,7 +238,7 @@
       "ok": true,
       "seen": 37,
       "kept": 0,
-      "ms": 93
+      "ms": 62
     },
     {
       "company": "Movable Ink",
@@ -246,7 +246,7 @@
       "ok": true,
       "seen": 34,
       "kept": 0,
-      "ms": 106
+      "ms": 95
     },
     {
       "company": "Bombas",
@@ -254,7 +254,7 @@
       "ok": true,
       "seen": 13,
       "kept": 0,
-      "ms": 80
+      "ms": 48
     },
     {
       "company": "Dataiku",
@@ -262,7 +262,7 @@
       "ok": true,
       "seen": 24,
       "kept": 0,
-      "ms": 125
+      "ms": 86
     },
     {
       "company": "Celonis",
@@ -270,7 +270,7 @@
       "ok": true,
       "seen": 274,
       "kept": 0,
-      "ms": 275
+      "ms": 483
     },
     {
       "company": "Flatiron Health",
@@ -278,7 +278,7 @@
       "ok": true,
       "seen": 32,
       "kept": 0,
-      "ms": 71
+      "ms": 113
     },
     {
       "company": "Kraken",
@@ -286,7 +286,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 309
+      "ms": 531
     },
     {
       "company": "Varo Bank",
@@ -294,7 +294,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 266
+      "ms": 743
     },
     {
       "company": "Fundrise",
@@ -302,7 +302,7 @@
       "ok": true,
       "seen": 3,
       "kept": 0,
-      "ms": 698
+      "ms": 728
     },
     {
       "company": "Mercury",
@@ -310,7 +310,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 198
+      "ms": 216
     },
     {
       "company": "Deel",
@@ -318,7 +318,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 63
+      "ms": 46
     },
     {
       "company": "Visa",
@@ -326,7 +326,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 491
+      "ms": 454
     },
     {
       "company": "Publicis Groupe",
@@ -334,7 +334,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 466
+      "ms": 412
     },
     {
       "company": "WPP",
@@ -342,7 +342,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 536
+      "ms": 367
     }
   ],
   "jobs": [
@@ -463,7 +463,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -623,7 +623,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -643,7 +643,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -663,7 +663,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -703,7 +703,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -723,7 +723,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -763,7 +763,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -783,7 +783,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -843,7 +843,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -923,7 +923,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -983,7 +983,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1023,7 +1023,7 @@
       "strongMatch": true,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1043,7 +1043,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1083,7 +1083,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1103,7 +1103,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1123,7 +1123,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1143,7 +1143,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1163,7 +1163,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1243,7 +1243,7 @@
       "strongMatch": true,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1263,7 +1263,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1323,7 +1323,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1363,7 +1363,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1403,7 +1403,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1463,7 +1463,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1483,7 +1483,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1503,7 +1503,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1583,7 +1583,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1603,7 +1603,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1663,7 +1663,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1703,7 +1703,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1743,7 +1743,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1763,7 +1763,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1803,7 +1803,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1823,7 +1823,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1843,7 +1843,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1903,7 +1903,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1943,7 +1943,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -1983,7 +1983,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2003,7 +2003,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2063,7 +2063,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2083,7 +2083,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2123,7 +2123,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2143,7 +2143,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2163,7 +2163,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2263,7 +2263,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2343,7 +2343,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2443,7 +2443,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2503,7 +2503,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2563,7 +2563,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2583,7 +2583,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2623,7 +2623,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2643,7 +2643,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2663,7 +2663,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2743,7 +2743,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2763,7 +2763,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2843,7 +2843,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2923,7 +2923,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -2963,7 +2963,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -3043,7 +3043,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -3084,7 +3084,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-05T22:52:21.596Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-oscar-8044288",
@@ -3103,8 +3103,8 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:36:28.970Z",
-      "lastSeen": "2026-09-05T22:45:17.436Z",
-      "active": false
+      "lastSeen": "2026-09-06T00:15:53.182Z",
+      "active": true
     },
     {
       "id": "gh-oscar-8031791",
@@ -3183,7 +3183,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -3263,7 +3263,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -3343,7 +3343,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -3423,7 +3423,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -3443,7 +3443,7 @@
       "strongMatch": true,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -3523,7 +3523,7 @@
       "strongMatch": true,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -3543,7 +3543,7 @@
       "strongMatch": true,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -3563,7 +3563,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -3583,7 +3583,7 @@
       "strongMatch": true,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -3603,7 +3603,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -3683,7 +3683,7 @@
       "strongMatch": true,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -3783,7 +3783,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -3823,7 +3823,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -3883,7 +3883,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -3963,7 +3963,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4003,7 +4003,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4043,7 +4043,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4083,7 +4083,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4183,7 +4183,7 @@
       "strongMatch": true,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4203,7 +4203,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4223,7 +4223,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4263,7 +4263,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4303,7 +4303,7 @@
       "strongMatch": true,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4323,7 +4323,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4363,7 +4363,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4423,7 +4423,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4463,7 +4463,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4523,7 +4523,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4543,7 +4543,7 @@
       "strongMatch": true,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4643,7 +4643,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4683,7 +4683,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4703,7 +4703,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4723,7 +4723,7 @@
       "strongMatch": false,
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
@@ -4743,7 +4743,7 @@
       "strongMatch": false,
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:52:21.596Z",
+      "lastSeen": "2026-09-06T00:15:53.182Z",
       "active": true
     },
     {
