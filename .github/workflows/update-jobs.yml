@@ -93,7 +93,19 @@ jobs:
             echo "No change to data"
           else
             git commit -m "chore: refresh NYC job listings [skip ci]"
-            git push origin HEAD:"$SITE_BRANCH"
+            # A push landing mid-run leaves this commit behind the branch, and a
+            # straight push is rejected — losing the whole scrape over a race.
+            # Rebase onto whatever arrived and retry.
+            for attempt in 1 2 3; do
+              if git push origin HEAD:"$SITE_BRANCH"; then
+                echo "pushed on attempt $attempt"
+                break
+              fi
+              echo "push rejected, rebasing onto origin/$SITE_BRANCH"
+              git fetch origin "$SITE_BRANCH"
+              git rebase "origin/$SITE_BRANCH" || { git rebase --abort; exit 1; }
+              sleep 3
+            done
           fi
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
