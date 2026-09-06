@@ -839,10 +839,7 @@ async function main() {
 // Exported for the unit tests in scripts/test-parsing.mjs.
 export { parseSalary, formatSalary, isNYC, categorize, refine, parseWorkdayPosted, stripHtml, matchesAny, parseStatedDeadline, seniorityLevel, benchmarkSalaries, inferSalary };
 
-const invokedDirectly = process.argv[1] &&
-  resolve(process.argv[1]) === resolve(fileURLToPath(import.meta.url));
-if (invokedDirectly) {
-  // ---------------------------------------------------------------- coverage
+// ---------------------------------------------------------------- coverage
 
 const csvCell = v => {
   const t = v === null || v === undefined ? '' : String(v);
@@ -925,5 +922,8 @@ async function writeCoverageReport({ results, resolved, nextCache, diags }) {
   console.log('\nwritten to data/coverage_report.csv');
 }
 
-main().catch(err => { console.error(err); process.exit(1); });
+const invokedDirectly = process.argv[1] &&
+  resolve(process.argv[1]) === resolve(fileURLToPath(import.meta.url));
+if (invokedDirectly) {
+  main().catch(err => { console.error(err); process.exit(1); });
 }

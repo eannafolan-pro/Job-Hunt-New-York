@@ -4,6 +4,7 @@
 // the scheduled workflow, which reports board health into data/jobs.json.
 
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
 import { parseSalary, isNYC, categorize, refine, parseWorkdayPosted,
   seniorityLevel, benchmarkSalaries, inferSalary } from './fetch-jobs.mjs';
 
@@ -184,6 +185,31 @@ t('refuses on too few comparables', () => {
 });
 t('refuses when there is no comparable bucket at all', () => {
   assert.equal(inferSalary({ category: 'vc', level: 'analyst' }, {}), null);
+});
+
+console.log('\nmodule wiring');
+// A full sweep takes minutes and needs the network, so the unit tests never
+// call main(). That let a ReferenceError ship: writeCoverageReport had been
+// declared inside the `if (invokedDirectly)` block, which is block-scoped in a
+// module, so main() could not see it and the run died after the whole scrape.
+// node --check does not catch that. This does.
+t('every function main() calls resolves at module scope', async () => {
+  const src = await readFile(new URL('./fetch-jobs.mjs', import.meta.url), 'utf8');
+  const body = src.slice(src.indexOf('async function main()'));
+  const mainBody = body.slice(0, body.indexOf('\n}\n'));
+  const called = [...mainBody.matchAll(/\b(?:await\s+)?([a-zA-Z_$][\w$]*)\s*\(/g)]
+    .map(m => m[1])
+    .filter(n => !['if', 'for', 'while', 'switch', 'catch', 'return', 'typeof',
+      'Number', 'String', 'Boolean', 'Date', 'Math', 'Object', 'Array', 'Map',
+      'Set', 'JSON', 'console', 'require', 'new'].includes(n));
+  const guardStart = src.indexOf('if (invokedDirectly) {');
+  for (const name of new Set(called)) {
+    const declared = new RegExp(`^(?:async )?(?:function ${name}\\b|const ${name}\\b|let ${name}\\b)`, 'm');
+    const m = declared.exec(src);
+    if (!m) continue;                    // imported or a method call
+    assert.ok(m.index < guardStart,
+      `${name} is declared inside the invokedDirectly block — main() cannot see it`);
+  }
 });
 
 console.log(`\n${pass} passed, ${fail} failed\n`);
