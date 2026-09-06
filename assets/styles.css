@@ -308,8 +308,7 @@ input[type=range]::-moz-range-thumb {
 .jchip[data-urgency="critical"] .jdays { background: var(--hot); color: #2a0710; }
 .jchip[data-urgency="soon"] .jdays { background: var(--sales); color: #1d1103; }
 
-/* Only genuinely delisted roles get struck through. */
-.jchip.closed { opacity: .35; text-decoration: line-through; }
+/* Delisted roles are dropped by the scraper, so nothing is struck through. */
 
 .more { background: none; border: 0; color: var(--text-faint); font: inherit; font-size: 11px; cursor: pointer; padding: 1px 4px; text-align: left; }
 .more:hover { color: var(--text); }
@@ -514,8 +513,6 @@ footer.foot-note { margin-top: 26px; color: var(--text-faint); font-size: 12px; 
 .card[data-urgency="soon"] { border-color: #5c4426; }
 .card[data-urgency="critical"] .when { color: var(--hot); font-weight: 700; }
 .card[data-urgency="soon"] .when { color: var(--sales); font-weight: 600; }
-.card[data-urgency="gone"] { opacity: .45; }
-.card[data-urgency="gone"] .t { text-decoration: line-through; }
 
 /* A deadline the posting actually states, rather than our estimate. */
 .jchip.stated { border-left-style: double; border-left-width: 5px; }

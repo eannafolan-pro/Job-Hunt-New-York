@@ -138,6 +138,7 @@ export const EXCLUDE_TITLE = [
   // Application Support Engineer", "Senior Growth Marketing Manager"), so these
   // are broader than they first look.
   /\bengineer(ing)?\b/i, /\bdeveloper\b/i, /machine learning/i, /\bdevops\b/i,
+  /\bproduct (manager|operations|owner|lead)\b/i, /\bgtm\b/i,
   /site reliability/i, /\bdesigner\b/i, /\barchitect\b/i, /\bscientist\b/i,
   /\btechnician\b/i, /administrator/i, /business systems/i, /systems analyst/i,
   /solutions consultant/i, /\bsupport\b/i, /\bqa\b/i, /\bux\b/i, /\bui\b/i,

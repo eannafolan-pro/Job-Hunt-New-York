@@ -21,7 +21,6 @@ const OUT = resolve(ROOT, 'data/jobs.json');
 
 const TIMEOUT_MS = 25_000;
 const CONCURRENCY = 6;
-const RETAIN_CLOSED_DAYS = 21;   // matches MAX_POSTING_AGE_DAYS; nothing older survives anyway
 const WORKDAY_DETAIL_CAP = 25;   // per-company cap on follow-up description fetches
 
 // ---------------------------------------------------------------- http
@@ -630,13 +629,11 @@ async function main() {
     }
   }
 
-  // Retain recently-delisted roles so past days on the calendar aren't empty.
-  const cutoff = Date.now() - RETAIN_CLOSED_DAYS * 864e5;
-  for (const [id, prev] of prevById) {
-    if (byId.has(id)) continue;
-    if (new Date(prev.lastSeen || prev.firstSeen || 0).getTime() < cutoff) continue;
-    byId.set(id, { ...prev, active: false });
-  }
+  // Delisted roles are dropped, not retained. Carrying them forward copied old
+  // records through verbatim, so entries scraped under looser filters survived
+  // every later tightening — 143 of 222 retained rows were titles the current
+  // filters reject outright, showing up struck through on the page. A role that
+  // is off the board is also not applicable, so there is nothing to keep.
 
   const jobs = [...byId.values()].sort(
     (a, b) => new Date(b.postedAt) - new Date(a.postedAt));
