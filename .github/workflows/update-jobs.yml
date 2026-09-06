@@ -25,6 +25,12 @@ env:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    # The commit this job leaves the branch on. deploy must publish exactly this
+    # commit: checking out SITE_BRANCH by name resolves to the ref as it was when
+    # the run started, which is BEFORE the data commit below, so the site would
+    # forever publish listings one run stale.
+    outputs:
+      sha: ${{ steps.commit.outputs.sha }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -58,6 +64,7 @@ jobs:
           " >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit refreshed data
+        id: commit
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -68,6 +75,7 @@ jobs:
             git commit -m "chore: refresh NYC job listings [skip ci]"
             git push origin HEAD:"$SITE_BRANCH"
           fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
   deploy:
     needs: scrape
@@ -76,9 +84,11 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # The exact commit scrape produced, not the branch name — see the comment
+      # on the scrape job's outputs.
       - uses: actions/checkout@v4
         with:
-          ref: ${{ env.SITE_BRANCH }}
+          ref: ${{ needs.scrape.outputs.sha }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

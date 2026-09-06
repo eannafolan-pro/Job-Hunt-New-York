@@ -24,7 +24,7 @@ const state = {
   calMode: 'rolling',   // 'rolling' = trailing 6 weeks, 'month' = calendar month
   view: 'cal',
   q: '',
-  cats: new Set(PRIORITY_CATS),
+  cats: new Set(Object.keys(CATEGORY_LABELS)),
   dateBasis: 'applyBy',   // 'applyBy' = forward-looking deadlines, 'postedAt' = when it went live
   minSalary: 100_000,
   strongOnly: false,
@@ -72,17 +72,23 @@ function dayKey(d) {
 }
 function sameDay(a, b) { return dayKey(a) === dayKey(b); }
 
+// The scraper writes applyBy, but a page can be served alongside data written
+// by an older scraper. Derive it rather than trusting the field to exist.
+const APPLY_WINDOW_DAYS = 21;
+
+function applyByOf(job) {
+  if (job.applyBy) return new Date(job.applyBy);
+  return new Date(new Date(job.postedAt).getTime() + APPLY_WINDOW_DAYS * DAY_MS);
+}
+
 // Which date a job sits on. applyBy looks forward; postedAt looks back.
 function jobDate(job) {
-  return new Date(state.dateBasis === 'postedAt'
-    ? job.postedAt
-    : (job.applyBy || job.postedAt));
+  return state.dateBasis === 'postedAt' ? new Date(job.postedAt) : applyByOf(job);
 }
 
 // Days until the apply-by deadline. Negative means it has passed.
 function daysUntilDeadline(job) {
-  const d = new Date(job.applyBy || job.postedAt);
-  return Math.ceil((d - Date.now()) / DAY_MS);
+  return Math.ceil((applyByOf(job) - Date.now()) / DAY_MS);
 }
 
 function daysAgo(iso) {
@@ -259,6 +265,16 @@ function gridRange() {
 function renderCalendar() {
   const jobs = visibleJobs();
   const byDay = groupByDay(jobs);
+
+  // An empty month grid gives the reader nothing to act on; say why.
+  const notice = $('#cal-empty');
+  if (notice) notice.remove();
+  if (!jobs.length) {
+    const box = emptyState();
+    box.id = 'cal-empty';
+    box.style.marginBottom = '14px';
+    $('#view-cal').prepend(box);
+  }
   const { start: gridStart, cells, monthOf } = gridRange();
 
   if (state.calMode === 'rolling') {
@@ -340,11 +356,19 @@ function jobChip(job) {
 // ---------------------------------------------------------------- render: list
 
 function renderList() {
-  const jobs = visibleJobs().slice().sort((a, b) =>
-    state.dateBasis === 'applyBy'
-      // Soonest deadline first, priority lanes ahead of the rest.
-      ? Number(b.priority) - Number(a.priority) || jobDate(a) - jobDate(b)
-      : new Date(b.postedAt) - new Date(a.postedAt));
+  const jobs = visibleJobs().slice().sort((a, b) => {
+    if (state.dateBasis !== 'applyBy') {
+      return new Date(b.postedAt) - new Date(a.postedAt);
+    }
+    // Anything still open outranks a lapsed deadline — a passed date is never
+    // the most useful thing to show first, priority lane or not. Then the
+    // priority lanes, then soonest deadline.
+    const aPassed = daysUntilDeadline(a) < 0;
+    const bPassed = daysUntilDeadline(b) < 0;
+    return Number(aPassed) - Number(bPassed)
+      || Number(b.priority) - Number(a.priority)
+      || jobDate(a) - jobDate(b);
+  });
 
   const box = $('#list');
   box.replaceChildren();
@@ -359,6 +383,7 @@ function renderList() {
     const main = el('div', 'main');
     main.append(el('div', 't', job.title));
 
+    const dl = daysUntilDeadline(job);
     const meta = el('div', 'm');
     meta.append(el('span', null, job.company));
     meta.append(el('span', null, job.location));
@@ -376,7 +401,6 @@ function renderList() {
 
     const right = el('div', 'right');
     right.append(el('div', 'sal', job.salaryText || '—'));
-    const dl = daysUntilDeadline(job);
     right.append(el('div', 'when', state.dateBasis === 'applyBy'
       ? (dl < 0 ? 'deadline passed' : dl === 0 ? 'apply today' : `${dl}d left`)
       : relativeDay(job.postedAt)));
@@ -392,20 +416,64 @@ function renderList() {
   }
 }
 
+function resetFilters() {
+  state.cats = new Set(Object.keys(CATEGORY_LABELS));
+  state.q = '';
+  state.minSalary = 100_000;
+  state.strongOnly = state.j1Only = state.hideNoSpon = state.savedOnly = false;
+  state.openOnly = true;
+  $('#q').value = '';
+  $('#sal').value = 100_000;
+  $('#salout').textContent = money(100_000);
+  for (const [sel, key] of [['#f-strong', 'strongOnly'], ['#f-j1', 'j1Only'],
+    ['#f-spon', 'hideNoSpon'], ['#f-saved', 'savedOnly'], ['#f-open', 'openOnly']]) {
+    $(sel).checked = state[key];
+    store.write(`njc.${key}`, state[key]);
+  }
+  store.write('njc.cats', [...state.cats]);
+  store.write('njc.minSalary', state.minSalary);
+  render();
+}
+
+// Explains an empty result rather than leaving a blank grid, and says which
+// filter is responsible — an earlier build showed nothing at all when the
+// selected lanes happened to match no jobs.
 function emptyState() {
   const box = el('div', 'empty');
-  const hasData = (state.data.jobs || []).length > 0;
-  if (hasData) {
-    box.append(el('h3', null, 'No roles match these filters'));
-    box.append(el('p', null, 'Try lowering the salary floor, clearing the search box, or re-enabling a category.'));
-  } else {
+  const total = (state.data.jobs || []).length;
+
+  if (!total) {
     box.append(el('h3', null, 'No jobs yet'));
     const p = el('p');
     p.append(document.createTextNode('The scraper has not run yet. Trigger the '));
     p.append(el('code', null, 'Update NYC jobs'));
     p.append(document.createTextNode(' workflow in the repository’s Actions tab, or wait for the next 6-hourly run.'));
     box.append(p);
+    return box;
   }
+
+  // Work out which filter is doing the damage.
+  const lanes = new Set(state.data.jobs.map(j => j.category));
+  const laneMiss = ![...state.cats].some(c => lanes.has(c));
+  const reasons = [];
+  if (laneMiss) {
+    reasons.push(`none of the selected lanes (${[...state.cats].map(c => CATEGORY_LABELS[c] || c).join(', ')}) exist in the current data`);
+  }
+  if (state.q) reasons.push(`the search “${state.q}” matches nothing`);
+  if (state.minSalary > 100_000) reasons.push(`the salary floor is set to ${money(state.minSalary)}`);
+  if (state.strongOnly) reasons.push('“strong match only” is on');
+  if (state.j1Only) reasons.push('“J-1 friendly” is on');
+  if (state.savedOnly) reasons.push('“saved only” is on');
+
+  box.append(el('h3', null, `No roles match — ${total} in the data`));
+  box.append(el('p', null, reasons.length
+    ? `Nothing gets through because ${reasons.join('; and ')}.`
+    : 'Every current role is outside the dates shown. Try the "Date posted" view or a wider range.'));
+
+  const btn = el('button', 'btn', 'Reset all filters');
+  btn.style.cssText = 'margin-top:14px;max-width:200px';
+  btn.addEventListener('click', resetFilters);
+  box.append(btn);
   return box;
 }
 
@@ -449,10 +517,8 @@ function openDrawer(job) {
   pair('Salary', job.salaryText ? job.salaryText + (job.hourly ? ' (from hourly rate)' : '') : 'not stated');
   pair('Posted', `${new Date(job.postedAt).toLocaleDateString('en-US', { dateStyle: 'medium' })} · ${relativeDay(job.postedAt)}`);
   const dld = daysUntilDeadline(job);
-  pair('Apply by', job.applyBy
-    ? `${new Date(job.applyBy).toLocaleDateString('en-US', { dateStyle: 'medium' })} · ` +
-      (dld < 0 ? 'passed' : dld === 0 ? 'today' : `${dld} days left`)
-    : '—');
+  pair('Apply by', `${applyByOf(job).toLocaleDateString('en-US', { dateStyle: 'medium' })} · ` +
+    (dld < 0 ? 'passed' : dld === 0 ? 'today' : `${dld} days left`));
   pair('Category', CATEGORY_LABELS[job.category]);
   pair('Source', job.source);
   pair('Status', job.active === false ? 'Delisted from the board' : 'Open');
