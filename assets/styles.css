@@ -517,3 +517,40 @@ footer.foot-note { margin-top: 26px; color: var(--text-faint); font-size: 12px; 
 /* A deadline the posting actually states, rather than our estimate. */
 .jchip.stated { border-left-style: double; border-left-width: 5px; }
 .tag.stated { border-color: var(--ops); color: var(--ops); }
+
+/* ---------------------------------------------------------------- recruiters */
+
+.recintro { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; margin-bottom: 14px; }
+.recintro h2 { margin: 0 0 6px; font-size: 17px; letter-spacing: -0.01em; }
+.recintro p { margin: 0 0 12px; color: var(--text-faint); font-size: 12.5px; line-height: 1.6; max-width: 76ch; }
+
+.addrow { display: flex; flex-wrap: wrap; gap: 7px; }
+.addrow input {
+  flex: 1 1 170px; min-width: 0; background: var(--surface-2);
+  border: 1px solid var(--border-bright); border-radius: var(--radius-sm);
+  color: var(--text); font: inherit; font-size: 12.5px; padding: 8px 10px; outline: none;
+}
+.addrow input:focus { border-color: var(--finance); }
+.addrow .btn { flex: 0 0 auto; max-width: 150px; padding: 8px 16px; }
+
+.recgroup h4 {
+  margin: 18px 0 8px; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.07em; color: var(--text-faint); font-weight: 600;
+}
+.recgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 8px; }
+
+.reccard {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 12px 14px; min-width: 0;
+}
+.reccard.mine { border-color: #4a4426; background: #17160f; }
+.reccard .rname { font-weight: 600; font-size: 13.5px; }
+.reccard .rfocus { color: var(--text-faint); font-size: 11.5px; margin-top: 3px; line-height: 1.5; }
+.reccard .rlinks { display: flex; gap: 8px; margin-top: 9px; flex-wrap: wrap; align-items: center; }
+.reccard a {
+  font-size: 11.5px; color: var(--finance); text-decoration: none;
+  border: 1px solid var(--border-bright); border-radius: 4px; padding: 3px 8px;
+}
+.reccard a:hover { border-color: var(--finance); }
+.reccard .del { margin-left: auto; background: none; border: 0; color: var(--text-faint); cursor: pointer; font-size: 15px; line-height: 1; }
+.reccard .del:hover { color: var(--hot); }

@@ -1,0 +1,20 @@
+{
+  "note": "Search firms active in finance, investment banking and restructuring recruitment with a New York presence. Firms rather than individuals: a firm's specialism is publicly stated and checkable, whereas naming a person and asserting what they place risks being wrong about a real individual. Each row links to a LinkedIn people search so you can find that firm's actual recruiters, and you can pin your own contacts alongside them.",
+  "verify": "Confirm current focus before relying on any row — desks and coverage change.",
+  "firms": [
+    { "name": "Selby Jennings", "focus": "Banking & financial services; IB, PE, credit desks", "site": "selbyjennings.com" },
+    { "name": "Options Group", "focus": "Financial services executive search, capital markets", "site": "optionsgroup.com" },
+    { "name": "Sheffield Haworth", "focus": "Financial services, advisory and investment management", "site": "sheffieldhaworth.com" },
+    { "name": "Glocap Search", "focus": "Private equity, hedge funds, finance roles in NYC", "site": "glocap.com" },
+    { "name": "Atlas Search", "focus": "Accounting and finance, NYC-focused", "site": "atlas-search.com" },
+    { "name": "Long Ridge Partners", "focus": "Investment banking, credit and investment roles", "site": "longridgepartners.com" },
+    { "name": "Amity Search Partners", "focus": "Private equity and investment banking placement", "site": "amitysearch.com" },
+    { "name": "Bay Street Advisors", "focus": "Financial services, investment and advisory search", "site": "baystreetadvisors.com" },
+    { "name": "Dartmouth Partners", "focus": "Finance, PE and advisory; UK origin with a NY desk", "site": "dartmouthpartners.com" },
+    { "name": "GQR", "focus": "Global search including financial services", "site": "gqrgm.com" },
+    { "name": "JW Michaels & Co", "focus": "Finance, legal and compliance search in NYC", "site": "jwmichaels.com" },
+    { "name": "Whitney Partners", "focus": "Financial services search, capital markets", "site": "whitneypartners.com" },
+    { "name": "Prospect Rock Partners", "focus": "Finance and accounting search, New York", "site": "prospectrockpartners.com" },
+    { "name": "Michael Page", "focus": "Generalist with a dedicated banking and finance desk", "site": "michaelpage.com" }
+  ]
+}

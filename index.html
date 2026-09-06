@@ -32,16 +32,18 @@
 
   <section class="controls">
     <div class="row">
-      <div class="search">
+      <div class="search" id="searchwrap">
         <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
         <input type="search" id="q" placeholder="Search title, company or location…" autocomplete="off">
       </div>
       <div class="viewtabs" role="group" aria-label="View">
         <button id="tab-cal" aria-pressed="true">Calendar</button>
         <button id="tab-list" aria-pressed="false">List</button>
+        <button id="tab-rec" aria-pressed="false">Recruiters</button>
       </div>
     </div>
 
+    <div id="jobfilters">
     <div class="row">
       <div class="chips" id="cats"></div>
     </div>
@@ -59,6 +61,7 @@
         <label class="toggle"><input type="checkbox" id="f-saved"> Saved only</label>
         <label class="toggle"><input type="checkbox" id="f-open" checked> Still open only</label>
       </div>
+    </div>
     </div>
   </section>
 
@@ -100,6 +103,21 @@
   </section>
 
   <section id="view-list" hidden><div class="list" id="list"></div></section>
+
+  <section id="view-rec" hidden>
+    <div class="recintro">
+      <h2>Recruiters &amp; search firms</h2>
+      <p id="recnote"></p>
+      <div class="addrow">
+        <input id="rec-name" placeholder="Name — e.g. Danny O'Neill" autocomplete="off">
+        <input id="rec-firm" placeholder="Firm or focus" autocomplete="off">
+        <input id="rec-url" placeholder="LinkedIn or email (optional)" autocomplete="off">
+        <button id="rec-add" class="btn">Add contact</button>
+      </div>
+    </div>
+    <div id="reccontacts"></div>
+    <div id="recfirms"></div>
+  </section>
 
   <details class="sources" id="manual-panel">
     <summary>Manual checklist <span id="manualsummary"></span></summary>

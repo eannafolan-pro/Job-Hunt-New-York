@@ -20,6 +20,7 @@ const DAY_MS = 86_400_000;
 
 const state = {
   data: { jobs: [], sources: [], counts: {} },
+  recruiters: null,
   month: startOfMonth(new Date()),
   calMode: 'rolling',   // 'rolling' = trailing 6 weeks, 'month' = calendar month
   view: 'cal',
@@ -52,6 +53,8 @@ const store = {
 let saved = new Set(store.read('njc.saved', []));
 // { [firm name]: ISO date it was last checked }
 let checkedFirms = store.read('njc.checkedFirms', {});
+// Recruiters the user adds themselves — kept in this browser only.
+let myRecruiters = store.read('njc.recruiters', []);
 let applied = new Set(store.read('njc.applied', []));
 
 const persistSaved = () => store.write('njc.saved', [...saved]);
@@ -290,6 +293,83 @@ function renderManual() {
     g.append(list);
     grid.append(g);
   }
+}
+
+// ---------------------------------------------------------------- recruiters
+
+// A LinkedIn people search scoped to a firm surfaces its actual recruiters,
+// which is the honest way to get names: the firm's specialism is publicly
+// stated, whereas asserting what a named individual places is not something
+// this page can verify.
+function linkedInPeopleSearch(firm) {
+  return 'https://www.linkedin.com/search/results/people/?' + new URLSearchParams({
+    keywords: `${firm} recruiter restructuring investment banking New York`,
+  });
+}
+
+function renderRecruiters() {
+  const data = state.recruiters;
+  $('#recnote').textContent = data?.note || '';
+
+  // The user's own contacts first — those are the ones that matter.
+  const mine = $('#reccontacts');
+  mine.replaceChildren();
+  if (myRecruiters.length) {
+    const g = el('div', 'recgroup');
+    g.append(el('h4', null, `Your contacts (${myRecruiters.length})`));
+    const grid = el('div', 'recgrid');
+    myRecruiters.forEach((r, i) => grid.append(recruiterCard(r, i)));
+    g.append(grid);
+    mine.append(g);
+  }
+
+  const box = $('#recfirms');
+  box.replaceChildren();
+  const firms = data?.firms || [];
+  if (!firms.length) return;
+  const g = el('div', 'recgroup');
+  g.append(el('h4', null, `Search firms (${firms.length}) — ${data.verify || ''}`));
+  const grid = el('div', 'recgrid');
+  for (const f of firms) grid.append(recruiterCard(f));
+  g.append(grid);
+  box.append(g);
+}
+
+function recruiterCard(r, myIndex) {
+  const card = el('div', 'reccard' + (myIndex === undefined ? '' : ' mine'));
+  card.append(el('div', 'rname', r.name));
+  if (r.focus) card.append(el('div', 'rfocus', r.focus));
+
+  const links = el('div', 'rlinks');
+  if (r.url) {
+    const a = el('a', null, r.url.includes('linkedin') ? 'LinkedIn' : 'Contact');
+    a.href = r.url.startsWith('http') ? r.url : (r.url.includes('@') ? `mailto:${r.url}` : `https://${r.url}`);
+    a.target = '_blank'; a.rel = 'noopener noreferrer';
+    links.append(a);
+  }
+  if (myIndex === undefined) {
+    const li = el('a', null, 'Find their recruiters');
+    li.href = linkedInPeopleSearch(r.name);
+    li.target = '_blank'; li.rel = 'noopener noreferrer';
+    links.append(li);
+    if (r.site) {
+      const w = el('a', null, 'Website');
+      w.href = `https://${r.site}`;
+      w.target = '_blank'; w.rel = 'noopener noreferrer';
+      links.append(w);
+    }
+  } else {
+    const del = el('button', 'del', '×');
+    del.title = 'Remove';
+    del.addEventListener('click', () => {
+      myRecruiters.splice(myIndex, 1);
+      store.write('njc.recruiters', myRecruiters);
+      renderRecruiters();
+    });
+    links.append(del);
+  }
+  card.append(links);
+  return card;
 }
 
 function renderSources() {
@@ -776,7 +856,9 @@ function render() {
   renderCategoryChips();
   renderStats();
   renderActNow();
-  if (state.view === 'cal') renderCalendar(); else renderList();
+  if (state.view === 'rec') renderRecruiters();
+  else if (state.view === 'cal') renderCalendar();
+  else renderList();
   renderManual();
   renderSources();
 }
@@ -805,11 +887,20 @@ function setCalMode(mode) {
 
 function setView(view) {
   state.view = view;
-  $('#tab-cal').setAttribute('aria-pressed', view === 'cal');
-  $('#tab-list').setAttribute('aria-pressed', view === 'list');
+  for (const [id, v] of [['#tab-cal', 'cal'], ['#tab-list', 'list'], ['#tab-rec', 'rec']]) {
+    $(id).setAttribute('aria-pressed', view === v);
+  }
   $('#view-cal').hidden = view !== 'cal';
   $('#view-list').hidden = view !== 'list';
+  $('#view-rec').hidden = view !== 'rec';
   $('.calbar').style.display = view === 'cal' ? '' : 'none';
+  // Hide the job filters on the recruiters tab — but NOT the whole controls
+  // panel, which is where the view tabs live. Hiding it stranded the reader on
+  // the tab with no way back.
+  $('#jobfilters').style.display = view === 'rec' ? 'none' : '';
+  $('#searchwrap').style.visibility = view === 'rec' ? 'hidden' : '';
+  $('#stats').style.display = view === 'rec' ? 'none' : '';
+  $('#actnow').style.display = view === 'rec' ? 'none' : '';
   store.write('njc.view', view);
   render();
 }
@@ -847,6 +938,20 @@ function bind() {
 
   $('#tab-cal').addEventListener('click', () => setView('cal'));
   $('#tab-list').addEventListener('click', () => setView('list'));
+  $('#tab-rec').addEventListener('click', () => setView('rec'));
+
+  $('#rec-add').addEventListener('click', () => {
+    const name = $('#rec-name').value.trim();
+    if (!name) { $('#rec-name').focus(); return; }
+    myRecruiters.push({
+      name,
+      focus: $('#rec-firm').value.trim(),
+      url: $('#rec-url').value.trim(),
+    });
+    store.write('njc.recruiters', myRecruiters);
+    for (const id of ['#rec-name', '#rec-firm', '#rec-url']) $(id).value = '';
+    renderRecruiters();
+  });
 
   $('#prev').addEventListener('click', () => {
     state.month = new Date(state.month.getFullYear(), state.month.getMonth() - 1, 1);
@@ -893,6 +998,11 @@ async function boot() {
     const res = await fetch(`data/jobs.json?t=${Date.now()}`, { cache: 'no-store' });
     if (res.ok) state.data = await res.json();
   } catch { /* fall through to the empty state */ }
+
+  try {
+    const res = await fetch(`data/recruiters.json?t=${Date.now()}`, { cache: 'no-store' });
+    if (res.ok) state.recruiters = await res.json();
+  } catch { /* the tab still works with the user's own contacts */ }
 
   setDateBasis(state.dateBasis);
   setCalMode(state.calMode);
