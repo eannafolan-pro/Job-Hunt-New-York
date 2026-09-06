@@ -125,7 +125,12 @@ const money = n => n >= 1000 ? `$${Math.round(n / 1000)}k` : `$${n}`;
 function visibleJobs() {
   const q = state.q.trim().toLowerCase();
   return state.data.jobs.filter(j => {
-    if (state.openOnly && j.active === false) return false;
+    if (state.openOnly) {
+      // "Open" means still on the board AND the apply-by window has not lapsed.
+      // A role you can no longer realistically apply to is not an open role.
+      if (j.active === false) return false;
+      if (daysUntilDeadline(j) < 0) return false;
+    }
     if (!state.cats.has(j.category)) return false;
     if ((j.salaryMax ?? 0) < state.minSalary) return false;
     if (state.strongOnly && !j.strongMatch) return false;
@@ -194,7 +199,7 @@ function renderStats() {
 function renderCategoryChips() {
   const counts = {};
   for (const j of state.data.jobs) {
-    if (state.openOnly && j.active === false) continue;
+    if (state.openOnly && (j.active === false || daysUntilDeadline(j) < 0)) continue;
     counts[j.category] = (counts[j.category] || 0) + 1;
   }
   const box = $('#cats');
@@ -334,6 +339,68 @@ function gridRange() {
     cells: 42,
     monthOf: first.getMonth(),
   };
+}
+
+// Two short lists to open the page on: what closes soonest, and what has only
+// just gone live.
+//
+// On "under 20 applicants": no public ATS feed exposes an applicant count.
+// Greenhouse, Lever, Ashby, SmartRecruiters and Workday all omit it; the number
+// people recognise is LinkedIn's, and LinkedIn blocks automated access. Days
+// since posting is the honest proxy — a role listed 24 hours ago has a fraction
+// of the applicants it will have in a fortnight.
+const FRESH_DAYS = 3;
+
+function renderActNow() {
+  const box = $('#actnow');
+  box.replaceChildren();
+
+  const open = visibleJobs().filter(j => j.active !== false && daysUntilDeadline(j) >= 0);
+  if (!open.length) { box.hidden = true; return; }
+  box.hidden = false;
+
+  const closing = open.filter(j => daysUntilDeadline(j) <= 7)
+    .sort((a, b) => daysUntilDeadline(a) - daysUntilDeadline(b));
+  const fresh = open.filter(j => (daysAgo(j.postedAt) ?? 99) <= FRESH_DAYS)
+    .sort((a, b) => new Date(b.postedAt) - new Date(a.postedAt));
+
+  const wrap = el('div', 'actgrid');
+  wrap.append(actColumn('Closing this week', closing,
+    'Apply-by date within 7 days.', 'urgent'));
+  wrap.append(actColumn(`Just posted — fewest applicants`, fresh,
+    `Live for ${FRESH_DAYS} days or less. No job board publishes an applicant count, so recency is the closest honest signal.`, 'fresh'));
+  box.append(wrap);
+}
+
+function actColumn(title, jobs, note, kind) {
+  const col = el('div', 'actcol ' + kind);
+  const head = el('div', 'acthead');
+  head.append(el('h3', null, title));
+  head.append(el('span', 'actcount', String(jobs.length)));
+  col.append(head);
+  col.append(el('p', 'actnote', note));
+
+  if (!jobs.length) {
+    col.append(el('div', 'actempty', 'Nothing right now — check back in a day or two.'));
+    return col;
+  }
+
+  for (const job of jobs.slice(0, 6)) {
+    const row = el('button', 'actrow');
+    row.dataset.cat = job.category;
+    const main = el('div', 'actmain');
+    main.append(el('div', 'acttitle', job.title));
+    main.append(el('div', 'actmeta', `${job.company} · ${job.salaryText || 'salary n/a'}`));
+    row.append(main);
+    const d = daysUntilDeadline(job);
+    row.append(el('div', 'actwhen', kind === 'urgent'
+      ? (d === 0 ? 'today' : `${d}d`)
+      : relativeDay(job.postedAt)));
+    row.addEventListener('click', () => openDrawer(job));
+    col.append(row);
+  }
+  if (jobs.length > 6) col.append(el('div', 'actempty', `+${jobs.length - 6} more in the list below`));
+  return col;
 }
 
 function renderCalendar() {
@@ -667,6 +734,7 @@ function render() {
   renderCountdown();
   renderCategoryChips();
   renderStats();
+  renderActNow();
   if (state.view === 'cal') renderCalendar(); else renderList();
   renderManual();
   renderSources();

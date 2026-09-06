@@ -434,3 +434,41 @@ footer.foot-note { margin-top: 26px; color: var(--text-faint); font-size: 12px; 
 .mrow .mdate { font-family: var(--mono); font-size: 10.5px; color: var(--text-faint); flex: none; }
 .mrow .mwhy { display: block; color: var(--text-faint); font-size: 10.5px; margin-top: 1px;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ---------------------------------------------------------------- act now */
+
+.actgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 12px; margin-bottom: 18px; }
+
+.actcol {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 14px 15px 12px;
+}
+.actcol.urgent { border-color: #5c2b38; }
+.actcol.fresh  { border-color: #2b4a5c; }
+
+.acthead { display: flex; align-items: baseline; gap: 9px; }
+.acthead h3 { margin: 0; font-size: 14px; font-weight: 650; letter-spacing: -0.01em; }
+.actcount { font-family: var(--mono); font-size: 12px; color: var(--text-faint); }
+.actcol.urgent .actcount { color: var(--hot); }
+.actcol.fresh .actcount { color: var(--finance); }
+
+.actnote { margin: 4px 0 10px; font-size: 11.5px; line-height: 1.5; color: var(--text-faint); }
+
+.actrow {
+  display: flex; align-items: center; gap: 10px; width: 100%; text-align: left;
+  background: var(--surface-2); border: 0; border-left: 3px solid var(--text-faint);
+  border-radius: 4px; color: var(--text); font: inherit;
+  padding: 7px 10px; margin-bottom: 5px; cursor: pointer;
+}
+.actrow:hover { background: var(--surface-3); }
+.actrow[data-cat="ib"] { border-left-color: var(--finance); }
+.actrow[data-cat="vc"] { border-left-color: var(--hot); }
+.actrow[data-cat="finance"] { border-left-color: var(--ops); }
+.actrow[data-cat="ops_strategy"] { border-left-color: var(--sales); }
+
+.actmain { flex: 1; min-width: 0; }
+.acttitle { font-size: 12.5px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.actmeta { font-size: 11px; color: var(--text-faint); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.actwhen { font-family: var(--mono); font-size: 11.5px; color: var(--gold); flex: none; }
+
+.actempty { font-size: 11.5px; color: var(--text-faint); padding: 6px 2px; }
