@@ -63,15 +63,35 @@ jobs:
             console.log(out.join('\n'));
           " >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Coverage summary
+        run: |
+          node -e "
+            const fs = require('fs');
+            const rows = fs.readFileSync('data/coverage_report.csv','utf8').trim().split('\n').slice(1);
+            const by = {};
+            for (const line of rows) {
+              const m = line.match(/,([a-z_]+),[^,]*$/);
+              const o = m ? m[1] : 'unknown';
+              (by[o] ||= []).push(line.split(',')[0]);
+            }
+            const out = ['## Target coverage (' + rows.length + ' companies)', '', '| outcome | count |', '|---|---|'];
+            for (const [k,v] of Object.entries(by)) out.push('| ' + k + ' | ' + v.length + ' |');
+            for (const [k,v] of Object.entries(by)) {
+              if (k === 'ok') continue;
+              out.push('', '### ' + k, v.join(', '));
+            }
+            console.log(out.join('\n'));
+          " >> "$GITHUB_STEP_SUMMARY"
+
       - name: Commit refreshed data
         id: commit
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- data/jobs.json; then
-            echo "No change to data/jobs.json"
+          if git diff --quiet -- data/jobs.json data/coverage_report.csv; then
+            echo "No change to data"
           else
-            git add data/jobs.json
+            git add data/jobs.json data/coverage_report.csv
             git commit -m "chore: refresh NYC job listings [skip ci]"
             git push origin HEAD:"$SITE_BRANCH"
           fi

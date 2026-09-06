@@ -378,7 +378,7 @@ const DISCOVERY_TTL_DAYS = 7;   // how long to trust a miss before trying again
 // trustworthy if it was produced by the current logic: adding the Workday step
 // while 87 firms sat cached as "checked today" meant none of them were ever
 // probed for it. Anything recorded under an older version is re-probed.
-const DISCOVERY_VERSION = 2;
+const DISCOVERY_VERSION = 3;   // 3: instrumented discovery for the coverage report
 
 function slugCandidates(target) {
   const root = target.domain.split('.')[0];
@@ -406,11 +406,37 @@ const WORKDAY_RE = /([a-z0-9][a-z0-9-]*)\.(wd\d+)\.myworkdayjobs\.com\/(?:[a-z]{
 
 const CAREERS_PATHS = ['/careers', '/en/careers', '/careers/jobs', '/about/careers', '/join-us', '/en-us/careers'];
 
-async function discoverWorkday(target) {
+// HTTP status out of the Error thrown by fetchJSON/fetchText, or 0 for a
+// transport failure. Needed so the coverage report can tell a 403 apart from a
+// 404 — one is a block, the other is a wrong guess.
+function statusOf(err) {
+  const m = /HTTP (\d{3})/.exec(err?.message || '');
+  if (m) return +m[1];
+  return err?.name === 'AbortError' ? 0 : 0;
+}
+
+const BLOCKING_STATUSES = new Set([401, 403, 429, 451]);
+
+// Visible text left after stripping markup — used to tell a real careers page
+// from a single-page-app shell that renders its jobs in JavaScript.
+function visibleTextLength(html) {
+  return stripHtml(html).length;
+}
+
+async function discoverWorkday(target, diag) {
   for (const path of CAREERS_PATHS) {
     let page;
-    try { page = await fetchText(`https://${target.domain}${path}`); }
-    catch { continue; }
+    try {
+      page = await fetchText(`https://${target.domain}${path}`);
+      diag.careersUrl = page.url;
+      diag.careersStatus = 200;
+      diag.htmlText = Math.max(diag.htmlText || 0, visibleTextLength(page.body));
+    } catch (err) {
+      const st = statusOf(err);
+      diag.statuses.push(`${path}:${st || 'net'}`);
+      if (BLOCKING_STATUSES.has(st)) diag.blocked = true;
+      continue;
+    }
 
     // The redirect target itself, then anything linked in the page.
     const hit = page.url.match(WORKDAY_RE) || page.body.match(WORKDAY_RE);
@@ -418,34 +444,66 @@ async function discoverWorkday(target) {
 
     const [, tenant, wd, site] = hit;
     const host = `${tenant}.${wd}.myworkdayjobs.com`;
+    const endpoint = `https://${host}/wday/cxs/${tenant}/${site}/jobs`;
     try {
-      const probe = await fetchJSON(`https://${host}/wday/cxs/${tenant}/${site}/jobs`, {
+      const probe = await fetchJSON(endpoint, {
         method: 'POST',
         body: { appliedFacets: {}, limit: 1, offset: 0, searchText: '' },
       });
-      if (Array.isArray(probe?.jobPostings)) return { ats: 'workday', token: site, host, tenant, site };
-    } catch { /* found the host but the site name was wrong — try the next path */ }
+      if (Array.isArray(probe?.jobPostings)) {
+        return { ats: 'workday', token: site, host, tenant, site, endpoint };
+      }
+    } catch (err) {
+      const st = statusOf(err);
+      diag.statuses.push(`workday:${st}`);
+      if (BLOCKING_STATUSES.has(st)) diag.blocked = true;
+    }
   }
   return null;
 }
 
+// Returns { hit, diag }. diag is always populated, even on total failure — the
+// point of the coverage report is that nothing fails silently.
 async function discoverAts(target) {
+  const diag = { statuses: [], careersUrl: null, careersStatus: null, htmlText: 0, blocked: false };
+
   for (const slug of slugCandidates(target)) {
     for (const [ats, url] of Object.entries(PROBES)) {
+      const endpoint = url(slug);
       try {
-        const data = await fetchJSON(url(slug));
+        const data = await fetchJSON(endpoint);
         const found = ats === 'lever' ? Array.isArray(data) : Array.isArray(data?.jobs);
-        if (found) return { ats, token: slug };
-      } catch { /* wrong platform or wrong slug — keep going */ }
+        if (found) return { hit: { ats, token: slug, endpoint }, diag };
+      } catch (err) {
+        const st = statusOf(err);
+        if (BLOCKING_STATUSES.has(st)) diag.blocked = true;
+        if (st && st !== 404) diag.statuses.push(`${ats}/${slug}:${st}`);
+      }
     }
   }
-  return discoverWorkday(target);
+  const hit = await discoverWorkday(target, diag);
+  return { hit, diag };
+}
+
+// Classify what happened to one company, for the coverage report.
+function outcomeFor({ hit, diag, raw, matched }) {
+  if (hit) {
+    if (matched > 0) return 'ok';
+    return 'no_matching_roles';
+  }
+  if (diag.blocked) return 'blocked';
+  if (diag.careersStatus === 200) {
+    // Reached a careers page but found no postings source in it.
+    return diag.htmlText < 500 ? 'js_only' : 'no_ats_found';
+  }
+  return 'careers_page_missing';
 }
 
 async function resolveTargets(cache) {
   const now = Date.now();
   const resolved = [];
   const nextCache = {};
+  const diags = new Map();   // company name -> discovery diagnostics
 
   const stale = t => {
     const hit = cache[t.name];
@@ -458,17 +516,28 @@ async function resolveTargets(cache) {
   const toProbe = TARGETS.filter(stale);
   // Probing hits the same few hosts, so keep it gentler than the main sweep.
   const found = await pool(toProbe, 4, async (t) => {
-    const hit = await discoverAts(t);
+    const { hit, diag } = await discoverAts(t);
     if (hit) console.log(`  found ${t.name.padEnd(30)} ${hit.ats}/${hit.token}`);
-    return { name: t.name, ...(hit || { ats: null }) };
+    return { name: t.name, hit, diag };
   });
 
   const probed = new Map(found.map(f => [f.name, f]));
   for (const t of TARGETS) {
-    const hit = probed.get(t.name) || cache[t.name];
+    const fresh = probed.get(t.name);
+    const cached = cache[t.name];
+    const hit = fresh?.hit || (cached?.ats ? { ...cached } : null);
+    // A cached row carries no diagnostics; say so rather than inventing them.
+    const diag = fresh?.diag || {
+      statuses: [], careersUrl: cached?.careersUrl || null,
+      careersStatus: cached?.ats ? 200 : null, htmlText: 0, blocked: false, fromCache: true,
+    };
+    diags.set(t.name, diag);
+
     nextCache[t.name] = {
       ats: hit?.ats || null, token: hit?.token || null,
       host: hit?.host, tenant: hit?.tenant, site: hit?.site,
+      endpoint: hit?.endpoint || cached?.endpoint || null,
+      careersUrl: diag.careersUrl || cached?.careersUrl || null,
       v: DISCOVERY_VERSION,
       checkedAt: new Date(now).toISOString(),
     };
@@ -476,11 +545,12 @@ async function resolveTargets(cache) {
       resolved.push({
         name: t.name, ats: hit.ats, token: hit.token,
         host: hit.host, tenant: hit.tenant, site: hit.site,
+        endpoint: nextCache[t.name].endpoint,
         category: t.category, whyFit: t.whyFit,
       });
     }
   }
-  return { resolved, nextCache };
+  return { resolved, nextCache, diags };
 }
 
 const ADAPTERS = {
@@ -565,7 +635,7 @@ async function main() {
 
   // Resolve the target firms' job boards before the main sweep.
   const cache = previous.atsCache || {};
-  const { resolved, nextCache } = await resolveTargets(cache);
+  const { resolved, nextCache, diags } = await resolveTargets(cache);
   const newlyFound = Object.entries(nextCache)
     .filter(([n, v]) => v.ats && !cache[n]?.ats).map(([n]) => n);
   console.log(`\nTarget list: ${resolved.length}/${TARGETS.length} firms have a reachable board` +
@@ -581,11 +651,12 @@ async function main() {
       const raw = await ADAPTERS[co.ats](co);
       const kept = raw.map(r => refine(r, co)).filter(Boolean);
       console.log(`  ok   ${co.name.padEnd(22)} ${String(raw.length).padStart(4)} seen -> ${kept.length} kept`);
-      return { co, kept, health: { company: co.name, ats: co.ats, ok: true, seen: raw.length, kept: kept.length, ms: Date.now() - t0 } };
+      return { co, kept, rawCount: raw.length, health: { company: co.name, ats: co.ats, ok: true, seen: raw.length, kept: kept.length, ms: Date.now() - t0 } };
     } catch (err) {
       const msg = err?.name === 'AbortError' ? 'timeout' : (err?.message || String(err));
       console.log(`  FAIL ${co.name.padEnd(22)} ${msg}`);
-      return { co, kept: [], health: { company: co.name, ats: co.ats, ok: false, error: msg, ms: Date.now() - t0 } };
+      return { co, kept: [], rawCount: 0, fetchError: msg, fetchStatus: statusOf(err),
+        health: { company: co.name, ats: co.ats, ok: false, error: msg, ms: Date.now() - t0 } };
     }
   });
 
@@ -669,6 +740,8 @@ async function main() {
   await mkdir(dirname(OUT), { recursive: true });
   await writeFile(OUT, JSON.stringify(payload, null, 2) + '\n');
 
+  await writeCoverageReport({ results, resolved, nextCache, diags });
+
   console.log(`\n${jobs.length} jobs (${payload.counts.active} active) from ` +
     `${payload.counts.boardsOk}/${payload.counts.boardsTotal} boards -> data/jobs.json`);
 }
@@ -679,5 +752,88 @@ export { parseSalary, formatSalary, isNYC, categorize, refine, parseWorkdayPoste
 const invokedDirectly = process.argv[1] &&
   resolve(process.argv[1]) === resolve(fileURLToPath(import.meta.url));
 if (invokedDirectly) {
-  main().catch(err => { console.error(err); process.exit(1); });
+  // ---------------------------------------------------------------- coverage
+
+const csvCell = v => {
+  const t = v === null || v === undefined ? '' : String(v);
+  return /[",\n]/.test(t) ? `"${t.replace(/"/g, '""')}"` : t;
+};
+
+// One row per target company, always. A company that was never reached still
+// gets a row saying why — silent skipping is what hides a coverage failure.
+async function writeCoverageReport({ results, resolved, nextCache, diags }) {
+  const byName = new Map(results.map(r => [r.co.name, r]));
+  const resolvedByName = new Map(resolved.map(r => [r.name, r]));
+
+  const rows = TARGETS.map(t => {
+    const hit = resolvedByName.get(t.name) || null;
+    const run = byName.get(t.name);
+    const diag = diags.get(t.name) || { statuses: [], blocked: false };
+
+    const raw = run?.rawCount ?? 0;
+    const matched = run?.kept?.length ?? 0;
+
+    let outcome;
+    let status = '';
+    if (!hit) {
+      outcome = outcomeFor({ hit, diag, raw, matched });
+      status = diag.careersStatus ?? (diag.statuses[0]?.split(':').pop() || '');
+    } else if (!run) {
+      // A board was discovered but the sweep never fetched it.
+      outcome = 'not_attempted';
+    } else if (run.fetchError) {
+      outcome = BLOCKING_STATUSES.has(run.fetchStatus) ? 'blocked' : 'no_ats_found';
+      status = run.fetchStatus || '';
+    } else {
+      status = 200;
+      outcome = matched > 0 ? 'ok' : 'no_matching_roles';
+    }
+
+    const notes = [
+      diag.fromCache ? 'from cache' : null,
+      diag.statuses.length ? `probe:${diag.statuses.slice(0, 4).join(' ')}` : null,
+      run?.fetchError ? `fetch:${run.fetchError}` : null,
+      !hit && diag.careersUrl ? `careers:${diag.careersUrl}` : null,
+      !hit && diag.htmlText ? `visible_text:${diag.htmlText}` : null,
+    ].filter(Boolean).join('; ');
+
+    return {
+      company: t.name,
+      ats_detected: hit?.ats || '',
+      endpoint_url: hit?.endpoint || nextCache[t.name]?.endpoint || '',
+      http_status: status,
+      raw_jobs_returned: raw,
+      matched_after_filter: matched,
+      outcome,
+      notes,
+    };
+  });
+
+  const header = ['company', 'ats_detected', 'endpoint_url', 'http_status',
+    'raw_jobs_returned', 'matched_after_filter', 'outcome', 'notes'];
+  const csv = [header.join(',')]
+    .concat(rows.map(r => header.map(h => csvCell(r[h])).join(',')))
+    .join('\n') + '\n';
+  await writeFile(resolve(ROOT, 'data/coverage_report.csv'), csv);
+
+  // Summary, grouped by outcome.
+  const groups = {};
+  for (const r of rows) (groups[r.outcome] ||= []).push(r.company);
+  const order = ['ok', 'no_matching_roles', 'blocked', 'js_only', 'no_ats_found',
+    'careers_page_missing', 'not_attempted'];
+
+  console.log(`\n=== COVERAGE REPORT — ${rows.length} companies ===`);
+  for (const k of order) {
+    const list = groups[k] || [];
+    console.log(`\n${k}: ${list.length}`);
+    if (list.length) console.log('  ' + list.join(', '));
+  }
+  const rawTotal = rows.reduce((a, r) => a + r.raw_jobs_returned, 0);
+  const matchTotal = rows.reduce((a, r) => a + r.matched_after_filter, 0);
+  console.log(`\nraw postings seen across targets: ${rawTotal}`);
+  console.log(`matched after filtering:          ${matchTotal}`);
+  console.log('\nwritten to data/coverage_report.csv');
+}
+
+main().catch(err => { console.error(err); process.exit(1); });
 }
