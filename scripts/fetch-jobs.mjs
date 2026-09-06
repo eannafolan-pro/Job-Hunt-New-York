@@ -9,6 +9,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { COMPANIES } from './companies.mjs';
+import { TARGETS } from './targets.mjs';
 import {
   SALARY_FLOOR, APPLY_WINDOW_DAYS, NYC_PATTERNS, NOT_NYC_PATTERNS, CATEGORIES,
   SALARY_BASIS, EXCLUDE_TITLE, NO_SPONSORSHIP_PATTERNS, CITIZENSHIP_BLOCK_PATTERNS,
@@ -285,6 +286,77 @@ async function fromWorkday(co) {
   return jobs.map(({ _path, ...j }) => j);
 }
 
+// ---------------------------------------------------------------- ats discovery
+//
+// The target list carries names and domains but no ATS tokens, so they have to
+// be found. Try a few plausible board slugs against each key-less platform and
+// keep the first that answers. Results — including misses — are cached in
+// data/jobs.json so a run does not re-probe the whole list every six hours.
+
+const DISCOVERY_TTL_DAYS = 7;   // how long to trust a miss before trying again
+
+function slugCandidates(target) {
+  const root = target.domain.split('.')[0];
+  const name = target.name.toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '');
+  const trimmed = name.replace(
+    /(partners|capital|management|group|advisors|advisory|holdings|global|financial|securities|company|llc|inc)$/, '');
+  return [...new Set([root, name, trimmed])].filter(x => x && x.length > 2);
+}
+
+// A cheap existence check per platform. No retries: a wrong slug 404s fast and
+// there are hundreds of these.
+const PROBES = {
+  greenhouse: slug => `https://boards-api.greenhouse.io/v1/boards/${slug}/jobs`,
+  lever:      slug => `https://api.lever.co/v0/postings/${slug}?mode=json&limit=1`,
+  ashby:      slug => `https://api.ashbyhq.com/posting-api/job-board/${slug}`,
+};
+
+async function discoverAts(target) {
+  for (const slug of slugCandidates(target)) {
+    for (const [ats, url] of Object.entries(PROBES)) {
+      try {
+        const data = await fetchJSON(url(slug));
+        const found = ats === 'lever' ? Array.isArray(data) : Array.isArray(data?.jobs);
+        if (found) return { ats, token: slug };
+      } catch { /* wrong platform or wrong slug — keep going */ }
+    }
+  }
+  return null;
+}
+
+async function resolveTargets(cache) {
+  const now = Date.now();
+  const resolved = [];
+  const nextCache = {};
+
+  const stale = t => {
+    const hit = cache[t.name];
+    if (!hit) return true;
+    if (hit.ats) return false;                       // a known board never expires
+    return now - new Date(hit.checkedAt).getTime() > DISCOVERY_TTL_DAYS * 864e5;
+  };
+
+  const toProbe = TARGETS.filter(stale);
+  // Probing hits the same few hosts, so keep it gentler than the main sweep.
+  const found = await pool(toProbe, 4, async (t) => {
+    const hit = await discoverAts(t);
+    if (hit) console.log(`  found ${t.name.padEnd(30)} ${hit.ats}/${hit.token}`);
+    return { name: t.name, ...(hit || { ats: null }) };
+  });
+
+  const probed = new Map(found.map(f => [f.name, f]));
+  for (const t of TARGETS) {
+    const hit = probed.get(t.name) || cache[t.name];
+    nextCache[t.name] = { ats: hit?.ats || null, token: hit?.token || null, checkedAt: new Date(now).toISOString() };
+    if (hit?.ats) {
+      resolved.push({ name: t.name, ats: hit.ats, token: hit.token, category: t.category, whyFit: t.whyFit });
+    }
+  }
+  return { resolved, nextCache };
+}
+
 const ADAPTERS = {
   greenhouse: fromGreenhouse,
   lever: fromLever,
@@ -362,7 +434,19 @@ async function main() {
   const previous = await loadPrevious();
   const prevById = new Map((previous.jobs || []).map(j => [j.id, j]));
 
-  const results = await pool(COMPANIES, CONCURRENCY, async (co) => {
+  // Resolve the target firms' job boards before the main sweep.
+  const cache = previous.atsCache || {};
+  const { resolved, nextCache } = await resolveTargets(cache);
+  const newlyFound = Object.entries(nextCache)
+    .filter(([n, v]) => v.ats && !cache[n]?.ats).map(([n]) => n);
+  console.log(`\nTarget list: ${resolved.length}/${TARGETS.length} firms have a reachable board` +
+    (newlyFound.length ? ` (new: ${newlyFound.join(', ')})` : ''));
+
+  // Pinned boards plus whatever discovery resolved, de-duplicated by name.
+  const seenNames = new Set(COMPANIES.map(c => c.name));
+  const boards = [...COMPANIES, ...resolved.filter(r => !seenNames.has(r.name))];
+
+  const results = await pool(boards, CONCURRENCY, async (co) => {
     const t0 = Date.now();
     try {
       const raw = await ADAPTERS[co.ats](co);
@@ -425,6 +509,13 @@ async function main() {
   const payload = {
     generatedAt: nowISO,
     salaryFloor: SALARY_FLOOR,
+    atsCache: nextCache,
+    targets: {
+      total: TARGETS.length,
+      reachable: resolved.length,
+      // Firms with no key-less public board — apply on their own site instead.
+      unreachable: TARGETS.filter(t => !nextCache[t.name]?.ats).map(t => t.name),
+    },
     counts: {
       total: jobs.length,
       active: jobs.filter(j => j.active).length,

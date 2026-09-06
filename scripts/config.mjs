@@ -52,6 +52,12 @@ export const CATEGORIES = [
       /debt capital markets/i, /leveraged finance/i, /\blevfin\b/i,
       /financial sponsors/i, /sponsor coverage/i, /coverage (analyst|associate)/i,
       /debt advisory/i, /sell.?side/i, /\bunderwriting\b/i,
+      // Insolvency vocabulary from the target list — the exact work at
+      // EY-Parthenon (receiverships, liquidations, asset disposals).
+      /insolvency/i, /receivership/i, /\bworkout\b/i, /recoveries/i,
+      /liquidation/i, /administration(s)? (analyst|associate)/i,
+      /business recovery/i, /performance improvement/i, /transaction services/i,
+      /\bcreditor\b/i, /\bdebtor\b/i, /chapter 11/i, /liability management/i,
       /corporate finance (analyst|associate)/i, /transaction (advisory|services)/i,
       /valuation (analyst|associate|services)/i, /due diligence (analyst|associate)/i,
       /deal (advisory|execution)/i, /merchant bank/i,
