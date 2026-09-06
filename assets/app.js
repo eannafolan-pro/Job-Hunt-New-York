@@ -50,6 +50,8 @@ const store = {
 };
 
 let saved = new Set(store.read('njc.saved', []));
+// { [firm name]: ISO date it was last checked }
+let checkedFirms = store.read('njc.checkedFirms', {});
 let applied = new Set(store.read('njc.applied', []));
 
 const persistSaved = () => store.write('njc.saved', [...saved]);
@@ -210,6 +212,78 @@ function renderCategoryChips() {
       render();
     });
     box.append(b);
+  }
+}
+
+const CATEGORY_GROUPS = {
+  restructuring_advisory: 'Restructuring & turnaround advisory',
+  restructuring_bank: 'Restructuring / RX banks',
+  big_four_advisory: 'Big Four & mid-tier advisory',
+  credit_fund: 'Credit & distressed funds',
+  bank: 'Investment banks',
+  private_equity: 'Private equity',
+  ireland_financial: 'Irish financial',
+  corporate_development: 'Corporate development',
+};
+
+// Firms with no public job feed. Listed so they get checked by hand rather than
+// quietly disappearing from the search.
+function renderManual() {
+  const panel = $('#manual-panel');
+  const firms = state.data.targets?.unreachable || [];
+  if (!firms.length) { panel.hidden = true; return; }
+  panel.hidden = false;
+
+  const done = firms.filter(f => checkedFirms[f.name]).length;
+  $('#manualsummary').textContent =
+    `— ${firms.length} firms with no public feed, ${done} checked`;
+
+  const grid = $('#manualgrid');
+  grid.replaceChildren();
+
+  for (const [cat, label] of Object.entries(CATEGORY_GROUPS)) {
+    const inGroup = firms.filter(f => f.category === cat);
+    if (!inGroup.length) continue;
+
+    const g = el('div', 'mgroup');
+    g.append(el('h4', null, `${label} (${inGroup.length})`));
+    const list = el('div', 'mlist');
+
+    for (const firm of inGroup) {
+      const row = el('div', 'mrow' + (checkedFirms[firm.name] ? ' done' : ''));
+
+      const cb = el('input');
+      cb.type = 'checkbox';
+      cb.checked = !!checkedFirms[firm.name];
+      cb.title = 'Mark as checked today';
+      cb.addEventListener('change', () => {
+        if (cb.checked) checkedFirms[firm.name] = new Date().toISOString();
+        else delete checkedFirms[firm.name];
+        store.write('njc.checkedFirms', checkedFirms);
+        renderManual();
+      });
+      row.append(cb);
+
+      const name = el('div', 'mname');
+      const a = el('a', null, firm.name);
+      // A careers search rather than a guessed /careers path, which 404s often.
+      a.href = 'https://www.google.com/search?q=' +
+        encodeURIComponent(`${firm.name} careers New York restructuring analyst associate`);
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      name.append(a);
+      if (firm.whyFit) name.append(el('span', 'mwhy', firm.whyFit));
+      row.append(name);
+
+      const when = checkedFirms[firm.name];
+      if (when) {
+        const days = Math.floor((Date.now() - new Date(when)) / DAY_MS);
+        row.append(el('div', 'mdate', days === 0 ? 'today' : `${days}d ago`));
+      }
+      list.append(row);
+    }
+    g.append(list);
+    grid.append(g);
   }
 }
 
@@ -594,6 +668,7 @@ function render() {
   renderCategoryChips();
   renderStats();
   if (state.view === 'cal') renderCalendar(); else renderList();
+  renderManual();
   renderSources();
 }
 

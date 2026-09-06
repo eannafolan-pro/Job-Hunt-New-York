@@ -513,8 +513,12 @@ async function main() {
     targets: {
       total: TARGETS.length,
       reachable: resolved.length,
-      // Firms with no key-less public board — apply on their own site instead.
-      unreachable: TARGETS.filter(t => !nextCache[t.name]?.ats).map(t => t.name),
+      // Firms with no key-less public board — Workday, iCIMS or proprietary
+      // portals. The page lists these as a manual checklist, since naming them
+      // is more useful than dropping them silently.
+      unreachable: TARGETS.filter(t => !nextCache[t.name]?.ats)
+        .map(({ name, domain, category, whyFit }) => ({ name, domain, category, whyFit })),
+      reached: TARGETS.filter(t => nextCache[t.name]?.ats).map(t => t.name),
     },
     counts: {
       total: jobs.length,

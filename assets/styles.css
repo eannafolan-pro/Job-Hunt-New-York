@@ -409,3 +409,28 @@ footer.foot-note { margin-top: 26px; color: var(--text-faint); font-size: 12px; 
   .card { flex-wrap: wrap; }
   .card .right { text-align: left; align-items: flex-start; flex-direction: row; }
 }
+
+/* ---------------------------------------------------------------- manual checklist */
+
+.panelnote { color: var(--text-faint); font-size: 12px; line-height: 1.6; margin: 10px 0 4px; max-width: 62ch; }
+
+.mgroup { margin-top: 14px; }
+.mgroup h4 {
+  margin: 0 0 7px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em;
+  color: var(--text-faint); font-weight: 600;
+}
+.mlist { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 5px; }
+
+.mrow {
+  display: flex; align-items: center; gap: 9px;
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 7px 10px; min-width: 0;
+}
+.mrow.done { opacity: .5; }
+.mrow input { accent-color: var(--ops); width: 14px; height: 14px; cursor: pointer; flex: none; }
+.mrow .mname { flex: 1; min-width: 0; font-size: 12.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mrow .mname a { color: var(--text); text-decoration: none; }
+.mrow .mname a:hover { color: var(--finance); text-decoration: underline; }
+.mrow .mdate { font-family: var(--mono); font-size: 10.5px; color: var(--text-faint); flex: none; }
+.mrow .mwhy { display: block; color: var(--text-faint); font-size: 10.5px; margin-top: 1px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
