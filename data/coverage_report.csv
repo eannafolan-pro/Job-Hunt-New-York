@@ -1,0 +1,101 @@
+company,ats_detected,endpoint_url,http_status,raw_jobs_returned,matched_after_filter,outcome,notes
+Alvarez & Marsal,,,net,0,0,careers_page_missing,probe:/careers:net /en/careers:net /careers/jobs:net /about/careers:net
+AlixPartners,greenhouse,https://boards-api.greenhouse.io/v1/boards/alixpartners/jobs,200,116,1,ok,
+FTI Consulting,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /about/careers:404 /join-us:404 /en-us/careers:500; careers:https://www.fticonsulting.com/en/careers; visible_text:1830
+Kroll,,,404,0,0,careers_page_missing,probe:/careers:404 /en/careers:404 /careers/jobs:404 /about/careers:404
+Teneo,greenhouse,https://boards-api.greenhouse.io/v1/boards/teneo/jobs,200,51,1,ok,
+Interpath,greenhouse,https://boards-api.greenhouse.io/v1/boards/interpath/jobs,200,22,0,no_matching_roles,
+Ankura,workday,https://ankura.wd5.myworkdayjobs.com/wday/cxs/ankura/Ankura/jobs,200,27,0,no_matching_roles,
+Berkeley Research Group,workday,https://thinkbrg.wd5.myworkdayjobs.com/wday/cxs/thinkbrg/BRG_External_Career_Site/jobs,200,46,4,ok,
+Riveron,ashby,https://api.ashbyhq.com/posting-api/job-board/riveron,200,74,0,no_matching_roles,
+Portage Point Partners,lever,https://api.lever.co/v0/postings/portagepointpartners?mode=json&limit=1,200,50,2,ok,
+M3 Partners,,,404,0,0,careers_page_missing,probe:/careers:404 /en/careers:404 /careers/jobs:404 /about/careers:404
+Province,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /join-us:404; careers:https://provincefirm.com/careers/; visible_text:3066
+CR3 Partners,,,200,0,0,no_ats_found,careers:https://www.cr3partners.com/; visible_text:6378
+Getzler Henrich,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /join-us:404; careers:https://getzlerhenrich.com/careers/; visible_text:3988
+Hilco Global,workday,https://hilcoglobal.wd1.myworkdayjobs.com/wday/cxs/hilcoglobal/Hilco_Global_Careers/jobs,200,0,0,no_matching_roles,
+Gordon Brothers,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /join-us:404; careers:https://www.gordonbrothers.com/about-us/careers/; visible_text:2609
+B. Riley Financial,,,200,0,0,no_ats_found,careers:https://www.brcgh.com/; visible_text:3660
+Accordion,greenhouse,https://boards-api.greenhouse.io/v1/boards/accordion/jobs,200,49,5,ok,
+SierraConstellation Partners,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /join-us:404; careers:https://sierraconstellation.com/careers/; visible_text:6695
+Carl Marks Advisors,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /join-us:404; careers:https://carlmarks.com/careers/; visible_text:925
+Quantuma,,,200,0,0,js_only,probe:/en/careers:404 /careers/jobs:404 /about/careers:404 /join-us:404; careers:http://ww1.quantuma-careers.com/; visible_text:44
+Azets,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /about/careers:404 /join-us:404 /en-us/careers:404; careers:https://www.azets.com/en/careers; visible_text:7960
+Deloitte,,,404,0,0,careers_page_missing,probe:/careers:404 /en/careers:net /careers/jobs:404 /about/careers:net
+PwC,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /about/careers:404 /join-us:404; careers:https://www.pwc.com/us/en/careers.html; visible_text:12514
+KPMG,lever,https://api.lever.co/v0/postings/kpmg?mode=json&limit=1,200,0,0,no_matching_roles,
+EY,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /about/careers:404 /join-us:404; careers:https://www.ey.com/en_gl/careers; visible_text:34875
+Grant Thornton,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /about/careers:404 /join-us:404 /en-us/careers:404; careers:https://www.grantthornton.ie/en/careers/; visible_text:4065
+BDO,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /about/careers:404 /join-us:404; careers:https://bdoireland.pinpointhq.com/; visible_text:2897
+Forvis Mazars,greenhouse,https://boards-api.greenhouse.io/v1/boards/forvismazars/jobs,200,188,0,no_matching_roles,
+RSM,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /about/careers:404 /join-us:404; careers:https://www.rsm.global/working-for-rsm; visible_text:15684
+PJT Partners,workday,https://pjtpartners.wd1.myworkdayjobs.com/wday/cxs/pjtpartners/Careers/jobs,200,37,5,ok,
+Houlihan Lokey,workday,https://hl.wd1.myworkdayjobs.com/wday/cxs/hl/Campus/jobs,200,4,0,no_matching_roles,
+Lazard,,,200,0,0,no_ats_found,probe:/en/careers:404 /about/careers:404 /join-us:404 /en-us/careers:404; careers:https://lazard.com/careers/jobs; visible_text:2869
+Rothschild & Co,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /about/careers:404 /join-us:404; careers:https://www.rothschildandco.com/en-us/careers/; visible_text:12416
+Evercore,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /join-us:404; careers:https://www.evercore.com/careers/; visible_text:1586
+Moelis & Company,workday,https://moelis.wd1.myworkdayjobs.com/wday/cxs/moelis/Experienced-Hires/jobs,200,28,16,ok,
+Perella Weinberg Partners,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /join-us:404; careers:https://pwpartners.com/careers/; visible_text:2342
+Centerview Partners,,,403,0,0,blocked,probe:/careers:403 /en/careers:403 /careers/jobs:403 /about/careers:403
+Guggenheim Securities,,,net,0,0,careers_page_missing,probe:/careers:net /en/careers:net /careers/jobs:net /about/careers:net
+Jefferies,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /join-us:404 /en-us/careers:404; careers:https://www.jefferies.com/careers/; visible_text:17887
+Ducera Partners,greenhouse,https://boards-api.greenhouse.io/v1/boards/ducerapartners/jobs,200,7,2,ok,
+Solomon Partners,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /join-us:404; fetch:HTTP 404; careers:https://solomonpartners.com/careers/; visible_text:5361
+Stifel,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /about/careers:404 /join-us:404; careers:https://www.stifel.com/careers; visible_text:15368
+Piper Sandler,,,200,0,0,no_ats_found,probe:workday:404 /en/careers:404 /careers/jobs:404 /about/careers:404; careers:https://www.pipersandler.com/careers; visible_text:5482
+Cantor Fitzgerald,,,403,0,0,blocked,probe:/careers:403 /en/careers:403 /careers/jobs:403 /about/careers:403
+JPMorganChase,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /about/careers:404 /join-us:404; careers:https://www.jpmorganchase.com/careers; visible_text:14492
+Goldman Sachs,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /about/careers:404 /join-us:404; careers:https://www.goldmansachs.com/careers; visible_text:5353
+Morgan Stanley,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /join-us:404 /en-us/careers:404; careers:https://www.morganstanley.com/people; visible_text:14321
+Bank of America,,,200,0,0,no_ats_found,probe:workday:404 /en/careers:404 workday:404 /join-us:404; careers:https://about.bankofamerica.com/en?cm_mmc=EBZ-EnterpriseBrand-_-vanity-_-EB01VN009J_about-_-NA; visible_text:13735
+Citi,workday,https://citi.wd5.myworkdayjobs.com/wday/cxs/citi/2/jobs,200,570,37,ok,
+Barclays,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /join-us:404 /en-us/careers:404; careers:https://home.barclays/careers/; visible_text:9356
+Deutsche Bank,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /about/careers:404 /join-us:404; careers:https://careers.db.com/index?kid=careers.redirect-en.shortcut&language_id=1; visible_text:2834
+UBS,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /about/careers:404 /join-us:404; careers:https://www.ubs.com/global/en/careers.html; visible_text:6851
+HSBC,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /about/careers:404 /join-us:404 /en-us/careers:404; careers:https://www.hsbc.com/careers; visible_text:9059
+BNP Paribas,,,403,0,0,blocked,probe:/careers:403 /en/careers:403 /careers/jobs:403 /about/careers:403
+Wells Fargo,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /join-us:404 /en-us/careers:404; careers:https://www.wellsfargojobs.com/en/; visible_text:3537
+RBC Capital Markets,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /about/careers:404 /join-us:404 /en-us/careers:404; careers:https://www.rbc.com/en/about-us/history/careers/; visible_text:3165
+Nomura,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /about/careers:404 /join-us:404; careers:https://www.nomura.com/careers/; visible_text:898
+Macquarie,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /join-us:404 /en-us/careers:404; careers:https://www.macquarie.com/us/en/careers.html; visible_text:4512
+Oaktree Capital Management,workday,https://oaktree.wd1.myworkdayjobs.com/wday/cxs/oaktree/Oaktree/jobs,200,12,0,no_matching_roles,
+Apollo Global Management,greenhouse,https://boards-api.greenhouse.io/v1/boards/apollo/jobs,200,0,0,no_matching_roles,
+Ares Management,,,403,0,0,blocked,probe:/careers:403 /en/careers:403 /careers/jobs:403 /about/careers:403; fetch:HTTP 404
+Cerberus Capital Management,,,404,0,0,careers_page_missing,probe:/careers:404 /en/careers:404 /careers/jobs:404 /about/careers:404
+Fortress Investment Group,lever,https://api.lever.co/v0/postings/fortress?mode=json&limit=1,200,0,0,no_matching_roles,
+Centerbridge Partners,,,404,0,0,careers_page_missing,probe:/careers:404 /en/careers:404 /careers/jobs:404 /about/careers:404
+Silver Point Capital,,,200,0,0,no_ats_found,careers:https://www.silverpointcapital.com/; visible_text:3729
+Anchorage Capital Group,,,404,0,0,careers_page_missing,probe:/careers:404 /en/careers:404 /careers/jobs:404 /about/careers:404
+Knighthead Capital,,,net,0,0,careers_page_missing,probe:/careers:net /en/careers:net /careers/jobs:net /about/careers:net
+Monarch Alternative Capital,,,200,0,0,no_ats_found,careers:https://www.monarchlp.com/; visible_text:2632
+King Street Capital Management,,,404,0,0,careers_page_missing,probe:/careers:404 /en/careers:404 /careers/jobs:404 /about/careers:404
+Marathon Asset Management,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /about/careers:404 /join-us:404; fetch:HTTP 404; careers:https://www.marathonfund.com/careers; visible_text:7673
+GoldenTree Asset Management,,,404,0,0,careers_page_missing,probe:/careers:404 /en/careers:404 /careers/jobs:404 /about/careers:404
+Bain Capital Credit,,,404,0,0,careers_page_missing,probe:/careers:404 /en/careers:404 /careers/jobs:404 /about/careers:404
+Blackstone,workday,https://blackstone.wd1.myworkdayjobs.com/wday/cxs/blackstone/Blackstone_Careers/jobs,200,103,9,ok,
+KKR,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /about/careers:404 /join-us:404; careers:https://www.kkr.com/careers; visible_text:11653
+Carlyle,,,403,0,0,blocked,probe:/careers:403 /en/careers:403 /careers/jobs:403 /about/careers:403
+Sixth Street,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /join-us:404; fetch:HTTP 404; careers:https://sixthstreet.com/careers/; visible_text:8160
+HPS Investment Partners,greenhouse,https://boards-api.greenhouse.io/v1/boards/hpsinvestmentpartners/jobs,200,0,0,no_matching_roles,
+Davidson Kempner,,,200,0,0,no_ats_found,careers:https://www.davidsonkempner.com/; visible_text:594
+Attestor Capital,,,404,0,0,careers_page_missing,probe:/careers:404 /en/careers:404 /careers/jobs:404 /about/careers:404
+TPG Angelo Gordon,,,200,0,0,no_ats_found,careers:https://www.tpg.com/; visible_text:5105
+Diameter Capital Partners,,,404,0,0,careers_page_missing,probe:/careers:404 /en/careers:404 /careers/jobs:404 /about/careers:404
+Beach Point Capital,,,net,0,0,careers_page_missing,probe:/careers:net /en/careers:net /careers/jobs:net /about/careers:net
+Lone Star Funds,,,404,0,0,careers_page_missing,probe:/careers:404 /en/careers:404 /careers/jobs:404 /about/careers:404
+H.I.G. Capital,,,200,0,0,no_ats_found,careers:https://hig.com/; visible_text:7783
+Platinum Equity,,,404,0,0,careers_page_missing,probe:/careers:404 /en/careers:404 /careers/jobs:404 /about/careers:404
+Sun Capital Partners,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /join-us:404; careers:https://suncappart.com/careers/; visible_text:3113
+Atlas Holdings,ashby,https://api.ashbyhq.com/posting-api/job-board/atlas,200,8,0,no_matching_roles,
+AIB,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /about/careers:404 /join-us:404; careers:https://www.aib.ie/careers; visible_text:1433
+Bank of Ireland,,,404,0,0,careers_page_missing,probe:/careers:404 /en/careers:404 /careers/jobs:404 /about/careers:404
+Pepper Advantage,,,200,0,0,js_only,careers:https://pepperadvantage.com/en-us/careers
+Davy,,,200,0,0,no_ats_found,careers:https://www.davy.ie/en-us/careers; visible_text:8300
+Goodbody,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /join-us:404; careers:https://www.goodbody.ie/careers/; visible_text:4239
+Investec,,,403,0,0,blocked,probe:/careers:403 /en/careers:403 /careers/jobs:403 /about/careers:403
+EssilorLuxottica,,,200,0,0,js_only,probe:/en/careers:net /about/careers:net /en-us/careers:net; careers:https://www.essilorluxottica.com/join-us/; visible_text:20
+Flutter Entertainment,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /about/careers:404 /join-us:404; careers:https://flutter.com/careers/; visible_text:4529
+CRH,,,200,0,0,no_ats_found,probe:/careers/jobs:404 /join-us:404; careers:https://www.crh.com/careers/; visible_text:10752
+Smurfit Westrock,,,200,0,0,no_ats_found,probe:/en/careers:404 /about/careers:404 /join-us:404 /en-us/careers:404; careers:https://www.smurfitwestrock.com/careers/jobs; visible_text:12973
+Kerry Group,,,200,0,0,no_ats_found,probe:/en/careers:404 /careers/jobs:404 /about/careers:404 /join-us:404; careers:https://www.kerry.com/careers; visible_text:5854
+Ryanair,,,200,0,0,js_only,careers:https://www.ryanair.com/us/en; visible_text:7
