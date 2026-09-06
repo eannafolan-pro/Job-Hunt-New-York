@@ -476,18 +476,26 @@ function renderCalendar() {
 function jobChip(job) {
   const b = el('button', 'jchip');
   b.dataset.cat = job.category;
-  // On deadlines, urgency reads forward: what is closing soonest is brightest.
+  // Urgency is signalled with colour and weight, not opacity. Fading a chip
+  // reads as "disabled", which is the opposite of what a near deadline means.
+  const dl = daysUntilDeadline(job);
   if (state.dateBasis === 'applyBy') {
-    const d = daysUntilDeadline(job);
-    b.dataset.age = d < 0 ? 'stale' : d <= 3 ? 'fresh' : d <= 10 ? 'recent' : 'aging';
+    b.dataset.urgency = dl < 0 ? 'gone'
+      : dl <= 2 ? 'critical'
+      : dl <= 7 ? 'soon'
+      : dl <= 14 ? 'ok'
+      : 'later';
   } else {
     b.dataset.age = ageBand(job.postedAt);
   }
   if (job.strongMatch || job.priority) b.classList.add('star');
   if (job.active === false) b.classList.add('closed');
-  const dl = daysUntilDeadline(job);
   b.title = `${job.title} — ${job.company} — ${job.salaryText || 'salary n/a'}`
     + (dl >= 0 ? ` — apply within ${dl} day${dl === 1 ? '' : 's'}` : ' — deadline passed');
+  // A countdown on the chip itself, so urgency survives at a glance.
+  if (state.dateBasis === 'applyBy' && dl >= 0 && dl <= 7) {
+    b.append(el('span', 'jdays', dl === 0 ? 'TODAY' : `${dl}d`));
+  }
   b.append(document.createTextNode(job.title));
   b.append(el('span', 'co', ` · ${job.company}`));
   b.addEventListener('click', () => openDrawer(job));
@@ -519,12 +527,16 @@ function renderList() {
   for (const job of jobs) {
     const card = el('div', 'card');
     card.dataset.cat = job.category;
+    const dl = daysUntilDeadline(job);
+    if (state.dateBasis === 'applyBy') {
+      card.dataset.urgency = job.active === false || dl < 0 ? 'gone'
+        : dl <= 2 ? 'critical' : dl <= 7 ? 'soon' : 'ok';
+    }
     card.append(el('div', 'bar'));
 
     const main = el('div', 'main');
     main.append(el('div', 't', job.title));
 
-    const dl = daysUntilDeadline(job);
     const meta = el('div', 'm');
     meta.append(el('span', null, job.company));
     meta.append(el('span', null, job.location));

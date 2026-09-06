@@ -276,10 +276,39 @@ input[type=range]::-moz-range-thumb {
 .jchip.star { box-shadow: inset 0 0 0 1px var(--gold); }
 
 /* freshness aging */
+/* Posted-date view keeps the freshness fade — there, older really is less
+   interesting. */
 .jchip[data-age="fresh"] { background: #223349; }
 .jchip[data-age="recent"] { opacity: .92; }
 .jchip[data-age="aging"] { opacity: .68; }
 .jchip[data-age="stale"] { opacity: .45; }
+
+/* Deadline view signals urgency with colour and weight instead. Dimming a
+   closing-soon role would read as "ignore me". */
+.jchip[data-urgency="critical"] {
+  background: #3b1622; border-left-color: var(--hot) !important;
+  box-shadow: inset 0 0 0 1px rgba(255,95,126,.55);
+  font-weight: 650;
+}
+.jchip[data-urgency="soon"] {
+  background: #3a2a14; border-left-color: var(--sales) !important;
+  box-shadow: inset 0 0 0 1px rgba(240,160,75,.4);
+  font-weight: 600;
+}
+.jchip[data-urgency="ok"]    { background: var(--surface-3); }
+.jchip[data-urgency="later"] { background: #161d2a; color: var(--text-dim); }
+.jchip[data-urgency="gone"]  { opacity: .4; text-decoration: line-through; }
+
+/* The countdown badge on the chip. */
+.jdays {
+  display: inline-block; font-family: var(--mono); font-size: 9.5px; font-weight: 700;
+  letter-spacing: .03em; padding: 1px 4px; border-radius: 3px; margin-right: 5px;
+  vertical-align: 1px;
+}
+.jchip[data-urgency="critical"] .jdays { background: var(--hot); color: #2a0710; }
+.jchip[data-urgency="soon"] .jdays { background: var(--sales); color: #1d1103; }
+
+/* Only genuinely delisted roles get struck through. */
 .jchip.closed { opacity: .35; text-decoration: line-through; }
 
 .more { background: none; border: 0; color: var(--text-faint); font: inherit; font-size: 11px; cursor: pointer; padding: 1px 4px; text-align: left; }
@@ -479,3 +508,11 @@ footer.foot-note { margin-top: 26px; color: var(--text-faint); font-size: 12px; 
   border: 1px solid var(--border-bright); font-size: 12.5px; padding: 9px 12px;
 }
 .btn.linkedin:hover { color: var(--text); border-color: var(--finance); }
+
+/* Deadline urgency in the list view. */
+.card[data-urgency="critical"] { border-color: #5c2b38; background: #1a1016; }
+.card[data-urgency="soon"] { border-color: #5c4426; }
+.card[data-urgency="critical"] .when { color: var(--hot); font-weight: 700; }
+.card[data-urgency="soon"] .when { color: var(--sales); font-weight: 600; }
+.card[data-urgency="gone"] { opacity: .45; }
+.card[data-urgency="gone"] .t { text-decoration: line-through; }
