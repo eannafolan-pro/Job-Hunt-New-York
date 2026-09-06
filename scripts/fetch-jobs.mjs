@@ -12,7 +12,7 @@ import { COMPANIES } from './companies.mjs';
 import { TARGETS } from './targets.mjs';
 import {
   SALARY_FLOOR, APPLY_WINDOW_DAYS, MAX_POSTING_AGE_DAYS, NYC_PATTERNS, NOT_NYC_PATTERNS, CATEGORIES,
-  SALARY_BASIS, EXCLUDE_TITLE, NO_SPONSORSHIP_PATTERNS, CITIZENSHIP_BLOCK_PATTERNS,
+  SALARY_BASIS, ASSUME_WORK_AUTHORIZED, EXCLUDE_TITLE, NO_SPONSORSHIP_PATTERNS, CITIZENSHIP_BLOCK_PATTERNS,
   J1_FRIENDLY_PATTERNS, STRONG_MATCH_PATTERNS,
 } from './config.mjs';
 
@@ -635,9 +635,9 @@ function refine(raw, co) {
 
   const body = raw.body || '';
 
-  // Hard visa block: no third-party J-1 sponsor gets past a citizenship or
-  // clearance requirement, so these are dropped rather than flagged.
-  if (matchesAny(body, CITIZENSHIP_BLOCK_PATTERNS)) return null;
+  // Visa filtering is off — the applicant is treated as fully work-authorised,
+  // so citizenship and clearance requirements no longer exclude a role.
+  if (!ASSUME_WORK_AUTHORIZED && matchesAny(body, CITIZENSHIP_BLOCK_PATTERNS)) return null;
 
   const category = categorize(title);
   if (!category) return null;
@@ -673,8 +673,9 @@ function refine(raw, co) {
     // A deadline the posting actually states, if it has one. Null means we fall
     // back to the estimate at merge time.
     statedDeadline: parseStatedDeadline(body, raw.postedAt || new Date().toISOString()),
-    noSponsorship: matchesAny(body, NO_SPONSORSHIP_PATTERNS),
-    j1Friendly: matchesAny(body, J1_FRIENDLY_PATTERNS) || matchesAny(title, J1_FRIENDLY_PATTERNS),
+    noSponsorship: ASSUME_WORK_AUTHORIZED ? false : matchesAny(body, NO_SPONSORSHIP_PATTERNS),
+    j1Friendly: ASSUME_WORK_AUTHORIZED ? false
+      : (matchesAny(body, J1_FRIENDLY_PATTERNS) || matchesAny(title, J1_FRIENDLY_PATTERNS)),
     strongMatch: matchesAny(title, STRONG_MATCH_PATTERNS),
     source: co.ats,
   };

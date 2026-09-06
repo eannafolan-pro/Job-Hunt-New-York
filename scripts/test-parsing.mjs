@@ -122,23 +122,17 @@ t('keeps unpriced postings for the benchmark pass to judge', () => {
   assert.ok(j, 'no longer dropped at refine time');
   assert.equal(j.salaryMin, null);
 });
-t('flags (but keeps) no-sponsorship postings — J-1 uses a third-party sponsor', () => {
+// Visa filtering is off: the applicant is treated as fully work-authorised.
+t('keeps roles that state no sponsorship', () => {
   const j = refine({ ...base, body: base.body + ' We are unable to sponsor visas for this role.' }, co);
-  assert.ok(j, 'should not be dropped');
-  assert.ok(j.noSponsorship);
+  assert.ok(j);
+  assert.equal(j.noSponsorship, false, 'no longer flagged');
 });
-t('drops US-citizenship-only roles (hard J-1 block)', () => {
-  assert.equal(refine({ ...base, body: base.body + ' Applicants must be a US citizen.' }, co), null);
+t('keeps US-citizenship-only roles', () => {
+  assert.ok(refine({ ...base, body: base.body + ' Applicants must be a US citizen.' }, co));
 });
-t('drops roles needing security clearance', () => {
-  assert.equal(refine({ ...base, body: base.body + ' An active security clearance is required.' }, co), null);
-});
-t('flags J-1-friendly framing', () => {
-  const j = refine({ ...base, body: base.body + ' This is an 18-month rotational training program.' }, co);
-  assert.ok(j.j1Friendly);
-});
-t('plain posting is not flagged J-1-friendly', () => {
-  assert.equal(refine({ ...base }, co).j1Friendly, false);
+t('keeps roles needing security clearance', () => {
+  assert.ok(refine({ ...base, body: base.body + ' An active security clearance is required.' }, co));
 });
 t('uses the Ashby salary hint', () => {
   const j = refine({ ...base, body: 'No numbers here.', salaryHint: '$180K – $220K • Offers Equity' }, co);

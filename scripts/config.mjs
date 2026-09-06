@@ -152,6 +152,11 @@ export const EXCLUDE_TITLE = [
 
 // ---------------------------------------------------------------- visa
 //
+// Set: treat the applicant as fully work-authorised in the US. Nothing is
+// dropped or flagged on visa grounds, and the patterns below go unused. Flip to
+// false to restore the J-1 handling described underneath.
+export const ASSUME_WORK_AUTHORIZED = true;
+//
 // Target status: J-1 Trainee (Irish citizen, EY-Parthenon experience -> meets
 // the degree + 1 year relevant non-US experience requirement; 18 month max).
 //

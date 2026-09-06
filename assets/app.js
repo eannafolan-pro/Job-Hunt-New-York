@@ -29,8 +29,6 @@ const state = {
   dateBasis: 'applyBy',   // 'applyBy' = forward-looking deadlines, 'postedAt' = when it went live
   minSalary: 100_000,
   strongOnly: false,
-  j1Only: false,
-  hideNoSpon: false,
   savedOnly: false,
   openOnly: true,
   expandedDays: new Set(),
@@ -137,8 +135,6 @@ function visibleJobs() {
     if (!state.cats.has(j.category)) return false;
     if ((j.salaryMax ?? 0) < state.minSalary) return false;
     if (state.strongOnly && !j.strongMatch) return false;
-    if (state.j1Only && !j.j1Friendly) return false;
-    if (state.hideNoSpon && j.noSponsorship) return false;
     if (state.savedOnly && !saved.has(j.id)) return false;
     if (q) {
       const hay = `${j.title} ${j.company} ${j.location}`.toLowerCase();
@@ -628,8 +624,6 @@ function renderList() {
     if (job.strongMatch) meta.append(el('span', 'tag match', 'strong match'));
     if (dl >= 0 && dl <= 5) meta.append(el('span', 'tag hot', dl === 0 ? 'closes today' : `${dl}d left`));
     else if ((daysAgo(job.postedAt) ?? 99) <= 3) meta.append(el('span', 'tag hot', 'new'));
-    if (job.j1Friendly) meta.append(el('span', 'tag match', 'J-1 friendly'));
-    if (job.noSponsorship) meta.append(el('span', 'tag nospon', 'says no sponsorship'));
     if (job.active === false) meta.append(el('span', 'tag closed', 'delisted'));
     if (applied.has(job.id)) meta.append(el('span', 'tag', 'applied'));
     main.append(meta);
@@ -661,13 +655,13 @@ function resetFilters() {
   state.cats = new Set(Object.keys(CATEGORY_LABELS));
   state.q = '';
   state.minSalary = 100_000;
-  state.strongOnly = state.j1Only = state.hideNoSpon = state.savedOnly = false;
+  state.strongOnly = state.savedOnly = false;
   state.openOnly = true;
   $('#q').value = '';
   $('#sal').value = 100_000;
   $('#salout').textContent = money(100_000);
-  for (const [sel, key] of [['#f-strong', 'strongOnly'], ['#f-j1', 'j1Only'],
-    ['#f-spon', 'hideNoSpon'], ['#f-saved', 'savedOnly'], ['#f-open', 'openOnly']]) {
+  for (const [sel, key] of [['#f-strong', 'strongOnly'],
+    ['#f-saved', 'savedOnly'], ['#f-open', 'openOnly']]) {
     $(sel).checked = state[key];
     store.write(`njc.${key}`, state[key]);
   }
@@ -703,7 +697,6 @@ function emptyState() {
   if (state.q) reasons.push(`the search “${state.q}” matches nothing`);
   if (state.minSalary > 100_000) reasons.push(`the salary floor is set to ${money(state.minSalary)}`);
   if (state.strongOnly) reasons.push('“strong match only” is on');
-  if (state.j1Only) reasons.push('“J-1 friendly” is on');
   if (state.savedOnly) reasons.push('“saved only” is on');
 
   box.append(el('h3', null, `No roles match — ${total} in the data`));
@@ -783,12 +776,6 @@ function openDrawer(job) {
   }
   if (job.strongMatch) {
     notes.append(note('match', 'Strong match — the title lines up with your restructuring, M&A and financial-analysis experience.'));
-  }
-  if (job.j1Friendly) {
-    notes.append(note('match', 'J-1 friendly signals — the posting mentions a programme, fixed term or explicit sponsorship.'));
-  }
-  if (job.noSponsorship) {
-    notes.append(note('nospon', 'This posting says it will not sponsor a visa. That usually means no H-1B. On a J-1 trainee visa your sponsor is a designated third-party organisation and the employer only signs the DS-7002 training plan — so it is worth asking, but expect to explain the difference.'));
   }
   body.append(notes);
   drawer.append(body);
@@ -931,8 +918,6 @@ function bind() {
 
   const toggles = [
     ['#f-strong', 'strongOnly'],
-    ['#f-j1', 'j1Only'],
-    ['#f-spon', 'hideNoSpon'],
     ['#f-saved', 'savedOnly'],
     ['#f-open', 'openOnly'],
   ];
@@ -992,8 +977,8 @@ function restorePrefs() {
   $('#sal').value = state.minSalary;
   $('#salout').textContent = money(state.minSalary);
 
-  for (const [sel, key] of [['#f-strong', 'strongOnly'], ['#f-j1', 'j1Only'],
-    ['#f-spon', 'hideNoSpon'], ['#f-saved', 'savedOnly'], ['#f-open', 'openOnly']]) {
+  for (const [sel, key] of [['#f-strong', 'strongOnly'],
+    ['#f-saved', 'savedOnly'], ['#f-open', 'openOnly']]) {
     state[key] = store.read(`njc.${key}`, key === 'openOnly');
     $(sel).checked = state[key];
   }
