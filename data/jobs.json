@@ -1,506 +1,506 @@
 {
-  "generatedAt": "2026-09-06T14:55:51.135Z",
+  "generatedAt": "2026-09-06T15:00:20.179Z",
   "salaryFloor": 100000,
   "atsCache": {
     "Alvarez & Marsal": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "AlixPartners": {
       "ats": "greenhouse",
       "token": "alixpartners",
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "FTI Consulting": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Kroll": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Teneo": {
       "ats": "greenhouse",
       "token": "teneo",
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Interpath": {
       "ats": "greenhouse",
       "token": "interpath",
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Ankura": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Berkeley Research Group": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Riveron": {
       "ats": "ashby",
       "token": "riveron",
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Portage Point Partners": {
       "ats": "lever",
       "token": "portagepointpartners",
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "M3 Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Province": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "CR3 Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Getzler Henrich": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Hilco Global": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Gordon Brothers": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "B. Riley Financial": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Accordion": {
       "ats": "greenhouse",
       "token": "accordion",
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "SierraConstellation Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Carl Marks Advisors": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Quantuma": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Azets": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Deloitte": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "PwC": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "KPMG": {
       "ats": "lever",
       "token": "kpmg",
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "EY": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Grant Thornton": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "BDO": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Forvis Mazars": {
       "ats": "greenhouse",
       "token": "forvismazars",
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "RSM": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "PJT Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Houlihan Lokey": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Lazard": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Rothschild & Co": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Evercore": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Moelis & Company": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Perella Weinberg Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Centerview Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Guggenheim Securities": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Jefferies": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Ducera Partners": {
       "ats": "greenhouse",
       "token": "ducerapartners",
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Solomon Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Stifel": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Piper Sandler": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Cantor Fitzgerald": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "JPMorganChase": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Goldman Sachs": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Morgan Stanley": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Bank of America": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Citi": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Barclays": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Deutsche Bank": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "UBS": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "HSBC": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "BNP Paribas": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Wells Fargo": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "RBC Capital Markets": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Nomura": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Macquarie": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Oaktree Capital Management": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Apollo Global Management": {
       "ats": "greenhouse",
       "token": "apollo",
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Ares Management": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Cerberus Capital Management": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Fortress Investment Group": {
       "ats": "lever",
       "token": "fortress",
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Centerbridge Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Silver Point Capital": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Anchorage Capital Group": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Knighthead Capital": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Monarch Alternative Capital": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "King Street Capital Management": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Marathon Asset Management": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "GoldenTree Asset Management": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Bain Capital Credit": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Blackstone": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "KKR": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Carlyle": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Sixth Street": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "HPS Investment Partners": {
       "ats": "greenhouse",
       "token": "hpsinvestmentpartners",
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Davidson Kempner": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Attestor Capital": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "TPG Angelo Gordon": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Diameter Capital Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Beach Point Capital": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Lone Star Funds": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "H.I.G. Capital": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Platinum Equity": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Sun Capital Partners": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Atlas Holdings": {
       "ats": "ashby",
       "token": "atlas",
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "AIB": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Bank of Ireland": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Pepper Advantage": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Davy": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Goodbody": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Investec": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "EssilorLuxottica": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Flutter Entertainment": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "CRH": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Smurfit Westrock": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Kerry Group": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     },
     "Ryanair": {
       "ats": null,
       "token": null,
-      "checkedAt": "2026-09-06T14:55:51.138Z"
+      "checkedAt": "2026-09-06T15:00:20.181Z"
     }
   },
   "targets": {
@@ -1046,9 +1046,10 @@
       "Atlas Holdings"
     ]
   },
+  "maxPostingAgeDays": 21,
   "counts": {
     "total": 234,
-    "active": 53,
+    "active": 12,
     "boardsOk": 64,
     "boardsTotal": 95
   },
@@ -1058,217 +1059,217 @@
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3069
+      "ms": 3156
     },
     {
       "company": "Index Ventures",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3071
+      "ms": 3152
     },
     {
       "company": "Union Square Ventures",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3060
+      "ms": 3129
     },
     {
       "company": "FirstMark Capital",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3061
+      "ms": 3195
     },
     {
       "company": "Lerer Hippeau",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3066
+      "ms": 3264
     },
     {
       "company": "Primary Venture Partners",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3066
+      "ms": 3181
     },
     {
       "company": "RRE Ventures",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3065
+      "ms": 3134
     },
     {
       "company": "Tiger Global",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3064
+      "ms": 3151
     },
     {
       "company": "Coatue",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3068
+      "ms": 3214
     },
     {
       "company": "Thrive Capital",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3167
+      "ms": 3296
     },
     {
       "company": "Ares Management",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3067
+      "ms": 3146
     },
     {
       "company": "Blue Owl Capital",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3074
+      "ms": 3136
     },
     {
       "company": "Sixth Street",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3065
+      "ms": 3262
     },
     {
       "company": "Golub Capital",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3070
+      "ms": 3125
     },
     {
       "company": "Hamilton Lane",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3070
+      "ms": 3140
     },
     {
       "company": "StepStone Group",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3073
+      "ms": 3200
     },
     {
       "company": "Cambridge Associates",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3071
+      "ms": 3133
     },
     {
       "company": "Bridgepoint",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3071
+      "ms": 3117
     },
     {
       "company": "Perella Weinberg",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3075
+      "ms": 3128
     },
     {
       "company": "Solomon Partners",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3071
+      "ms": 3220
     },
     {
       "company": "Union Square Advisors",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3065
+      "ms": 3131
     },
     {
       "company": "Cowen",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3081
+      "ms": 3195
     },
     {
       "company": "Oppenheimer",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3077
+      "ms": 3320
     },
     {
       "company": "B. Riley",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3070
+      "ms": 3183
     },
     {
       "company": "Canaccord Genuity",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3065
+      "ms": 3203
     },
     {
       "company": "Antares Capital",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3068
+      "ms": 3138
     },
     {
       "company": "Angelo Gordon",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3078
+      "ms": 3120
     },
     {
       "company": "Marathon Asset Management",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3071
+      "ms": 3145
     },
     {
       "company": "Sculptor Capital",
       "ats": "lever",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3638
+      "ms": 3206
     },
     {
       "company": "Corsair Capital",
       "ats": "lever",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3495
+      "ms": 3683
     },
     {
       "company": "Bain Capital Ventures",
       "ats": "ashby",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3125
+      "ms": 3131
     },
     {
       "company": "Oscar Health",
@@ -1276,7 +1277,7 @@
       "ok": true,
       "seen": 283,
       "kept": 6,
-      "ms": 367
+      "ms": 256
     },
     {
       "company": "Ramp",
@@ -1284,7 +1285,7 @@
       "ok": true,
       "seen": 142,
       "kept": 6,
-      "ms": 87
+      "ms": 91
     },
     {
       "company": "Point72",
@@ -1292,7 +1293,7 @@
       "ok": true,
       "seen": 231,
       "kept": 5,
-      "ms": 159
+      "ms": 205
     },
     {
       "company": "Accordion",
@@ -1300,7 +1301,7 @@
       "ok": true,
       "seen": 49,
       "kept": 5,
-      "ms": 60
+      "ms": 87
     },
     {
       "company": "Brex",
@@ -1308,7 +1309,7 @@
       "ok": true,
       "seen": 282,
       "kept": 4,
-      "ms": 585
+      "ms": 465
     },
     {
       "company": "Datadog",
@@ -1316,7 +1317,7 @@
       "ok": true,
       "seen": 441,
       "kept": 4,
-      "ms": 425
+      "ms": 540
     },
     {
       "company": "iCapital",
@@ -1324,7 +1325,7 @@
       "ok": true,
       "seen": 212,
       "kept": 3,
-      "ms": 326
+      "ms": 340
     },
     {
       "company": "Gemini",
@@ -1332,7 +1333,7 @@
       "ok": true,
       "seen": 36,
       "kept": 2,
-      "ms": 1047
+      "ms": 102
     },
     {
       "company": "Portage Point Partners",
@@ -1340,7 +1341,7 @@
       "ok": true,
       "seen": 50,
       "kept": 2,
-      "ms": 572
+      "ms": 207
     },
     {
       "company": "Ducera Partners",
@@ -1348,7 +1349,7 @@
       "ok": true,
       "seen": 7,
       "kept": 2,
-      "ms": 26
+      "ms": 58
     },
     {
       "company": "Betterment",
@@ -1356,7 +1357,7 @@
       "ok": true,
       "seen": 27,
       "kept": 1,
-      "ms": 256
+      "ms": 317
     },
     {
       "company": "Carta",
@@ -1364,7 +1365,7 @@
       "ok": true,
       "seen": 61,
       "kept": 1,
-      "ms": 283
+      "ms": 231
     },
     {
       "company": "Clear Street",
@@ -1372,7 +1373,7 @@
       "ok": true,
       "seen": 26,
       "kept": 1,
-      "ms": 234
+      "ms": 176
     },
     {
       "company": "Alloy",
@@ -1380,7 +1381,7 @@
       "ok": true,
       "seen": 25,
       "kept": 1,
-      "ms": 68
+      "ms": 81
     },
     {
       "company": "Coinbase",
@@ -1388,7 +1389,7 @@
       "ok": true,
       "seen": 192,
       "kept": 1,
-      "ms": 361
+      "ms": 371
     },
     {
       "company": "Ethic",
@@ -1396,7 +1397,7 @@
       "ok": true,
       "seen": 4,
       "kept": 1,
-      "ms": 309
+      "ms": 105
     },
     {
       "company": "Yext",
@@ -1404,7 +1405,7 @@
       "ok": true,
       "seen": 22,
       "kept": 1,
-      "ms": 40
+      "ms": 56
     },
     {
       "company": "Braze",
@@ -1412,7 +1413,7 @@
       "ok": true,
       "seen": 281,
       "kept": 1,
-      "ms": 396
+      "ms": 496
     },
     {
       "company": "Justworks",
@@ -1420,7 +1421,7 @@
       "ok": true,
       "seen": 98,
       "kept": 1,
-      "ms": 166
+      "ms": 573
     },
     {
       "company": "Vanta",
@@ -1428,7 +1429,7 @@
       "ok": true,
       "seen": 111,
       "kept": 1,
-      "ms": 77
+      "ms": 102
     },
     {
       "company": "OpenAI",
@@ -1436,7 +1437,7 @@
       "ok": true,
       "seen": 779,
       "kept": 1,
-      "ms": 423
+      "ms": 328
     },
     {
       "company": "Schonfeld",
@@ -1444,7 +1445,7 @@
       "ok": true,
       "seen": 67,
       "kept": 1,
-      "ms": 62
+      "ms": 75
     },
     {
       "company": "AlixPartners",
@@ -1452,7 +1453,7 @@
       "ok": true,
       "seen": 116,
       "kept": 1,
-      "ms": 78
+      "ms": 96
     },
     {
       "company": "Teneo",
@@ -1460,7 +1461,7 @@
       "ok": true,
       "seen": 51,
       "kept": 1,
-      "ms": 100
+      "ms": 164
     },
     {
       "company": "Chime",
@@ -1468,7 +1469,7 @@
       "ok": true,
       "seen": 65,
       "kept": 0,
-      "ms": 336
+      "ms": 289
     },
     {
       "company": "Affirm",
@@ -1476,7 +1477,7 @@
       "ok": true,
       "seen": 204,
       "kept": 0,
-      "ms": 455
+      "ms": 459
     },
     {
       "company": "SoFi",
@@ -1484,7 +1485,7 @@
       "ok": true,
       "seen": 61,
       "kept": 0,
-      "ms": 112
+      "ms": 225
     },
     {
       "company": "Robinhood",
@@ -1492,7 +1493,7 @@
       "ok": true,
       "seen": 128,
       "kept": 0,
-      "ms": 333
+      "ms": 321
     },
     {
       "company": "Fireblocks",
@@ -1500,7 +1501,7 @@
       "ok": true,
       "seen": 72,
       "kept": 0,
-      "ms": 150
+      "ms": 182
     },
     {
       "company": "Vestwell",
@@ -1508,7 +1509,7 @@
       "ok": true,
       "seen": 20,
       "kept": 0,
-      "ms": 67
+      "ms": 139
     },
     {
       "company": "MongoDB",
@@ -1516,7 +1517,7 @@
       "ok": true,
       "seen": 415,
       "kept": 0,
-      "ms": 241
+      "ms": 421
     },
     {
       "company": "Squarespace",
@@ -1524,7 +1525,7 @@
       "ok": true,
       "seen": 28,
       "kept": 0,
-      "ms": 68
+      "ms": 79
     },
     {
       "company": "Peloton",
@@ -1532,7 +1533,7 @@
       "ok": true,
       "seen": 47,
       "kept": 0,
-      "ms": 147
+      "ms": 125
     },
     {
       "company": "SeatGeek",
@@ -1540,7 +1541,7 @@
       "ok": true,
       "seen": 20,
       "kept": 0,
-      "ms": 41
+      "ms": 85
     },
     {
       "company": "Attentive",
@@ -1548,7 +1549,7 @@
       "ok": true,
       "seen": 37,
       "kept": 0,
-      "ms": 137
+      "ms": 355
     },
     {
       "company": "Movable Ink",
@@ -1556,7 +1557,7 @@
       "ok": true,
       "seen": 34,
       "kept": 0,
-      "ms": 119
+      "ms": 80
     },
     {
       "company": "Bombas",
@@ -1564,7 +1565,7 @@
       "ok": true,
       "seen": 13,
       "kept": 0,
-      "ms": 85
+      "ms": 132
     },
     {
       "company": "Dataiku",
@@ -1572,7 +1573,7 @@
       "ok": true,
       "seen": 24,
       "kept": 0,
-      "ms": 84
+      "ms": 154
     },
     {
       "company": "Celonis",
@@ -1580,7 +1581,7 @@
       "ok": true,
       "seen": 274,
       "kept": 0,
-      "ms": 308
+      "ms": 358
     },
     {
       "company": "Flatiron Health",
@@ -1588,7 +1589,7 @@
       "ok": true,
       "seen": 32,
       "kept": 0,
-      "ms": 79
+      "ms": 147
     },
     {
       "company": "Kraken",
@@ -1596,7 +1597,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 746
+      "ms": 306
     },
     {
       "company": "Varo Bank",
@@ -1604,7 +1605,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 742
+      "ms": 3265
     },
     {
       "company": "Fundrise",
@@ -1612,7 +1613,7 @@
       "ok": true,
       "seen": 3,
       "kept": 0,
-      "ms": 676
+      "ms": 319
     },
     {
       "company": "Mercury",
@@ -1620,7 +1621,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 151
+      "ms": 134
     },
     {
       "company": "Deel",
@@ -1628,7 +1629,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 22
+      "ms": 45
     },
     {
       "company": "Visa",
@@ -1636,7 +1637,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 385
+      "ms": 478
     },
     {
       "company": "Publicis Groupe",
@@ -1644,7 +1645,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 348
+      "ms": 459
     },
     {
       "company": "WPP",
@@ -1652,7 +1653,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 342
+      "ms": 413
     },
     {
       "company": "General Catalyst",
@@ -1660,7 +1661,7 @@
       "ok": true,
       "seen": 1,
       "kept": 0,
-      "ms": 23
+      "ms": 43
     },
     {
       "company": "Bessemer Venture Partners",
@@ -1668,7 +1669,7 @@
       "ok": true,
       "seen": 4,
       "kept": 0,
-      "ms": 30
+      "ms": 50
     },
     {
       "company": "Battery Ventures",
@@ -1676,7 +1677,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 26
+      "ms": 52
     },
     {
       "company": "Greycroft",
@@ -1684,7 +1685,7 @@
       "ok": true,
       "seen": 2,
       "kept": 0,
-      "ms": 23
+      "ms": 45
     },
     {
       "company": "Lincoln International",
@@ -1692,7 +1693,7 @@
       "ok": true,
       "seen": 41,
       "kept": 0,
-      "ms": 56
+      "ms": 69
     },
     {
       "company": "Man Group",
@@ -1700,7 +1701,7 @@
       "ok": true,
       "seen": 55,
       "kept": 0,
-      "ms": 61
+      "ms": 81
     },
     {
       "company": "Jane Street",
@@ -1708,7 +1709,7 @@
       "ok": true,
       "seen": 232,
       "kept": 0,
-      "ms": 81
+      "ms": 185
     },
     {
       "company": "Andreessen Horowitz",
@@ -1716,7 +1717,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 46
+      "ms": 81
     },
     {
       "company": "Interpath",
@@ -1724,7 +1725,7 @@
       "ok": true,
       "seen": 22,
       "kept": 0,
-      "ms": 71
+      "ms": 64
     },
     {
       "company": "Riveron",
@@ -1732,7 +1733,7 @@
       "ok": true,
       "seen": 74,
       "kept": 0,
-      "ms": 109
+      "ms": 46
     },
     {
       "company": "KPMG",
@@ -1740,7 +1741,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 100
+      "ms": 133
     },
     {
       "company": "Forvis Mazars",
@@ -1748,7 +1749,7 @@
       "ok": true,
       "seen": 188,
       "kept": 0,
-      "ms": 83
+      "ms": 105
     },
     {
       "company": "Apollo Global Management",
@@ -1756,7 +1757,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 29
+      "ms": 46
     },
     {
       "company": "Fortress Investment Group",
@@ -1764,7 +1765,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 86
+      "ms": 639
     },
     {
       "company": "HPS Investment Partners",
@@ -1772,7 +1773,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 26
+      "ms": 47
     },
     {
       "company": "Atlas Holdings",
@@ -1780,7 +1781,7 @@
       "ok": true,
       "seen": 8,
       "kept": 0,
-      "ms": 42
+      "ms": 14
     }
   ],
   "jobs": [
@@ -1905,7 +1906,7 @@
       "applyBy": "2026-09-25T13:16:43.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:55:51.135Z",
+      "lastSeen": "2026-09-06T15:00:20.179Z",
       "active": true
     },
     {
@@ -2069,7 +2070,7 @@
       "applyBy": "2026-09-24T16:14:44.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:55:51.135Z",
+      "lastSeen": "2026-09-06T15:00:20.179Z",
       "active": true
     },
     {
@@ -2153,7 +2154,7 @@
       "applyBy": "2026-09-22T22:33:54.415Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:55:51.135Z",
+      "lastSeen": "2026-09-06T15:00:20.179Z",
       "active": true
     },
     {
@@ -2217,7 +2218,7 @@
       "applyBy": "2026-09-22T18:20:38.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:55:51.135Z",
+      "lastSeen": "2026-09-06T15:00:20.179Z",
       "active": true
     },
     {
@@ -2301,7 +2302,7 @@
       "applyBy": "2026-09-21T18:11:54.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:55:51.135Z",
+      "lastSeen": "2026-09-06T15:00:20.179Z",
       "active": true
     },
     {
@@ -2345,7 +2346,7 @@
       "applyBy": "2026-09-18T16:38:21.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
-      "lastSeen": "2026-09-06T14:55:51.135Z",
+      "lastSeen": "2026-09-06T15:00:20.179Z",
       "active": true
     },
     {
@@ -2509,7 +2510,7 @@
       "applyBy": "2026-09-16T21:11:28.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:55:51.135Z",
+      "lastSeen": "2026-09-06T15:00:20.179Z",
       "active": true
     },
     {
@@ -2593,7 +2594,7 @@
       "applyBy": "2026-09-15T20:24:28.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:55:51.135Z",
+      "lastSeen": "2026-09-06T15:00:20.179Z",
       "active": true
     },
     {
@@ -2657,7 +2658,7 @@
       "applyBy": "2026-09-14T16:45:50.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:55:51.135Z",
+      "lastSeen": "2026-09-06T15:00:20.179Z",
       "active": true
     },
     {
@@ -2741,7 +2742,7 @@
       "applyBy": "2026-09-11T17:29:26.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:55:51.135Z",
+      "lastSeen": "2026-09-06T15:00:20.179Z",
       "active": true
     },
     {
@@ -2765,7 +2766,7 @@
       "applyBy": "2026-09-11T13:36:58.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:55:51.135Z",
+      "lastSeen": "2026-09-06T15:00:20.179Z",
       "active": true
     },
     {
@@ -2969,7 +2970,7 @@
       "applyBy": "2026-09-08T21:50:26.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T14:55:51.135Z",
+      "lastSeen": "2026-09-06T15:00:20.179Z",
       "active": true
     },
     {
@@ -3054,7 +3055,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-ramp-157bb000-868b-4a6d-9143-67619871812f",
@@ -3118,7 +3119,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-clearstreet-8126698",
@@ -3142,7 +3143,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-betterment-8078059",
@@ -3206,7 +3207,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-ramp-8baec095-2235-41ab-ab64-9abc57823b4b",
@@ -3250,7 +3251,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-brex-8698248002",
@@ -3374,7 +3375,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-ramp-97898101-f97b-47c8-a991-267afc517ae5",
@@ -3498,7 +3499,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-brex-8687493002",
@@ -3822,7 +3823,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-brex-8659251002",
@@ -3986,7 +3987,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-betterment-8078001",
@@ -4210,7 +4211,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-gemini-8069413",
@@ -4234,7 +4235,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-carta-7810427003",
@@ -4338,7 +4339,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-ramp-1368191c-94bc-4cfd-b3d2-a2a72f847360",
@@ -4522,7 +4523,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-point72-8614187002",
@@ -5026,7 +5027,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-oscar-8011066",
@@ -5050,7 +5051,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-oscar-7991118",
@@ -5134,7 +5135,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-justworks-7980174",
@@ -5158,7 +5159,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-accordion-7984026",
@@ -5182,7 +5183,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-brex-8579199002",
@@ -5206,7 +5207,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-ramp-5cc4e600-1b28-4083-8a70-90f790112f89",
@@ -5230,7 +5231,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-gemini-7977282",
@@ -5254,7 +5255,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-datadog-7982288",
@@ -5338,7 +5339,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-datadog-7958756",
@@ -5602,7 +5603,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:16:29.056Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-datadog-7905006",
@@ -5646,7 +5647,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-brex-8534634002",
@@ -5690,7 +5691,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-justworks-7846681",
@@ -5754,7 +5755,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-ducerapartners-7692641003",
@@ -5778,7 +5779,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-oscar-7852511",
@@ -5922,7 +5923,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-justworks-7797381",
@@ -5986,7 +5987,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-oscar-7762241",
@@ -6010,7 +6011,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-datadog-7785350",
@@ -6054,7 +6055,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-point72-8467512002",
@@ -6218,7 +6219,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-brex-8438581002",
@@ -6302,7 +6303,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-accordion-7582977",
@@ -6326,7 +6327,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-point72-8367891002",
@@ -6350,7 +6351,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-clearstreet-7561417",
@@ -6514,7 +6515,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:16:29.056Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-brex-8152938002",
@@ -6538,7 +6539,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-datadog-7129425",
@@ -6562,7 +6563,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-ducerapartners-6674183003",
@@ -6586,7 +6587,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-ramp-d84bbf19-572a-499c-9c87-0c154ce85caf",
@@ -6630,7 +6631,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "lv-portagepointpartners-44ddb482-a3bf-42da-afe3-422d53c47eae",
@@ -6654,7 +6655,7 @@
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-06T14:38:50.956Z",
       "lastSeen": "2026-09-06T14:55:51.135Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-point72-4644225002",
