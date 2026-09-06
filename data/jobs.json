@@ -1,68 +1,269 @@
 {
-  "generatedAt": "2026-09-06T12:11:35.739Z",
+  "generatedAt": "2026-09-06T14:16:29.056Z",
   "salaryFloor": 100000,
   "counts": {
-    "total": 221,
-    "active": 94,
-    "boardsOk": 42,
-    "boardsTotal": 42
+    "total": 223,
+    "active": 42,
+    "boardsOk": 51,
+    "boardsTotal": 82
   },
   "sources": [
     {
-      "company": "Ramp",
-      "ats": "ashby",
-      "ok": true,
-      "seen": 142,
-      "kept": 21,
-      "ms": 126
+      "company": "Insight Partners",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3172
     },
     {
-      "company": "Datadog",
+      "company": "Index Ventures",
       "ats": "greenhouse",
-      "ok": true,
-      "seen": 441,
-      "kept": 13,
-      "ms": 660
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3177
+    },
+    {
+      "company": "Union Square Ventures",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3176
+    },
+    {
+      "company": "FirstMark Capital",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3169
+    },
+    {
+      "company": "Lerer Hippeau",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3170
+    },
+    {
+      "company": "Primary Venture Partners",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3173
+    },
+    {
+      "company": "RRE Ventures",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3172
+    },
+    {
+      "company": "Tiger Global",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3162
+    },
+    {
+      "company": "Coatue",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3164
+    },
+    {
+      "company": "Thrive Capital",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3165
+    },
+    {
+      "company": "Ares Management",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3186
+    },
+    {
+      "company": "Blue Owl Capital",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3168
+    },
+    {
+      "company": "Sixth Street",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3180
+    },
+    {
+      "company": "Golub Capital",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3165
+    },
+    {
+      "company": "Hamilton Lane",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3187
+    },
+    {
+      "company": "StepStone Group",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3166
+    },
+    {
+      "company": "Cambridge Associates",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3169
+    },
+    {
+      "company": "Bridgepoint",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3163
+    },
+    {
+      "company": "Perella Weinberg",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3177
+    },
+    {
+      "company": "Solomon Partners",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3258
+    },
+    {
+      "company": "Union Square Advisors",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3170
+    },
+    {
+      "company": "Cowen",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3180
+    },
+    {
+      "company": "Oppenheimer",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3177
+    },
+    {
+      "company": "B. Riley",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3190
+    },
+    {
+      "company": "Canaccord Genuity",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3164
+    },
+    {
+      "company": "Antares Capital",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3167
+    },
+    {
+      "company": "Angelo Gordon",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3174
+    },
+    {
+      "company": "Marathon Asset Management",
+      "ats": "greenhouse",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3246
+    },
+    {
+      "company": "Sculptor Capital",
+      "ats": "lever",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3741
+    },
+    {
+      "company": "Corsair Capital",
+      "ats": "lever",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 4597
+    },
+    {
+      "company": "Bain Capital Ventures",
+      "ats": "ashby",
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 3182
     },
     {
       "company": "Oscar Health",
       "ats": "greenhouse",
       "ok": true,
       "seen": 283,
-      "kept": 13,
-      "ms": 409
+      "kept": 6,
+      "ms": 346
     },
     {
-      "company": "Brex",
-      "ats": "greenhouse",
+      "company": "Ramp",
+      "ats": "ashby",
       "ok": true,
-      "seen": 282,
-      "kept": 10,
-      "ms": 439
-    },
-    {
-      "company": "Justworks",
-      "ats": "greenhouse",
-      "ok": true,
-      "seen": 98,
-      "kept": 7,
-      "ms": 260
-    },
-    {
-      "company": "Alloy",
-      "ats": "greenhouse",
-      "ok": true,
-      "seen": 25,
-      "kept": 4,
-      "ms": 68
+      "seen": 142,
+      "kept": 6,
+      "ms": 164
     },
     {
       "company": "Point72",
       "ats": "greenhouse",
       "ok": true,
       "seen": 231,
+      "kept": 5,
+      "ms": 148
+    },
+    {
+      "company": "Brex",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 282,
       "kept": 4,
-      "ms": 186
+      "ms": 531
+    },
+    {
+      "company": "Datadog",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 441,
+      "kept": 4,
+      "ms": 514
     },
     {
       "company": "iCapital",
@@ -70,31 +271,7 @@
       "ok": true,
       "seen": 212,
       "kept": 3,
-      "ms": 317
-    },
-    {
-      "company": "Braze",
-      "ats": "greenhouse",
-      "ok": true,
-      "seen": 281,
-      "kept": 3,
-      "ms": 599
-    },
-    {
-      "company": "Betterment",
-      "ats": "greenhouse",
-      "ok": true,
-      "seen": 27,
-      "kept": 2,
-      "ms": 209
-    },
-    {
-      "company": "Carta",
-      "ats": "greenhouse",
-      "ok": true,
-      "seen": 61,
-      "kept": 2,
-      "ms": 416
+      "ms": 335
     },
     {
       "company": "Gemini",
@@ -102,23 +279,23 @@
       "ok": true,
       "seen": 36,
       "kept": 2,
-      "ms": 188
+      "ms": 111
     },
     {
-      "company": "Ethic",
+      "company": "Betterment",
       "ats": "greenhouse",
       "ok": true,
-      "seen": 4,
-      "kept": 2,
-      "ms": 46
-    },
-    {
-      "company": "Chime",
-      "ats": "greenhouse",
-      "ok": true,
-      "seen": 65,
+      "seen": 27,
       "kept": 1,
-      "ms": 760
+      "ms": 186
+    },
+    {
+      "company": "Carta",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 61,
+      "kept": 1,
+      "ms": 244
     },
     {
       "company": "Clear Street",
@@ -126,7 +303,15 @@
       "ok": true,
       "seen": 26,
       "kept": 1,
-      "ms": 287
+      "ms": 205
+    },
+    {
+      "company": "Alloy",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 25,
+      "kept": 1,
+      "ms": 85
     },
     {
       "company": "Coinbase",
@@ -134,39 +319,15 @@
       "ok": true,
       "seen": 192,
       "kept": 1,
-      "ms": 309
+      "ms": 336
     },
     {
-      "company": "Fireblocks",
+      "company": "Ethic",
       "ats": "greenhouse",
       "ok": true,
-      "seen": 72,
+      "seen": 4,
       "kept": 1,
-      "ms": 135
-    },
-    {
-      "company": "Squarespace",
-      "ats": "greenhouse",
-      "ok": true,
-      "seen": 28,
-      "kept": 1,
-      "ms": 92
-    },
-    {
-      "company": "Peloton",
-      "ats": "greenhouse",
-      "ok": true,
-      "seen": 47,
-      "kept": 1,
-      "ms": 117
-    },
-    {
-      "company": "SeatGeek",
-      "ats": "greenhouse",
-      "ok": true,
-      "seen": 20,
-      "kept": 1,
-      "ms": 70
+      "ms": 64
     },
     {
       "company": "Yext",
@@ -174,7 +335,23 @@
       "ok": true,
       "seen": 22,
       "kept": 1,
-      "ms": 63
+      "ms": 80
+    },
+    {
+      "company": "Braze",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 281,
+      "kept": 1,
+      "ms": 448
+    },
+    {
+      "company": "Justworks",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 98,
+      "kept": 1,
+      "ms": 257
     },
     {
       "company": "Vanta",
@@ -182,7 +359,7 @@
       "ok": true,
       "seen": 111,
       "kept": 1,
-      "ms": 160
+      "ms": 225
     },
     {
       "company": "OpenAI",
@@ -190,7 +367,23 @@
       "ok": true,
       "seen": 779,
       "kept": 1,
-      "ms": 436
+      "ms": 563
+    },
+    {
+      "company": "Schonfeld",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 67,
+      "kept": 1,
+      "ms": 111
+    },
+    {
+      "company": "Chime",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 65,
+      "kept": 0,
+      "ms": 301
     },
     {
       "company": "Affirm",
@@ -198,7 +391,7 @@
       "ok": true,
       "seen": 204,
       "kept": 0,
-      "ms": 540
+      "ms": 391
     },
     {
       "company": "SoFi",
@@ -206,7 +399,7 @@
       "ok": true,
       "seen": 61,
       "kept": 0,
-      "ms": 167
+      "ms": 164
     },
     {
       "company": "Robinhood",
@@ -214,7 +407,15 @@
       "ok": true,
       "seen": 128,
       "kept": 0,
-      "ms": 258
+      "ms": 325
+    },
+    {
+      "company": "Fireblocks",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 72,
+      "kept": 0,
+      "ms": 146
     },
     {
       "company": "Vestwell",
@@ -222,7 +423,7 @@
       "ok": true,
       "seen": 20,
       "kept": 0,
-      "ms": 67
+      "ms": 89
     },
     {
       "company": "MongoDB",
@@ -230,7 +431,31 @@
       "ok": true,
       "seen": 415,
       "kept": 0,
-      "ms": 380
+      "ms": 241
+    },
+    {
+      "company": "Squarespace",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 28,
+      "kept": 0,
+      "ms": 260
+    },
+    {
+      "company": "Peloton",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 47,
+      "kept": 0,
+      "ms": 208
+    },
+    {
+      "company": "SeatGeek",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 20,
+      "kept": 0,
+      "ms": 122
     },
     {
       "company": "Attentive",
@@ -238,7 +463,7 @@
       "ok": true,
       "seen": 37,
       "kept": 0,
-      "ms": 72
+      "ms": 136
     },
     {
       "company": "Movable Ink",
@@ -246,7 +471,7 @@
       "ok": true,
       "seen": 34,
       "kept": 0,
-      "ms": 46
+      "ms": 108
     },
     {
       "company": "Bombas",
@@ -254,7 +479,7 @@
       "ok": true,
       "seen": 13,
       "kept": 0,
-      "ms": 123
+      "ms": 138
     },
     {
       "company": "Dataiku",
@@ -262,7 +487,7 @@
       "ok": true,
       "seen": 24,
       "kept": 0,
-      "ms": 94
+      "ms": 137
     },
     {
       "company": "Celonis",
@@ -270,7 +495,7 @@
       "ok": true,
       "seen": 274,
       "kept": 0,
-      "ms": 489
+      "ms": 388
     },
     {
       "company": "Flatiron Health",
@@ -278,7 +503,7 @@
       "ok": true,
       "seen": 32,
       "kept": 0,
-      "ms": 196
+      "ms": 84
     },
     {
       "company": "Kraken",
@@ -286,7 +511,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 857
+      "ms": 364
     },
     {
       "company": "Varo Bank",
@@ -294,7 +519,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 537
+      "ms": 917
     },
     {
       "company": "Fundrise",
@@ -302,7 +527,7 @@
       "ok": true,
       "seen": 3,
       "kept": 0,
-      "ms": 490
+      "ms": 392
     },
     {
       "company": "Mercury",
@@ -310,7 +535,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 232
+      "ms": 338
     },
     {
       "company": "Deel",
@@ -318,7 +543,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 60
+      "ms": 137
     },
     {
       "company": "Visa",
@@ -326,7 +551,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 455
+      "ms": 522
     },
     {
       "company": "Publicis Groupe",
@@ -334,7 +559,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 343
+      "ms": 518
     },
     {
       "company": "WPP",
@@ -342,7 +567,71 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 365
+      "ms": 476
+    },
+    {
+      "company": "General Catalyst",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 1,
+      "kept": 0,
+      "ms": 61
+    },
+    {
+      "company": "Bessemer Venture Partners",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 4,
+      "kept": 0,
+      "ms": 64
+    },
+    {
+      "company": "Battery Ventures",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 0,
+      "kept": 0,
+      "ms": 114
+    },
+    {
+      "company": "Greycroft",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 2,
+      "kept": 0,
+      "ms": 61
+    },
+    {
+      "company": "Lincoln International",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 41,
+      "kept": 0,
+      "ms": 90
+    },
+    {
+      "company": "Man Group",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 55,
+      "kept": 0,
+      "ms": 90
+    },
+    {
+      "company": "Jane Street",
+      "ats": "greenhouse",
+      "ok": true,
+      "seen": 232,
+      "kept": 0,
+      "ms": 206
+    },
+    {
+      "company": "Andreessen Horowitz",
+      "ats": "ashby",
+      "ok": true,
+      "seen": 0,
+      "kept": 0,
+      "ms": 108
     }
   ],
   "jobs": [
@@ -454,6 +743,7 @@
       "location": "New York City",
       "postedAt": "2026-09-04T09:16:43-04:00",
       "category": "ops_strategy",
+      "priority": false,
       "salaryMin": 145000,
       "salaryMax": 171000,
       "salaryText": "$145k – $171k",
@@ -462,8 +752,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-09-25T13:16:43.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -613,7 +904,8 @@
       "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8766868002",
       "location": "New York, New York, United States",
       "postedAt": "2026-09-03T12:14:44-04:00",
-      "category": "ops_strategy",
+      "category": "vc",
+      "priority": true,
       "salaryMin": 90000,
       "salaryMax": 130000,
       "salaryText": "$90k – $130k",
@@ -622,8 +914,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-09-24T16:14:44.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -644,7 +937,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-ramp-dba53e68-4c96-449d-af4d-27dc475b814c",
@@ -664,7 +957,7 @@
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-oscar-8146250",
@@ -694,6 +987,7 @@
       "location": "New York, NY",
       "postedAt": "2026-09-01T22:33:54.415+00:00",
       "category": "sales_bd",
+      "priority": false,
       "salaryMin": 95000,
       "salaryMax": 112000,
       "salaryText": "$95k – $112k",
@@ -702,8 +996,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "ashby",
+      "applyBy": "2026-09-22T22:33:54.415Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -724,7 +1019,7 @@
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-point72-8770359002",
@@ -753,7 +1048,8 @@
       "url": "https://careers.datadoghq.com/detail/8171303/?gh_jid=8171303",
       "location": "New York, New York, USA",
       "postedAt": "2026-09-01T14:20:38-04:00",
-      "category": "sales_bd",
+      "category": "ops_strategy",
+      "priority": false,
       "salaryMin": 100000,
       "salaryMax": 100000,
       "salaryText": "$100k",
@@ -762,8 +1058,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-09-22T18:20:38.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -784,7 +1081,7 @@
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-oscar-8168186",
@@ -834,6 +1131,7 @@
       "location": "New York, NY; Hamilton, NJ",
       "postedAt": "2026-08-31T14:11:54-04:00",
       "category": "ops_strategy",
+      "priority": false,
       "salaryMin": 105400,
       "salaryMax": 124000,
       "salaryText": "$105k – $124k",
@@ -842,8 +1140,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-09-21T18:11:54.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -924,7 +1223,7 @@
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-seatgeek-8162057",
@@ -984,7 +1283,7 @@
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-oscar-8146196",
@@ -1014,6 +1313,7 @@
       "location": "New York, NY",
       "postedAt": "2026-08-26T17:11:28-04:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 108000,
       "salaryMax": 108000,
       "salaryText": "$108k",
@@ -1022,8 +1322,9 @@
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
+      "applyBy": "2026-09-16T21:11:28.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -1044,7 +1345,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-openai-51977acc-b1f8-48af-bde6-95ddba936d65",
@@ -1084,7 +1385,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-coinbase-8157661",
@@ -1094,6 +1395,7 @@
       "location": "New York City, NY",
       "postedAt": "2026-08-25T16:24:28-04:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 130900,
       "salaryMax": 130900,
       "salaryText": "$131k",
@@ -1102,8 +1404,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-09-15T20:24:28.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -1124,7 +1427,7 @@
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-alloy-8687338002",
@@ -1144,7 +1447,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-ethic-7963653003",
@@ -1154,6 +1457,7 @@
       "location": "New York, NY",
       "postedAt": "2026-08-24T12:45:50-04:00",
       "category": "sales_bd",
+      "priority": false,
       "salaryMin": 95000,
       "salaryMax": 105000,
       "salaryText": "$95k – $105k",
@@ -1162,8 +1466,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-09-14T16:45:50.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -1234,6 +1539,7 @@
       "location": "New York, New York, United States",
       "postedAt": "2026-08-21T13:29:26-04:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 87188,
       "salaryMax": 114434,
       "salaryText": "$87k – $114k",
@@ -1242,8 +1548,9 @@
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
+      "applyBy": "2026-09-11T17:29:26.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -1254,6 +1561,7 @@
       "location": "New York, New York, United States",
       "postedAt": "2026-08-21T09:36:58-04:00",
       "category": "sales_bd",
+      "priority": false,
       "salaryMin": 91908,
       "salaryMax": 120629,
       "salaryText": "$92k – $121k",
@@ -1262,8 +1570,9 @@
       "j1Friendly": true,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-09-11T13:36:58.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -1324,7 +1633,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-datadog-8140297",
@@ -1364,7 +1673,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-alloy-8729944002",
@@ -1404,7 +1713,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-betterment-8139698",
@@ -1453,7 +1762,8 @@
       "url": "https://www.brex.com/careers/8728491002?gh_jid=8728491002",
       "location": "New York, New York, United States",
       "postedAt": "2026-08-18T17:50:26-04:00",
-      "category": "finance",
+      "category": "vc",
+      "priority": true,
       "salaryMin": 103960,
       "salaryMax": 129950,
       "salaryText": "$104k – $130k",
@@ -1462,8 +1772,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-09-08T21:50:26.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -1484,7 +1795,7 @@
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-datadog-8128764",
@@ -1504,7 +1815,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-ramp-4e9886c1-134b-4cc7-9bcf-eb56bd0ca71f",
@@ -1574,6 +1885,7 @@
       "location": "New York City",
       "postedAt": "2026-08-14T16:41:37.064+00:00",
       "category": "sales_bd",
+      "priority": false,
       "salaryMin": 302000,
       "salaryMax": 335000,
       "salaryText": "$302k – $335k",
@@ -1582,8 +1894,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "ashby",
+      "applyBy": "2026-09-04T16:41:37.064Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -1594,6 +1907,7 @@
       "location": "New York, NY",
       "postedAt": "2026-08-12T17:09:57-04:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 100000,
       "salaryMax": 150000,
       "salaryText": "$100k – $150k",
@@ -1602,8 +1916,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-09-02T21:09:57.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -1654,6 +1969,7 @@
       "location": "New York, NY (HQ)",
       "postedAt": "2026-08-12T20:22:32.685+00:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 108000,
       "salaryMax": 200000,
       "salaryText": "$108k – $200k",
@@ -1662,8 +1978,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "ashby",
+      "applyBy": "2026-09-02T20:22:32.685Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -1694,6 +2011,7 @@
       "location": "New York, New York, United States",
       "postedAt": "2026-08-12T09:36:13-04:00",
       "category": "sales_bd",
+      "priority": false,
       "salaryMin": 101844,
       "salaryMax": 133670,
       "salaryText": "$102k – $134k",
@@ -1702,8 +2020,9 @@
       "j1Friendly": true,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-09-02T13:36:13.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -1744,7 +2063,7 @@
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-ethic-7855059003",
@@ -1764,7 +2083,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-ramp-2ddd97a8-70b2-4030-ba42-21124ad304d3",
@@ -1804,7 +2123,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-ramp-4904547a-e2ca-407c-b113-8aae2be0790c",
@@ -1814,6 +2133,7 @@
       "location": "New York, NY (HQ)",
       "postedAt": "2026-08-10T20:47:19.474+00:00",
       "category": "sales_bd",
+      "priority": false,
       "salaryMin": 116000,
       "salaryMax": 177000,
       "salaryText": "$116k – $177k",
@@ -1822,8 +2142,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "ashby",
+      "applyBy": "2026-08-31T20:47:19.474Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -1844,7 +2165,7 @@
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-ramp-f0f95d20-fb64-4c06-86ff-6142e937fe0b",
@@ -1904,7 +2225,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-clearstreet-8113916",
@@ -1933,7 +2254,8 @@
       "url": "https://jobs.ashbyhq.com/ramp/59ae3776-2d0a-41b0-a5b2-ffd1262b92d2",
       "location": "New York, NY (HQ)",
       "postedAt": "2026-08-07T01:12:02.946+00:00",
-      "category": "finance",
+      "category": "ib",
+      "priority": true,
       "salaryMin": 104000,
       "salaryMax": 192000,
       "salaryText": "$104k – $192k",
@@ -1942,8 +2264,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "ashby",
+      "applyBy": "2026-08-28T01:12:02.946Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -1984,7 +2307,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-ramp-4d3197eb-49dc-4827-a1e6-26cf0ff24b55",
@@ -2004,7 +2327,7 @@
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-openai-2a931dd1-5002-47d1-a367-ec1a19ef7e9e",
@@ -2064,7 +2387,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-oscar-8103046",
@@ -2084,7 +2407,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-ramp-881f9f7d-9ec5-4b69-b50d-a67000264ca8",
@@ -2124,7 +2447,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-squarespace-8101310",
@@ -2144,7 +2467,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-fireblocks-4701957006",
@@ -2164,7 +2487,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-braze-8081972",
@@ -2254,6 +2577,7 @@
       "location": "Betterment HQ - New York City",
       "postedAt": "2026-07-30T15:22:32-04:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 110000,
       "salaryMax": 130000,
       "salaryText": "$110k – $130k",
@@ -2262,8 +2586,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-08-20T19:22:32.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -2344,7 +2669,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-ramp-f36f233b-bb27-4334-87df-8dc02b897724",
@@ -2444,7 +2769,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-oscar-7914958",
@@ -2504,7 +2829,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-squarespace-8079472",
@@ -2564,7 +2889,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-datadog-8067190",
@@ -2584,7 +2909,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-oscar-8056703",
@@ -2614,6 +2939,7 @@
       "location": "New York, New York, United States",
       "postedAt": "2026-07-21T00:29:39-04:00",
       "category": "sales_bd",
+      "priority": false,
       "salaryMin": 101844,
       "salaryMax": 133670,
       "salaryText": "$102k – $134k",
@@ -2622,8 +2948,9 @@
       "j1Friendly": true,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-08-11T04:29:39.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -2634,6 +2961,7 @@
       "location": "New York, New York; Miami, Florida; Remote (USA)",
       "postedAt": "2026-07-20T18:41:19-04:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 92400,
       "salaryMax": 132000,
       "salaryText": "$92k – $132k",
@@ -2642,8 +2970,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-08-10T22:41:19.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -2664,7 +2993,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-brex-8641732002",
@@ -2734,6 +3063,7 @@
       "location": "New York City",
       "postedAt": "2026-07-17T15:50:05-04:00",
       "category": "ops_strategy",
+      "priority": false,
       "salaryMin": 108000,
       "salaryMax": 108000,
       "salaryText": "$108k",
@@ -2742,8 +3072,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-08-07T19:50:05.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -2764,7 +3095,7 @@
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-datadog-8069340",
@@ -2844,7 +3175,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-datadog-8060788",
@@ -2913,7 +3244,8 @@
       "url": "https://careers.datadoghq.com/detail/8049521/?gh_jid=8049521",
       "location": "New York, New York, USA",
       "postedAt": "2026-07-10T09:48:32-04:00",
-      "category": "sales_bd",
+      "category": "ops_strategy",
+      "priority": false,
       "salaryMin": 100000,
       "salaryMax": 100000,
       "salaryText": "$100k",
@@ -2922,8 +3254,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-07-31T13:48:32.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -2964,7 +3297,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-openai-3254f6a7-6353-4a77-beec-f37b832c99ae",
@@ -3044,7 +3377,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-betterment-8041552",
@@ -3104,7 +3437,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:36:28.970Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-oscar-8031791",
@@ -3184,7 +3517,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-braze-8024690",
@@ -3264,7 +3597,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-point72-8488485002",
@@ -3344,7 +3677,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "ab-ramp-6a7e382f-240a-4952-b9e5-7fe2b3856bc9",
@@ -3414,6 +3747,7 @@
       "location": "New York, NY (HQ)",
       "postedAt": "2026-06-17T15:11:56.824+00:00",
       "category": "sales_bd",
+      "priority": false,
       "salaryMin": 86000,
       "salaryMax": 176000,
       "salaryText": "$86k – $176k",
@@ -3422,8 +3756,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "ashby",
+      "applyBy": "2026-07-08T15:11:56.824Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -3434,6 +3769,7 @@
       "location": "New York, New York, United States",
       "postedAt": "2026-06-17T10:05:48-04:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 87188,
       "salaryMax": 114434,
       "salaryText": "$87k – $114k",
@@ -3442,8 +3778,9 @@
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
+      "applyBy": "2026-07-08T14:05:48.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -3514,6 +3851,7 @@
       "location": "New York, New York, United States",
       "postedAt": "2026-06-10T15:24:06-04:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 85000,
       "salaryMax": 115000,
       "salaryText": "$85k – $115k",
@@ -3522,8 +3860,9 @@
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
+      "applyBy": "2026-07-01T19:24:06.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -3534,6 +3873,7 @@
       "location": "New York, New York",
       "postedAt": "2026-06-05T18:08:06-04:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 122000,
       "salaryMax": 134200,
       "salaryText": "$122k – $134k",
@@ -3542,8 +3882,9 @@
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
+      "applyBy": "2026-06-26T22:08:06.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -3554,6 +3895,7 @@
       "location": "New York, New York, United States",
       "postedAt": "2026-06-04T15:02:48-04:00",
       "category": "ops_strategy",
+      "priority": false,
       "salaryMin": 101248,
       "salaryMax": 126560,
       "salaryText": "$101k – $127k",
@@ -3562,8 +3904,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-06-25T19:02:48.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -3574,6 +3917,7 @@
       "location": "New York, NY (HQ)",
       "postedAt": "2026-06-04T17:51:00.028+00:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 140000,
       "salaryMax": 230000,
       "salaryText": "$140k – $230k",
@@ -3582,8 +3926,9 @@
       "j1Friendly": false,
       "strongMatch": true,
       "source": "ashby",
+      "applyBy": "2026-06-25T17:51:00.028Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -3594,6 +3939,7 @@
       "location": "New York, New York; Miami, Florida; Remote (USA)",
       "postedAt": "2026-06-04T09:56:55-04:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 92400,
       "salaryMax": 132000,
       "salaryText": "$92k – $132k",
@@ -3602,8 +3948,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-06-25T13:56:55.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -3674,6 +4021,7 @@
       "location": "New York, NY (HQ)",
       "postedAt": "2026-05-29T18:37:46.619+00:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 104000,
       "salaryMax": 192000,
       "salaryText": "$104k – $192k",
@@ -3682,8 +4030,9 @@
       "j1Friendly": false,
       "strongMatch": true,
       "source": "ashby",
+      "applyBy": "2026-06-19T18:37:46.619Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -3784,7 +4133,7 @@
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-datadog-7947683",
@@ -3824,7 +4173,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-datadog-7947742",
@@ -3884,7 +4233,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-datadog-7917340",
@@ -3927,6 +4276,28 @@
       "active": false
     },
     {
+      "id": "gh-point72-8541241002",
+      "title": "Point72 Academy Investment Analyst Program for Upcoming Graduates (2027 – US)",
+      "company": "Point72",
+      "url": "https://boards.greenhouse.io/point72/jobs/8541241002?gh_jid=8541241002",
+      "location": "Chicago, Florida, New York, San Francisco",
+      "postedAt": "2026-05-08T13:09:53-04:00",
+      "category": "vc",
+      "priority": true,
+      "salaryMin": 125000,
+      "salaryMax": 125000,
+      "salaryText": "$125k",
+      "hourly": false,
+      "noSponsorship": false,
+      "j1Friendly": true,
+      "strongMatch": false,
+      "source": "greenhouse",
+      "applyBy": "2026-05-29T17:09:53.000Z",
+      "firstSeen": "2026-09-06T14:16:29.056Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
+      "active": true
+    },
+    {
       "id": "gh-datadog-7905006",
       "title": "Senior Product Manager - Serverless",
       "company": "Datadog",
@@ -3954,6 +4325,7 @@
       "location": "New York, New York, United States",
       "postedAt": "2026-05-05T20:44:29-04:00",
       "category": "ops_strategy",
+      "priority": false,
       "salaryMin": 91304,
       "salaryMax": 114130,
       "salaryText": "$91k – $114k",
@@ -3962,8 +4334,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-05-27T00:44:29.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -4004,7 +4377,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-brex-8527501002",
@@ -4033,7 +4406,8 @@
       "url": "https://careers.datadoghq.com/detail/7843331/?gh_jid=7843331",
       "location": "New York, New York, USA",
       "postedAt": "2026-04-27T15:36:43-04:00",
-      "category": "sales_bd",
+      "category": "ops_strategy",
+      "priority": false,
       "salaryMin": 100000,
       "salaryMax": 100000,
       "salaryText": "$100k",
@@ -4042,8 +4416,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-05-18T19:36:43.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -4084,7 +4459,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-point72-8498380002",
@@ -4174,6 +4549,7 @@
       "location": "New York",
       "postedAt": "2026-04-13T16:27:25-04:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 240000,
       "salaryMax": 260000,
       "salaryText": "$240k – $260k",
@@ -4182,8 +4558,9 @@
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
+      "applyBy": "2026-05-04T20:27:25.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -4204,7 +4581,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-justworks-7801522",
@@ -4224,7 +4601,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-point72-8499113002",
@@ -4233,7 +4610,8 @@
       "url": "https://boards.greenhouse.io/point72/jobs/8499113002?gh_jid=8499113002",
       "location": "Chicago, Florida, New York, San Francisco",
       "postedAt": "2026-04-09T16:55:26-04:00",
-      "category": "finance",
+      "category": "vc",
+      "priority": true,
       "salaryMin": 125000,
       "salaryMax": 125000,
       "salaryText": "$125k",
@@ -4242,9 +4620,10 @@
       "j1Friendly": true,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-04-30T20:55:26.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-05T22:32:01.011Z",
-      "active": false
+      "lastSeen": "2026-09-06T14:16:29.056Z",
+      "active": true
     },
     {
       "id": "gh-oscar-7762241",
@@ -4254,6 +4633,7 @@
       "location": "New York, New York, United States",
       "postedAt": "2026-04-07T21:37:24-04:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 96876,
       "salaryMax": 127150,
       "salaryText": "$97k – $127k",
@@ -4262,8 +4642,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-04-29T01:37:24.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -4294,6 +4675,7 @@
       "location": "New York, New York, United States",
       "postedAt": "2026-04-06T19:47:08-04:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 120000,
       "salaryMax": 135000,
       "salaryText": "$120k – $135k",
@@ -4302,8 +4684,9 @@
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
+      "applyBy": "2026-04-27T23:47:08.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -4324,7 +4707,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-datadog-7763117",
@@ -4364,7 +4747,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-brex-8463702002",
@@ -4424,7 +4807,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-brex-8461599002",
@@ -4454,6 +4837,7 @@
       "location": "New York, NY",
       "postedAt": "2026-03-03T15:19:26-05:00",
       "category": "ops_strategy",
+      "priority": false,
       "salaryMin": 145000,
       "salaryMax": 200000,
       "salaryText": "$145k – $200k",
@@ -4462,8 +4846,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2026-03-24T20:19:26.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -4524,7 +4909,7 @@
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-point72-8367891002",
@@ -4534,6 +4919,7 @@
       "location": "New York, NY",
       "postedAt": "2026-01-27T15:14:56-05:00",
       "category": "finance",
+      "priority": false,
       "salaryMin": 115000,
       "salaryMax": 145000,
       "salaryText": "$115k – $145k",
@@ -4542,8 +4928,9 @@
       "j1Friendly": false,
       "strongMatch": true,
       "source": "greenhouse",
+      "applyBy": "2026-02-17T20:14:56.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -4644,7 +5031,7 @@
       "source": "greenhouse",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-brex-8339277002",
@@ -4684,6 +5071,28 @@
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
+      "active": false
+    },
+    {
+      "id": "gh-schonfeld-7402926",
+      "title": "Systematic Portfolio Strategy and Risk Analyst (NYC or Miami)",
+      "company": "Schonfeld",
+      "url": "https://job-boards.greenhouse.io/schonfeld/jobs/7402926",
+      "location": "Miami, Florida, United States; New York, New York, United States",
+      "postedAt": "2025-11-21T12:53:38-05:00",
+      "category": "ops_strategy",
+      "priority": false,
+      "salaryMin": 150000,
+      "salaryMax": 150000,
+      "salaryText": "$150k",
+      "hourly": false,
+      "noSponsorship": false,
+      "j1Friendly": false,
+      "strongMatch": false,
+      "source": "greenhouse",
+      "applyBy": "2025-12-12T17:53:38.000Z",
+      "firstSeen": "2026-09-06T14:16:29.056Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -4694,6 +5103,7 @@
       "location": "New York, New York, United States",
       "postedAt": "2025-09-04T13:05:00-04:00",
       "category": "ops_strategy",
+      "priority": false,
       "salaryMin": 145544,
       "salaryMax": 181930,
       "salaryText": "$146k – $182k",
@@ -4702,8 +5112,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2025-09-25T17:05:00.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -4714,6 +5125,7 @@
       "location": "New York, New York, USA",
       "postedAt": "2025-08-12T10:03:10-04:00",
       "category": "sales_bd",
+      "priority": false,
       "salaryMin": 124000,
       "salaryMax": 124000,
       "salaryText": "$124k",
@@ -4722,8 +5134,9 @@
       "j1Friendly": false,
       "strongMatch": false,
       "source": "greenhouse",
+      "applyBy": "2025-09-02T14:03:10.000Z",
       "firstSeen": "2026-09-05T22:32:01.011Z",
-      "lastSeen": "2026-09-06T12:11:35.739Z",
+      "lastSeen": "2026-09-06T14:16:29.056Z",
       "active": true
     },
     {
@@ -4744,7 +5157,7 @@
       "source": "ashby",
       "firstSeen": "2026-09-05T22:32:01.011Z",
       "lastSeen": "2026-09-06T12:11:35.739Z",
-      "active": true
+      "active": false
     },
     {
       "id": "gh-point72-4644225002",
