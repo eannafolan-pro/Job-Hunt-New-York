@@ -678,6 +678,20 @@ function openDrawer(job) {
   body.append(notes);
   drawer.append(body);
 
+  // LinkedIn shows an applicant count (and the "first 25 applicants" badge) to
+  // a signed-in reader, but exposes it through no API and blocks scraping — so
+  // this hands the check to the reader rather than guessing a number.
+  const li = el('a', 'btn ghost linkedin', 'Applicants on LinkedIn ↗');
+  li.href = 'https://www.linkedin.com/jobs/search/?' + new URLSearchParams({
+    keywords: `${job.title} ${job.company}`,
+    location: 'New York, New York, United States',
+    f_TPR: 'r2592000',   // posted in the last 30 days
+  });
+  li.target = '_blank';
+  li.rel = 'noopener noreferrer';
+  li.title = 'Opens a LinkedIn search for this role. The applicant count is on the posting itself.';
+  body.append(li);
+
   const foot = el('div', 'foot');
   const apply = el('a', 'btn', 'Open posting →');
   apply.href = job.url;
