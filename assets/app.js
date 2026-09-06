@@ -622,6 +622,7 @@ function renderList() {
     meta.append(el('span', null, job.company));
     meta.append(el('span', null, job.location));
     meta.append(el('span', null, CATEGORY_LABELS[job.category]));
+    if (job.salaryEstimated) meta.append(el('span', 'tag est', 'salary estimated'));
     if (job.deadlineSource === 'stated') meta.append(el('span', 'tag stated', 'real closing date'));
     if (job.priority) meta.append(el('span', 'tag match', CATEGORY_LABELS[job.category]));
     if (job.strongMatch) meta.append(el('span', 'tag match', 'strong match'));
@@ -635,7 +636,12 @@ function renderList() {
     card.append(main);
 
     const right = el('div', 'right');
-    right.append(el('div', 'sal', job.salaryText || '—'));
+    const sal = el('div', 'sal' + (job.salaryEstimated ? ' est' : ''), job.salaryText || '—');
+    if (job.salaryEstimated) {
+      sal.title = `The posting states no range. Estimated from ${job.salaryEstimate.samples} `
+        + `comparable ${CATEGORY_LABELS[job.category]} postings at this grade.`;
+    }
+    right.append(sal);
     right.append(el('div', 'when', state.dateBasis === 'applyBy'
       ? (dl < 0 ? 'deadline passed' : dl === 0 ? 'apply today' : `${dl}d left`)
       : relativeDay(job.postedAt)));
@@ -749,7 +755,8 @@ function openDrawer(job) {
   const body = el('div', 'body');
   const dl = el('dl', 'kv');
   const pair = (k, v) => { dl.append(el('dt', null, k), el('dd', null, v)); };
-  pair('Salary', job.salaryText ? job.salaryText + (job.hourly ? ' (from hourly rate)' : '') : 'not stated');
+  pair(job.salaryEstimated ? 'Salary (est.)' : 'Salary',
+    job.salaryText ? job.salaryText + (job.hourly ? ' (from hourly rate)' : '') : 'not stated');
   pair('Posted', `${new Date(job.postedAt).toLocaleDateString('en-US', { dateStyle: 'medium' })} · ${relativeDay(job.postedAt)}`);
   const dld = daysUntilDeadline(job);
   const statedDl = job.deadlineSource === 'stated';
@@ -767,6 +774,13 @@ function openDrawer(job) {
   body.append(dl);
 
   const notes = el('div');
+  if (job.salaryEstimated) {
+    const e = job.salaryEstimate;
+    notes.append(note('est', `This posting states no salary. Kept because ${e.samples} comparable `
+      + `${CATEGORY_LABELS[job.category]} postings at this grade advertised a median of `
+      + `${money(e.median)} (range ${money(e.low)}–${money(e.high)}), which clears the $100k floor. `
+      + `It is a comparison against real observed pay, not a quote — confirm with the employer.`));
+  }
   if (job.strongMatch) {
     notes.append(note('match', 'Strong match — the title lines up with your restructuring, M&A and financial-analysis experience.'));
   }

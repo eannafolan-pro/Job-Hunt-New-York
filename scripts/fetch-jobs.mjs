@@ -216,6 +216,61 @@ function buildDate(year, monthIdx, day) {
   return d;
 }
 
+// ---------------------------------------------------------------- pay benchmarks
+
+// Grade implied by the title. Pay in this market tracks grade far more closely
+// than it tracks employer, so it is the right key for a comparison.
+function seniorityLevel(title) {
+  const t = title.toLowerCase();
+  if (/senior associate|sr\.? associate/.test(t)) return 'senior_associate';
+  if (/senior analyst|sr\.? analyst/.test(t)) return 'senior_analyst';
+  if (/senior consultant/.test(t)) return 'senior_consultant';
+  if (/\bassociate\b/.test(t)) return 'associate';
+  if (/\banalyst\b/.test(t)) return 'analyst';
+  if (/\bconsultant\b/.test(t)) return 'consultant';
+  return 'other';
+}
+
+const MIN_BENCHMARK_SAMPLES = 3;
+
+// Median advertised pay per category and grade, taken from postings that DID
+// state a range. This is the reference an unpriced role is checked against —
+// real observed pay for comparable roles, not an assumption.
+function benchmarkSalaries(jobs, previous = {}) {
+  const buckets = {};
+  for (const j of jobs) {
+    if (!j.salaryMin || !j.level) continue;
+    const key = `${j.category}|${j.level}`;
+    (buckets[key] ||= []).push(Math.round((j.salaryMin + j.salaryMax) / 2));
+  }
+
+  const out = {};
+  // Carry the previous run's samples so a thin day does not lose the reference.
+  for (const [key, prev] of Object.entries(previous)) {
+    out[key] = { ...prev, carried: true };
+  }
+  for (const [key, vals] of Object.entries(buckets)) {
+    vals.sort((a, b) => a - b);
+    out[key] = {
+      median: vals[Math.floor(vals.length / 2)],
+      samples: vals.length,
+      low: vals[0],
+      high: vals[vals.length - 1],
+    };
+  }
+  return out;
+}
+
+// Decide whether an unpriced role clears the floor, on the evidence available.
+// Returns null when there is no comparable data — an unverifiable role is
+// dropped rather than assumed to qualify.
+function inferSalary(job, benchmarks) {
+  const b = benchmarks[`${job.category}|${job.level}`];
+  if (!b || b.samples < MIN_BENCHMARK_SAMPLES) return null;
+  if (b.median < SALARY_FLOOR) return null;
+  return { median: b.median, samples: b.samples, low: b.low, high: b.high };
+}
+
 // ---------------------------------------------------------------- classify
 
 function isNYC(location) {
@@ -588,12 +643,16 @@ function refine(raw, co) {
   if (!category) return null;
 
   const salary = parseSalary(raw.salaryHint ? `${raw.salaryHint} salary ${body}` : body);
-  // Keep unpriced roles out — the floor is the whole point of the list.
-  if (!salary) return null;
-  const basis = SALARY_BASIS === 'max' ? salary.max
-    : SALARY_BASIS === 'mid' ? Math.round((salary.min + salary.max) / 2)
-    : salary.min;
-  if (basis < SALARY_FLOOR) return null;
+  if (salary) {
+    const basis = SALARY_BASIS === 'max' ? salary.max
+      : SALARY_BASIS === 'mid' ? Math.round((salary.min + salary.max) / 2)
+      : salary.min;
+    if (basis < SALARY_FLOOR) return null;
+  }
+  // An unpriced role is not dropped here. Many bank and Workday postings state
+  // no range in the text, and discarding them loses real roles. It is instead
+  // checked against observed pay for comparable roles once the whole sweep is
+  // in — see benchmarkSalaries() and the second pass in main().
 
   const cat = CATEGORIES.find(c => c.id === category);
 
@@ -606,10 +665,11 @@ function refine(raw, co) {
     postedAt: raw.postedAt,
     category,
     priority: !!cat?.priority,
-    salaryMin: salary.min,
-    salaryMax: salary.max,
-    salaryText: formatSalary(salary),
-    hourly: !!salary.hourly,
+    salaryMin: salary ? salary.min : null,
+    salaryMax: salary ? salary.max : null,
+    salaryText: salary ? formatSalary(salary) : null,
+    hourly: !!salary?.hourly,
+    level: seniorityLevel(title),
     // A deadline the posting actually states, if it has one. Null means we fall
     // back to the estimate at merge time.
     statedDeadline: parseStatedDeadline(body, raw.postedAt || new Date().toISOString()),
@@ -669,6 +729,12 @@ async function main() {
     }
   });
 
+  // Pay benchmarks from everything that stated a range this run, blended with
+  // what earlier runs observed. Unpriced roles are judged against these.
+  const allKept = results.flatMap(r => r.kept);
+  const benchmarks = benchmarkSalaries(allKept, previous.salaryBenchmarks || {});
+  let admitted = 0, unverifiable = 0;
+
   // Merge, dedupe, and carry forward first-seen dates.
   const nowISO = startedAt.toISOString();
   const byId = new Map();
@@ -679,6 +745,17 @@ async function main() {
       const key = `${job.company}::${job.title}`.toLowerCase();
       if (seenKeys.has(key)) continue;
       seenKeys.add(key);
+
+      // Unpriced roles: keep only where comparable postings show this grade
+      // clears the floor. No comparable data means no basis to keep it.
+      if (!job.salaryMin) {
+        const est = inferSalary(job, benchmarks);
+        if (!est) { unverifiable++; continue; }
+        job.salaryEstimated = true;
+        job.salaryEstimate = est;
+        job.salaryText = `~${formatSalary({ min: est.median, max: est.median })} est.`;
+        admitted++;
+      }
 
       const prev = prevById.get(job.id);
       const firstSeen = prev?.firstSeen || nowISO;
@@ -718,6 +795,9 @@ async function main() {
   const jobs = [...byId.values()].sort(
     (a, b) => new Date(b.postedAt) - new Date(a.postedAt));
 
+  console.log(`\nUnpriced roles: ${admitted} admitted on comparable pay, ` +
+    `${unverifiable} dropped with no comparable data`);
+
   const health = results.map(r => r.health).sort((a, b) =>
     Number(a.ok) - Number(b.ok) || b.kept - a.kept);
 
@@ -736,6 +816,7 @@ async function main() {
       reached: TARGETS.filter(t => nextCache[t.name]?.ats).map(t => t.name),
     },
     maxPostingAgeDays: MAX_POSTING_AGE_DAYS,
+    salaryBenchmarks: benchmarks,
     counts: {
       total: jobs.length,
       active: jobs.filter(j => j.active).length,
@@ -756,7 +837,7 @@ async function main() {
 }
 
 // Exported for the unit tests in scripts/test-parsing.mjs.
-export { parseSalary, formatSalary, isNYC, categorize, refine, parseWorkdayPosted, stripHtml, matchesAny, parseStatedDeadline };
+export { parseSalary, formatSalary, isNYC, categorize, refine, parseWorkdayPosted, stripHtml, matchesAny, parseStatedDeadline, seniorityLevel, benchmarkSalaries, inferSalary };
 
 const invokedDirectly = process.argv[1] &&
   resolve(process.argv[1]) === resolve(fileURLToPath(import.meta.url));

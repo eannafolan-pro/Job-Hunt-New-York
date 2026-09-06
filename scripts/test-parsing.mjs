@@ -4,7 +4,8 @@
 // the scheduled workflow, which reports board health into data/jobs.json.
 
 import assert from 'node:assert/strict';
-import { parseSalary, isNYC, categorize, refine, parseWorkdayPosted } from './fetch-jobs.mjs';
+import { parseSalary, isNYC, categorize, refine, parseWorkdayPosted,
+  seniorityLevel, benchmarkSalaries, inferSalary } from './fetch-jobs.mjs';
 
 let pass = 0, fail = 0;
 const t = (name, fn) => {
@@ -115,8 +116,10 @@ t('drops non-NYC', () => {
 t('drops below the salary floor', () => {
   assert.equal(refine({ ...base, body: 'Salary range $60,000 - $80,000.' }, co), null);
 });
-t('drops postings with no salary', () => {
-  assert.equal(refine({ ...base, body: 'Great benefits.' }, co), null);
+t('keeps unpriced postings for the benchmark pass to judge', () => {
+  const j = refine({ ...base, body: 'Great benefits.' }, co);
+  assert.ok(j, 'no longer dropped at refine time');
+  assert.equal(j.salaryMin, null);
 });
 t('flags (but keeps) no-sponsorship postings — J-1 uses a third-party sponsor', () => {
   const j = refine({ ...base, body: base.body + ' We are unable to sponsor visas for this role.' }, co);
@@ -148,6 +151,40 @@ t('Posted 5 Days Ago', () => {
   assert.equal(Math.round((Date.now() - d) / 864e5), 5);
 });
 t('unparseable -> null', () => assert.equal(parseWorkdayPosted('whenever'), null));
+
+console.log('\npay benchmarks');
+t('reads grade off the title', () => {
+  assert.equal(seniorityLevel('Restructuring Analyst'), 'analyst');
+  assert.equal(seniorityLevel('Senior Associate, TAS'), 'senior_associate');
+  assert.equal(seniorityLevel('M&A Associate'), 'associate');
+  assert.equal(seniorityLevel('Head of Widgets'), 'other');
+});
+t('medians by category and grade', () => {
+  const jobs = [
+    { category: 'ib', level: 'associate', salaryMin: 150000, salaryMax: 200000 },
+    { category: 'ib', level: 'associate', salaryMin: 160000, salaryMax: 220000 },
+    { category: 'ib', level: 'associate', salaryMin: 140000, salaryMax: 180000 },
+  ];
+  const b = benchmarkSalaries(jobs);
+  assert.equal(b['ib|associate'].samples, 3);
+  assert.equal(b['ib|associate'].median, 175000);   // midpoints 160/175/190
+});
+t('admits an unpriced role when comparables clear the floor', () => {
+  const b = { 'ib|associate': { median: 190000, samples: 4, low: 150000, high: 250000 } };
+  const est = inferSalary({ category: 'ib', level: 'associate' }, b);
+  assert.ok(est); assert.equal(est.median, 190000);
+});
+t('refuses when comparables sit below the floor', () => {
+  const b = { 'sales_bd|analyst': { median: 80000, samples: 5 } };
+  assert.equal(inferSalary({ category: 'sales_bd', level: 'analyst' }, b), null);
+});
+t('refuses on too few comparables', () => {
+  const b = { 'ib|analyst': { median: 200000, samples: 2 } };
+  assert.equal(inferSalary({ category: 'ib', level: 'analyst' }, b), null);
+});
+t('refuses when there is no comparable bucket at all', () => {
+  assert.equal(inferSalary({ category: 'vc', level: 'analyst' }, {}), null);
+});
 
 console.log(`\n${pass} passed, ${fail} failed\n`);
 process.exit(fail ? 1 : 0);

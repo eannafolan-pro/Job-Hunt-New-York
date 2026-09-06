@@ -554,3 +554,7 @@ footer.foot-note { margin-top: 26px; color: var(--text-faint); font-size: 12px; 
 .reccard a:hover { border-color: var(--finance); }
 .reccard .del { margin-left: auto; background: none; border: 0; color: var(--text-faint); cursor: pointer; font-size: 15px; line-height: 1; }
 .reccard .del:hover { color: var(--hot); }
+
+/* Salary inferred from comparable postings rather than stated by this one. */
+.card .sal.est { color: var(--text-dim); font-weight: 500; }
+.tag.est { border-color: #4a5a72; color: #9fb0c9; }
