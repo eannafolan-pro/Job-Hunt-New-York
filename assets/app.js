@@ -496,6 +496,7 @@ function jobChip(job) {
   if (state.dateBasis === 'applyBy' && dl >= 0 && dl <= 7) {
     b.append(el('span', 'jdays', dl === 0 ? 'TODAY' : `${dl}d`));
   }
+  if (job.deadlineSource === 'stated') b.classList.add('stated');
   b.append(document.createTextNode(job.title));
   b.append(el('span', 'co', ` · ${job.company}`));
   b.addEventListener('click', () => openDrawer(job));
@@ -541,6 +542,7 @@ function renderList() {
     meta.append(el('span', null, job.company));
     meta.append(el('span', null, job.location));
     meta.append(el('span', null, CATEGORY_LABELS[job.category]));
+    if (job.deadlineSource === 'stated') meta.append(el('span', 'tag stated', 'real closing date'));
     if (job.priority) meta.append(el('span', 'tag match', CATEGORY_LABELS[job.category]));
     if (job.strongMatch) meta.append(el('span', 'tag match', 'strong match'));
     if (dl >= 0 && dl <= 5) meta.append(el('span', 'tag hot', dl === 0 ? 'closes today' : `${dl}d left`));
@@ -670,8 +672,15 @@ function openDrawer(job) {
   pair('Salary', job.salaryText ? job.salaryText + (job.hourly ? ' (from hourly rate)' : '') : 'not stated');
   pair('Posted', `${new Date(job.postedAt).toLocaleDateString('en-US', { dateStyle: 'medium' })} · ${relativeDay(job.postedAt)}`);
   const dld = daysUntilDeadline(job);
-  pair('Apply by', `${applyByOf(job).toLocaleDateString('en-US', { dateStyle: 'medium' })} · ` +
+  const statedDl = job.deadlineSource === 'stated';
+  pair(statedDl ? 'Closing date' : 'Apply by (est.)',
+    `${applyByOf(job).toLocaleDateString('en-US', { dateStyle: 'medium' })} · ` +
     (dld < 0 ? 'passed' : dld === 0 ? 'today' : `${dld} days left`));
+  if (!statedDl) {
+    body.append(note('est', 'This posting states no closing date — almost none do. ' +
+      'The date above is an estimate: three weeks after it went live, which is roughly ' +
+      'how long a listing in this market stays open. Treat it as a nudge, not a deadline.'));
+  }
   pair('Category', CATEGORY_LABELS[job.category]);
   pair('Source', job.source);
   pair('Status', job.active === false ? 'Delisted from the board' : 'Open');
@@ -741,9 +750,15 @@ function openDrawer(job) {
 function note(kind, text) {
   const n = el('div');
   n.style.cssText = 'font-size:12.5px;line-height:1.6;padding:10px 12px;border-radius:6px;margin-top:10px';
-  n.style.background = kind === 'nospon' ? 'rgba(217,138,152,.09)' : 'rgba(255,200,87,.08)';
-  n.style.border = `1px solid ${kind === 'nospon' ? '#7a4a55' : '#5c4a1f'}`;
-  n.style.color = kind === 'nospon' ? '#e3b0ba' : '#e8d3a0';
+  const palette = {
+    nospon: ['rgba(217,138,152,.09)', '#7a4a55', '#e3b0ba'],
+    est:    ['rgba(120,140,170,.10)', '#33405a', '#9fb0c9'],
+    match:  ['rgba(255,200,87,.08)',  '#5c4a1f', '#e8d3a0'],
+  };
+  const [bg, border, color] = palette[kind] || palette.match;
+  n.style.background = bg;
+  n.style.border = `1px solid ${border}`;
+  n.style.color = color;
   n.textContent = text;
   return n;
 }

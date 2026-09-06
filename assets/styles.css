@@ -516,3 +516,7 @@ footer.foot-note { margin-top: 26px; color: var(--text-faint); font-size: 12px; 
 .card[data-urgency="soon"] .when { color: var(--sales); font-weight: 600; }
 .card[data-urgency="gone"] { opacity: .45; }
 .card[data-urgency="gone"] .t { text-decoration: line-through; }
+
+/* A deadline the posting actually states, rather than our estimate. */
+.jchip.stated { border-left-style: double; border-left-width: 5px; }
+.tag.stated { border-color: var(--ops); color: var(--ops); }

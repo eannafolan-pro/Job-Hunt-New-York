@@ -132,6 +132,65 @@ function formatSalary(sal) {
   return sal.min === sal.max ? fmt(sal.min) : `${fmt(sal.min)} – ${fmt(sal.max)}`;
 }
 
+// ---------------------------------------------------------------- deadlines
+
+const MONTHS = ['january','february','march','april','may','june','july',
+  'august','september','october','november','december'];
+
+// Real closing dates exist only where a posting states one in its text — no ATS
+// feed carries a close-date field. Structured programmes and graduate schemes
+// usually do; rolling roles almost never do.
+const DEADLINE_CUES = /(appl(?:y|ications?)\s+(?:by|close[sd]?|deadline|due|must be (?:received|submitted))|closing date|deadline for applications?|applications? (?:will )?close|final day to apply|last day to apply|submit(?:ted)? by)/i;
+
+function parseStatedDeadline(text, postedAt) {
+  if (!text) return null;
+  const now = Date.now();
+  const posted = new Date(postedAt).getTime();
+
+  for (const m of text.matchAll(new RegExp(DEADLINE_CUES.source + '[^.]{0,60}', 'gi'))) {
+    const chunk = m[0];
+    const d = extractDate(chunk);
+    if (!d) continue;
+    const t = d.getTime();
+    // Sanity: a stated deadline must be after the posting and within a year of it.
+    if (Number.isFinite(t) && t > posted - 864e5 && t < posted + 365 * 864e5 && t > now - 180 * 864e5) {
+      return d.toISOString();
+    }
+  }
+  return null;
+}
+
+function extractDate(chunk) {
+  // 15 January 2027 / January 15, 2027 / Jan 15 2027
+  const names = MONTHS.map(m => m.slice(0, 3)).join('|');
+  let m = chunk.match(new RegExp(`(\\d{1,2})(?:st|nd|rd|th)?\\s+(${names})[a-z]*\\.?,?\\s*(\\d{4})?`, 'i'));
+  if (m) return buildDate(m[3], MONTHS.findIndex(x => x.startsWith(m[2].toLowerCase())), m[1]);
+
+  m = chunk.match(new RegExp(`(${names})[a-z]*\\.?\\s+(\\d{1,2})(?:st|nd|rd|th)?,?\\s*(\\d{4})?`, 'i'));
+  if (m) return buildDate(m[3], MONTHS.findIndex(x => x.startsWith(m[1].toLowerCase())), m[2]);
+
+  // 2027-01-15
+  m = chunk.match(/(\d{4})-(\d{2})-(\d{2})/);
+  if (m) return new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
+
+  // 01/15/2027 (US order — these boards are US)
+  m = chunk.match(/(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
+  if (m) {
+    const y = +m[3] < 100 ? 2000 + +m[3] : +m[3];
+    return new Date(Date.UTC(y, +m[1] - 1, +m[2]));
+  }
+  return null;
+}
+
+function buildDate(year, monthIdx, day) {
+  if (monthIdx < 0) return null;
+  // An undated deadline means the next occurrence of that day.
+  const y = year ? +year : new Date().getFullYear();
+  const d = new Date(Date.UTC(y, monthIdx, +day));
+  if (!year && d.getTime() < Date.now() - 30 * 864e5) d.setUTCFullYear(y + 1);
+  return d;
+}
+
 // ---------------------------------------------------------------- classify
 
 function isNYC(location) {
@@ -405,6 +464,9 @@ function refine(raw, co) {
     salaryMax: salary.max,
     salaryText: formatSalary(salary),
     hourly: !!salary.hourly,
+    // A deadline the posting actually states, if it has one. Null means we fall
+    // back to the estimate at merge time.
+    statedDeadline: parseStatedDeadline(body, raw.postedAt || new Date().toISOString()),
     noSponsorship: matchesAny(body, NO_SPONSORSHIP_PATTERNS),
     j1Friendly: matchesAny(body, J1_FRIENDLY_PATTERNS) || matchesAny(title, J1_FRIENDLY_PATTERNS),
     strongMatch: matchesAny(title, STRONG_MATCH_PATTERNS),
@@ -475,16 +537,19 @@ async function main() {
       const firstSeen = prev?.firstSeen || nowISO;
       // Prefer the board's own posted date; fall back to when we first saw it.
       const posted = job.postedAt || prev?.postedAt || firstSeen;
-      // The calendar plots this, not the posted date: a job hunt needs a
-      // forward-looking deadline, and postings in this market close in
-      // roughly three weeks.
-      const applyBy = new Date(
-        new Date(posted).getTime() + APPLY_WINDOW_DAYS * 864e5).toISOString();
+      // Prefer a deadline the posting states. Failing that — which is most of
+      // them, since no ATS feed carries a close date — estimate one at
+      // APPLY_WINDOW_DAYS after posting. The two are labelled differently in the
+      // UI so an estimate is never mistaken for a real closing date.
+      const stated = job.statedDeadline || prev?.statedDeadline || null;
+      const applyBy = stated
+        || new Date(new Date(posted).getTime() + APPLY_WINDOW_DAYS * 864e5).toISOString();
 
       byId.set(job.id, {
         ...job,
         postedAt: posted,
         applyBy,
+        deadlineSource: stated ? 'stated' : 'estimated',
         firstSeen,
         lastSeen: nowISO,
         active: true,
@@ -538,7 +603,7 @@ async function main() {
 }
 
 // Exported for the unit tests in scripts/test-parsing.mjs.
-export { parseSalary, formatSalary, isNYC, categorize, refine, parseWorkdayPosted, stripHtml, matchesAny };
+export { parseSalary, formatSalary, isNYC, categorize, refine, parseWorkdayPosted, stripHtml, matchesAny, parseStatedDeadline };
 
 const invokedDirectly = process.argv[1] &&
   resolve(process.argv[1]) === resolve(fileURLToPath(import.meta.url));
