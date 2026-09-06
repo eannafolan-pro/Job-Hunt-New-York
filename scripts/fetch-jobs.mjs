@@ -375,6 +375,12 @@ async function fromWorkday(co) {
 
 const DISCOVERY_TTL_DAYS = 7;   // how long to trust a miss before trying again
 
+// Bump when the discovery logic gains a platform. A cached miss is only
+// trustworthy if it was produced by the current logic: adding the Workday step
+// while 87 firms sat cached as "checked today" meant none of them were ever
+// probed for it. Anything recorded under an older version is re-probed.
+const DISCOVERY_VERSION = 2;
+
 function slugCandidates(target) {
   const root = target.domain.split('.')[0];
   const name = target.name.toLowerCase()
@@ -445,6 +451,7 @@ async function resolveTargets(cache) {
   const stale = t => {
     const hit = cache[t.name];
     if (!hit) return true;
+    if (hit.v !== DISCOVERY_VERSION) return true;    // probed by older logic
     if (hit.ats) return false;                       // a known board never expires
     return now - new Date(hit.checkedAt).getTime() > DISCOVERY_TTL_DAYS * 864e5;
   };
@@ -463,6 +470,7 @@ async function resolveTargets(cache) {
     nextCache[t.name] = {
       ats: hit?.ats || null, token: hit?.token || null,
       host: hit?.host, tenant: hit?.tenant, site: hit?.site,
+      v: DISCOVERY_VERSION,
       checkedAt: new Date(now).toISOString(),
     };
     if (hit?.ats) {
