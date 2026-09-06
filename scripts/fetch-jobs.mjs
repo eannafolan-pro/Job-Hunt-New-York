@@ -11,7 +11,7 @@ import { fileURLToPath } from 'node:url';
 import { COMPANIES } from './companies.mjs';
 import { TARGETS } from './targets.mjs';
 import {
-  SALARY_FLOOR, APPLY_WINDOW_DAYS, NYC_PATTERNS, NOT_NYC_PATTERNS, CATEGORIES,
+  SALARY_FLOOR, APPLY_WINDOW_DAYS, MAX_POSTING_AGE_DAYS, NYC_PATTERNS, NOT_NYC_PATTERNS, CATEGORIES,
   SALARY_BASIS, EXCLUDE_TITLE, NO_SPONSORSHIP_PATTERNS, CITIZENSHIP_BLOCK_PATTERNS,
   J1_FRIENDLY_PATTERNS, STRONG_MATCH_PATTERNS,
 } from './config.mjs';
@@ -21,7 +21,7 @@ const OUT = resolve(ROOT, 'data/jobs.json');
 
 const TIMEOUT_MS = 25_000;
 const CONCURRENCY = 6;
-const RETAIN_CLOSED_DAYS = 45;   // keep delisted jobs this long so the calendar has history
+const RETAIN_CLOSED_DAYS = 21;   // matches MAX_POSTING_AGE_DAYS; nothing older survives anyway
 const WORKDAY_DETAIL_CAP = 25;   // per-company cap on follow-up description fetches
 
 // ---------------------------------------------------------------- http
@@ -43,6 +43,27 @@ async function fetchJSON(url, { method = 'GET', body, headers = {} } = {}) {
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return await res.json();
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+// Careers pages are HTML, not JSON — needed to read a Workday tenant off the
+// page or its redirect.
+async function fetchText(url) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
+  try {
+    const res = await fetch(url, {
+      signal: ctrl.signal,
+      redirect: 'follow',
+      headers: {
+        'accept': 'text/html,application/xhtml+xml',
+        'user-agent': 'nyc-job-calendar/1.0 (github actions; personal job search)',
+      },
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return { url: res.url, body: await res.text() };
   } finally {
     clearTimeout(timer);
   }
@@ -372,6 +393,37 @@ const PROBES = {
   ashby:      slug => `https://api.ashbyhq.com/posting-api/job-board/${slug}`,
 };
 
+// Workday is where the banks and restructuring boutiques actually post, but its
+// endpoint needs a tenant, a wd number and a site name that cannot be guessed —
+// ten hand-written attempts all returned 404 or 422. They can be read off the
+// careers page, which redirects to or links the real board.
+const WORKDAY_RE = /([a-z0-9][a-z0-9-]*)\.(wd\d+)\.myworkdayjobs\.com\/(?:[a-z]{2}-[A-Z]{2}\/)?([A-Za-z0-9_-]+)/;
+
+const CAREERS_PATHS = ['/careers', '/en/careers', '/careers/jobs', '/about/careers', '/join-us', '/en-us/careers'];
+
+async function discoverWorkday(target) {
+  for (const path of CAREERS_PATHS) {
+    let page;
+    try { page = await fetchText(`https://${target.domain}${path}`); }
+    catch { continue; }
+
+    // The redirect target itself, then anything linked in the page.
+    const hit = page.url.match(WORKDAY_RE) || page.body.match(WORKDAY_RE);
+    if (!hit) continue;
+
+    const [, tenant, wd, site] = hit;
+    const host = `${tenant}.${wd}.myworkdayjobs.com`;
+    try {
+      const probe = await fetchJSON(`https://${host}/wday/cxs/${tenant}/${site}/jobs`, {
+        method: 'POST',
+        body: { appliedFacets: {}, limit: 1, offset: 0, searchText: '' },
+      });
+      if (Array.isArray(probe?.jobPostings)) return { ats: 'workday', token: site, host, tenant, site };
+    } catch { /* found the host but the site name was wrong — try the next path */ }
+  }
+  return null;
+}
+
 async function discoverAts(target) {
   for (const slug of slugCandidates(target)) {
     for (const [ats, url] of Object.entries(PROBES)) {
@@ -382,7 +434,7 @@ async function discoverAts(target) {
       } catch { /* wrong platform or wrong slug — keep going */ }
     }
   }
-  return null;
+  return discoverWorkday(target);
 }
 
 async function resolveTargets(cache) {
@@ -408,9 +460,17 @@ async function resolveTargets(cache) {
   const probed = new Map(found.map(f => [f.name, f]));
   for (const t of TARGETS) {
     const hit = probed.get(t.name) || cache[t.name];
-    nextCache[t.name] = { ats: hit?.ats || null, token: hit?.token || null, checkedAt: new Date(now).toISOString() };
+    nextCache[t.name] = {
+      ats: hit?.ats || null, token: hit?.token || null,
+      host: hit?.host, tenant: hit?.tenant, site: hit?.site,
+      checkedAt: new Date(now).toISOString(),
+    };
     if (hit?.ats) {
-      resolved.push({ name: t.name, ats: hit.ats, token: hit.token, category: t.category, whyFit: t.whyFit });
+      resolved.push({
+        name: t.name, ats: hit.ats, token: hit.token,
+        host: hit.host, tenant: hit.tenant, site: hit.site,
+        category: t.category, whyFit: t.whyFit,
+      });
     }
   }
   return { resolved, nextCache };
@@ -541,6 +601,11 @@ async function main() {
       // them, since no ATS feed carries a close date — estimate one at
       // APPLY_WINDOW_DAYS after posting. The two are labelled differently in the
       // UI so an estimate is never mistaken for a real closing date.
+      // Age cutoff. Applied here rather than in refine() because postedAt is
+      // only settled once the board's date and the previous run's are merged.
+      const ageDays = (startedAt - new Date(posted)) / 864e5;
+      if (ageDays > MAX_POSTING_AGE_DAYS) continue;
+
       const stated = job.statedDeadline || prev?.statedDeadline || null;
       const applyBy = stated
         || new Date(new Date(posted).getTime() + APPLY_WINDOW_DAYS * 864e5).toISOString();
@@ -585,6 +650,7 @@ async function main() {
         .map(({ name, domain, category, whyFit }) => ({ name, domain, category, whyFit })),
       reached: TARGETS.filter(t => nextCache[t.name]?.ats).map(t => t.name),
     },
+    maxPostingAgeDays: MAX_POSTING_AGE_DAYS,
     counts: {
       total: jobs.length,
       active: jobs.filter(j => j.active).length,

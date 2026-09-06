@@ -8,6 +8,11 @@
 // within about three weeks, so this is the practical deadline to act on.
 export const APPLY_WINDOW_DAYS = 21;
 
+// Hard cutoff on how old a posting may be. Anything first published longer ago
+// than this is dropped outright, however live the board still says it is —
+// a months-old listing is either an evergreen requisition or already filled.
+export const MAX_POSTING_AGE_DAYS = 21;
+
 export const SALARY_FLOOR = 100_000;
 
 // Which end of the posted range must clear SALARY_FLOOR.
