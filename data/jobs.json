@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T00:08:25.845Z",
+  "generatedAt": "2026-10-13T13:34:41.811Z",
   "salaryFloor": 100000,
   "atsCache": {
     "Alvarez & Marsal": {
@@ -8,7 +8,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "AlixPartners": {
       "ats": "greenhouse",
@@ -16,7 +16,7 @@
       "endpoint": "https://boards-api.greenhouse.io/v1/boards/alixpartners/jobs",
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "FTI Consulting": {
       "ats": null,
@@ -24,7 +24,7 @@
       "endpoint": null,
       "careersUrl": "https://www.fticonsulting.com/en/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Kroll": {
       "ats": null,
@@ -32,7 +32,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Teneo": {
       "ats": "greenhouse",
@@ -40,7 +40,7 @@
       "endpoint": "https://boards-api.greenhouse.io/v1/boards/teneo/jobs",
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Interpath": {
       "ats": "greenhouse",
@@ -48,7 +48,7 @@
       "endpoint": "https://boards-api.greenhouse.io/v1/boards/interpath/jobs",
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Ankura": {
       "ats": "workday",
@@ -59,7 +59,7 @@
       "endpoint": "https://ankura.wd5.myworkdayjobs.com/wday/cxs/ankura/Ankura/jobs",
       "careersUrl": "https://ankura.com/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Berkeley Research Group": {
       "ats": "workday",
@@ -70,7 +70,7 @@
       "endpoint": "https://thinkbrg.wd5.myworkdayjobs.com/wday/cxs/thinkbrg/BRG_External_Career_Site/jobs",
       "careersUrl": "https://www.thinkbrg.com/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Riveron": {
       "ats": "ashby",
@@ -78,7 +78,7 @@
       "endpoint": "https://api.ashbyhq.com/posting-api/job-board/riveron",
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Portage Point Partners": {
       "ats": "lever",
@@ -86,7 +86,7 @@
       "endpoint": "https://api.lever.co/v0/postings/portagepointpartners?mode=json&limit=1",
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "M3 Partners": {
       "ats": null,
@@ -94,7 +94,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Province": {
       "ats": null,
@@ -102,7 +102,7 @@
       "endpoint": null,
       "careersUrl": "https://provincefirm.com/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "CR3 Partners": {
       "ats": null,
@@ -110,7 +110,7 @@
       "endpoint": null,
       "careersUrl": "https://www.cr3partners.com/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Getzler Henrich": {
       "ats": null,
@@ -118,7 +118,7 @@
       "endpoint": null,
       "careersUrl": "https://getzlerhenrich.com/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Hilco Global": {
       "ats": "workday",
@@ -129,7 +129,7 @@
       "endpoint": "https://hilcoglobal.wd1.myworkdayjobs.com/wday/cxs/hilcoglobal/Hilco_Global_Careers/jobs",
       "careersUrl": "https://hilcoglobal.com/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Gordon Brothers": {
       "ats": null,
@@ -137,7 +137,7 @@
       "endpoint": null,
       "careersUrl": "https://www.gordonbrothers.com/about-us/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "B. Riley Financial": {
       "ats": null,
@@ -145,7 +145,7 @@
       "endpoint": null,
       "careersUrl": "https://www.brcgh.com/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Accordion": {
       "ats": "greenhouse",
@@ -153,7 +153,7 @@
       "endpoint": "https://boards-api.greenhouse.io/v1/boards/accordion/jobs",
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "SierraConstellation Partners": {
       "ats": null,
@@ -161,7 +161,7 @@
       "endpoint": null,
       "careersUrl": "https://sierraconstellation.com/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Carl Marks Advisors": {
       "ats": null,
@@ -169,7 +169,7 @@
       "endpoint": null,
       "careersUrl": "https://carlmarks.com/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Quantuma": {
       "ats": null,
@@ -177,7 +177,7 @@
       "endpoint": null,
       "careersUrl": "http://ww1.quantuma-careers.com/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Azets": {
       "ats": null,
@@ -185,7 +185,7 @@
       "endpoint": null,
       "careersUrl": "https://www.azets.com/en/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Deloitte": {
       "ats": null,
@@ -193,7 +193,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "PwC": {
       "ats": null,
@@ -201,7 +201,7 @@
       "endpoint": null,
       "careersUrl": "https://www.pwc.com/us/en/careers.html",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "KPMG": {
       "ats": "lever",
@@ -209,7 +209,7 @@
       "endpoint": "https://api.lever.co/v0/postings/kpmg?mode=json&limit=1",
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "EY": {
       "ats": null,
@@ -217,7 +217,7 @@
       "endpoint": null,
       "careersUrl": "https://www.ey.com/en_gl/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Grant Thornton": {
       "ats": null,
@@ -225,7 +225,7 @@
       "endpoint": null,
       "careersUrl": "https://www.grantthornton.ie/en/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "BDO": {
       "ats": null,
@@ -233,7 +233,7 @@
       "endpoint": null,
       "careersUrl": "https://bdoireland.pinpointhq.com/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Forvis Mazars": {
       "ats": "greenhouse",
@@ -241,7 +241,7 @@
       "endpoint": "https://boards-api.greenhouse.io/v1/boards/forvismazars/jobs",
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "RSM": {
       "ats": null,
@@ -249,7 +249,7 @@
       "endpoint": null,
       "careersUrl": "https://www.rsm.global/working-for-rsm",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "PJT Partners": {
       "ats": "workday",
@@ -260,7 +260,7 @@
       "endpoint": "https://pjtpartners.wd1.myworkdayjobs.com/wday/cxs/pjtpartners/Careers/jobs",
       "careersUrl": "https://www.pjtpartners.com/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Houlihan Lokey": {
       "ats": "workday",
@@ -271,7 +271,7 @@
       "endpoint": "https://hl.wd1.myworkdayjobs.com/wday/cxs/hl/Campus/jobs",
       "careersUrl": "https://hl.com/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Lazard": {
       "ats": null,
@@ -279,7 +279,7 @@
       "endpoint": null,
       "careersUrl": "https://lazard.com/careers/jobs",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Rothschild & Co": {
       "ats": null,
@@ -287,7 +287,7 @@
       "endpoint": null,
       "careersUrl": "https://www.rothschildandco.com/en-us/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Evercore": {
       "ats": null,
@@ -295,7 +295,7 @@
       "endpoint": null,
       "careersUrl": "https://www.evercore.com/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Moelis & Company": {
       "ats": "workday",
@@ -306,7 +306,7 @@
       "endpoint": "https://moelis.wd1.myworkdayjobs.com/wday/cxs/moelis/Experienced-Hires/jobs",
       "careersUrl": "http://www.moelis.com/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Perella Weinberg Partners": {
       "ats": null,
@@ -314,7 +314,7 @@
       "endpoint": null,
       "careersUrl": "https://pwpartners.com/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Centerview Partners": {
       "ats": null,
@@ -322,7 +322,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Guggenheim Securities": {
       "ats": null,
@@ -330,7 +330,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Jefferies": {
       "ats": null,
@@ -338,7 +338,7 @@
       "endpoint": null,
       "careersUrl": "https://www.jefferies.com/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Ducera Partners": {
       "ats": "greenhouse",
@@ -346,7 +346,7 @@
       "endpoint": "https://boards-api.greenhouse.io/v1/boards/ducerapartners/jobs",
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Solomon Partners": {
       "ats": null,
@@ -354,7 +354,7 @@
       "endpoint": null,
       "careersUrl": "https://solomonpartners.com/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Stifel": {
       "ats": null,
@@ -362,7 +362,7 @@
       "endpoint": null,
       "careersUrl": "https://www.stifel.com/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Piper Sandler": {
       "ats": null,
@@ -370,7 +370,7 @@
       "endpoint": null,
       "careersUrl": "https://www.pipersandler.com/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Cantor Fitzgerald": {
       "ats": null,
@@ -378,7 +378,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "JPMorganChase": {
       "ats": null,
@@ -386,7 +386,7 @@
       "endpoint": null,
       "careersUrl": "https://www.jpmorganchase.com/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Goldman Sachs": {
       "ats": null,
@@ -394,7 +394,7 @@
       "endpoint": null,
       "careersUrl": "https://www.goldmansachs.com/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Morgan Stanley": {
       "ats": null,
@@ -402,7 +402,7 @@
       "endpoint": null,
       "careersUrl": "https://www.morganstanley.com/people",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Bank of America": {
       "ats": null,
@@ -410,7 +410,7 @@
       "endpoint": null,
       "careersUrl": "https://about.bankofamerica.com/en?cm_mmc=EBZ-EnterpriseBrand-_-vanity-_-EB01VN009J_about-_-NA",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Citi": {
       "ats": "workday",
@@ -421,7 +421,7 @@
       "endpoint": "https://citi.wd5.myworkdayjobs.com/wday/cxs/citi/2/jobs",
       "careersUrl": "https://jobs.citi.com/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Barclays": {
       "ats": null,
@@ -429,7 +429,7 @@
       "endpoint": null,
       "careersUrl": "https://home.barclays/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Deutsche Bank": {
       "ats": null,
@@ -437,7 +437,7 @@
       "endpoint": null,
       "careersUrl": "https://careers.db.com/index?kid=careers.redirect-en.shortcut&language_id=1",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "UBS": {
       "ats": null,
@@ -445,7 +445,7 @@
       "endpoint": null,
       "careersUrl": "https://www.ubs.com/global/en/careers.html",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "HSBC": {
       "ats": null,
@@ -453,7 +453,7 @@
       "endpoint": null,
       "careersUrl": "https://www.hsbc.com/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "BNP Paribas": {
       "ats": null,
@@ -461,7 +461,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Wells Fargo": {
       "ats": null,
@@ -469,7 +469,7 @@
       "endpoint": null,
       "careersUrl": "https://www.wellsfargojobs.com/en/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "RBC Capital Markets": {
       "ats": null,
@@ -477,7 +477,7 @@
       "endpoint": null,
       "careersUrl": "https://www.rbc.com/en/about-us/history/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Nomura": {
       "ats": null,
@@ -485,7 +485,7 @@
       "endpoint": null,
       "careersUrl": "https://www.nomura.com/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Macquarie": {
       "ats": null,
@@ -493,7 +493,7 @@
       "endpoint": null,
       "careersUrl": "https://www.macquarie.com/us/en/careers.html",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Oaktree Capital Management": {
       "ats": "workday",
@@ -504,7 +504,7 @@
       "endpoint": "https://oaktree.wd1.myworkdayjobs.com/wday/cxs/oaktree/Oaktree/jobs",
       "careersUrl": "https://www.oaktreecapital.com/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Apollo Global Management": {
       "ats": "greenhouse",
@@ -512,7 +512,7 @@
       "endpoint": "https://boards-api.greenhouse.io/v1/boards/apollo/jobs",
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Ares Management": {
       "ats": null,
@@ -520,7 +520,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Cerberus Capital Management": {
       "ats": null,
@@ -528,7 +528,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Fortress Investment Group": {
       "ats": "lever",
@@ -536,7 +536,7 @@
       "endpoint": "https://api.lever.co/v0/postings/fortress?mode=json&limit=1",
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Centerbridge Partners": {
       "ats": null,
@@ -544,7 +544,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Silver Point Capital": {
       "ats": null,
@@ -552,7 +552,7 @@
       "endpoint": null,
       "careersUrl": "https://www.silverpointcapital.com/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Anchorage Capital Group": {
       "ats": null,
@@ -560,7 +560,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Knighthead Capital": {
       "ats": null,
@@ -568,7 +568,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Monarch Alternative Capital": {
       "ats": null,
@@ -576,7 +576,7 @@
       "endpoint": null,
       "careersUrl": "https://www.monarchlp.com/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "King Street Capital Management": {
       "ats": null,
@@ -584,7 +584,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Marathon Asset Management": {
       "ats": null,
@@ -592,7 +592,7 @@
       "endpoint": null,
       "careersUrl": "https://www.marathonfund.com/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "GoldenTree Asset Management": {
       "ats": null,
@@ -600,7 +600,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Bain Capital Credit": {
       "ats": null,
@@ -608,7 +608,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Blackstone": {
       "ats": "workday",
@@ -619,7 +619,7 @@
       "endpoint": "https://blackstone.wd1.myworkdayjobs.com/wday/cxs/blackstone/Blackstone_Careers/jobs",
       "careersUrl": "https://www.blackstone.com/careers/careers-blackstone/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "KKR": {
       "ats": null,
@@ -627,7 +627,7 @@
       "endpoint": null,
       "careersUrl": "https://www.kkr.com/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Carlyle": {
       "ats": null,
@@ -635,7 +635,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Sixth Street": {
       "ats": null,
@@ -643,7 +643,7 @@
       "endpoint": null,
       "careersUrl": "https://sixthstreet.com/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "HPS Investment Partners": {
       "ats": "greenhouse",
@@ -651,7 +651,7 @@
       "endpoint": "https://boards-api.greenhouse.io/v1/boards/hpsinvestmentpartners/jobs",
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Davidson Kempner": {
       "ats": null,
@@ -659,7 +659,7 @@
       "endpoint": null,
       "careersUrl": "https://www.davidsonkempner.com/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Attestor Capital": {
       "ats": null,
@@ -667,7 +667,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "TPG Angelo Gordon": {
       "ats": null,
@@ -675,7 +675,7 @@
       "endpoint": null,
       "careersUrl": "https://www.tpg.com/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Diameter Capital Partners": {
       "ats": null,
@@ -683,7 +683,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Beach Point Capital": {
       "ats": null,
@@ -691,7 +691,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Lone Star Funds": {
       "ats": null,
@@ -699,7 +699,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "H.I.G. Capital": {
       "ats": null,
@@ -707,7 +707,7 @@
       "endpoint": null,
       "careersUrl": "https://hig.com/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Platinum Equity": {
       "ats": null,
@@ -715,7 +715,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Sun Capital Partners": {
       "ats": null,
@@ -723,7 +723,7 @@
       "endpoint": null,
       "careersUrl": "https://suncappart.com/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Atlas Holdings": {
       "ats": "ashby",
@@ -731,7 +731,7 @@
       "endpoint": "https://api.ashbyhq.com/posting-api/job-board/atlas",
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "AIB": {
       "ats": null,
@@ -739,7 +739,7 @@
       "endpoint": null,
       "careersUrl": "https://www.aib.ie/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Bank of Ireland": {
       "ats": null,
@@ -747,7 +747,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Pepper Advantage": {
       "ats": null,
@@ -755,7 +755,7 @@
       "endpoint": null,
       "careersUrl": "https://pepperadvantage.com/en-us/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Davy": {
       "ats": null,
@@ -763,7 +763,7 @@
       "endpoint": null,
       "careersUrl": "https://www.davy.ie/en-us/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Goodbody": {
       "ats": null,
@@ -771,7 +771,7 @@
       "endpoint": null,
       "careersUrl": "https://www.goodbody.ie/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Investec": {
       "ats": null,
@@ -779,7 +779,7 @@
       "endpoint": null,
       "careersUrl": null,
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "EssilorLuxottica": {
       "ats": null,
@@ -787,7 +787,7 @@
       "endpoint": null,
       "careersUrl": "https://www.essilorluxottica.com/join-us/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Flutter Entertainment": {
       "ats": null,
@@ -795,7 +795,7 @@
       "endpoint": null,
       "careersUrl": "https://flutter.com/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "CRH": {
       "ats": null,
@@ -803,7 +803,7 @@
       "endpoint": null,
       "careersUrl": "https://www.crh.com/careers/",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Smurfit Westrock": {
       "ats": null,
@@ -811,7 +811,7 @@
       "endpoint": null,
       "careersUrl": "https://www.smurfitwestrock.com/careers/jobs",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Kerry Group": {
       "ats": null,
@@ -819,7 +819,7 @@
       "endpoint": null,
       "careersUrl": "https://www.kerry.com/careers",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     },
     "Ryanair": {
       "ats": null,
@@ -827,7 +827,7 @@
       "endpoint": null,
       "careersUrl": "https://www.ryanair.com/us/en",
       "v": 3,
-      "checkedAt": "2026-10-13T00:08:25.847Z"
+      "checkedAt": "2026-10-13T13:34:41.812Z"
     }
   },
   "targets": {
@@ -1496,239 +1496,239 @@
       "ats": "lever",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3503
+      "ms": 3651
     },
     {
       "company": "Insight Partners",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3202
+      "ms": 3148
     },
     {
       "company": "Index Ventures",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3214
+      "ms": 3150
     },
     {
       "company": "Union Square Ventures",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3205
+      "ms": 3138
     },
     {
       "company": "FirstMark Capital",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3209
+      "ms": 3150
     },
     {
       "company": "Lerer Hippeau",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3202
+      "ms": 3146
     },
     {
       "company": "Primary Venture Partners",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3207
+      "ms": 3154
     },
     {
       "company": "RRE Ventures",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3330
+      "ms": 3146
     },
     {
       "company": "Tiger Global",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3207
+      "ms": 3149
     },
     {
       "company": "Coatue",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3207
+      "ms": 3150
     },
     {
       "company": "Thrive Capital",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3222
+      "ms": 3156
     },
     {
       "company": "Ares Management",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 8463
+      "ms": 3149
     },
     {
       "company": "Blue Owl Capital",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3207
+      "ms": 3150
     },
     {
       "company": "Sixth Street",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 8969
+      "ms": 3147
     },
     {
       "company": "Golub Capital",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3284
+      "ms": 3155
     },
     {
       "company": "Hamilton Lane",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3252
+      "ms": 3156
     },
     {
       "company": "StepStone Group",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 7569
+      "ms": 3150
     },
     {
       "company": "Cambridge Associates",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3340
+      "ms": 3147
     },
     {
       "company": "Bridgepoint",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3210
+      "ms": 3152
     },
     {
       "company": "Perella Weinberg",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 6055
+      "ms": 3148
     },
     {
       "company": "Solomon Partners",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3221
+      "ms": 3244
     },
     {
       "company": "Union Square Advisors",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3205
+      "ms": 3147
     },
     {
       "company": "Cowen",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3202
+      "ms": 3162
     },
     {
       "company": "Oppenheimer",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3209
+      "ms": 3152
     },
     {
       "company": "B. Riley",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3199
+      "ms": 3150
     },
     {
       "company": "Canaccord Genuity",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3205
+      "ms": 3153
     },
     {
       "company": "Antares Capital",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3207
+      "ms": 3155
     },
     {
       "company": "Angelo Gordon",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3218
+      "ms": 3146
     },
     {
       "company": "Marathon Asset Management",
       "ats": "greenhouse",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3222
+      "ms": 3147
     },
     {
       "company": "Sculptor Capital",
       "ats": "lever",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3449
+      "ms": 3732
     },
     {
       "company": "Corsair Capital",
       "ats": "lever",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 5645
+      "ms": 3417
     },
     {
       "company": "Bain Capital Ventures",
       "ats": "ashby",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3230
+      "ms": 3370
     },
     {
       "company": "Andreessen Horowitz",
       "ats": "ashby",
       "ok": false,
       "error": "HTTP 404",
-      "ms": 3152
+      "ms": 3169
     },
     {
       "company": "Citi",
       "ats": "workday",
       "ok": true,
-      "seen": 498,
-      "kept": 17,
-      "ms": 102906
+      "seen": 496,
+      "kept": 16,
+      "ms": 154365
     },
     {
       "company": "Moelis & Company",
@@ -1736,15 +1736,15 @@
       "ok": true,
       "seen": 23,
       "kept": 13,
-      "ms": 7868
+      "ms": 9566
     },
     {
       "company": "Blackstone",
       "ats": "workday",
       "ok": true,
-      "seen": 91,
+      "seen": 90,
       "kept": 9,
-      "ms": 28826
+      "ms": 38216
     },
     {
       "company": "Point72",
@@ -1752,15 +1752,15 @@
       "ok": true,
       "seen": 221,
       "kept": 6,
-      "ms": 228
+      "ms": 184
     },
     {
       "company": "Ramp",
       "ats": "ashby",
       "ok": true,
-      "seen": 164,
+      "seen": 165,
       "kept": 6,
-      "ms": 142
+      "ms": 156
     },
     {
       "company": "Robinhood",
@@ -1768,7 +1768,7 @@
       "ok": true,
       "seen": 181,
       "kept": 5,
-      "ms": 244
+      "ms": 296
     },
     {
       "company": "Berkeley Research Group",
@@ -1776,15 +1776,15 @@
       "ok": true,
       "seen": 43,
       "kept": 5,
-      "ms": 3524
+      "ms": 3912
     },
     {
       "company": "Jane Street",
       "ats": "greenhouse",
       "ok": true,
-      "seen": 230,
+      "seen": 229,
       "kept": 4,
-      "ms": 135
+      "ms": 161
     },
     {
       "company": "Accordion",
@@ -1792,7 +1792,7 @@
       "ok": true,
       "seen": 45,
       "kept": 4,
-      "ms": 115
+      "ms": 89
     },
     {
       "company": "Brex",
@@ -1800,15 +1800,15 @@
       "ok": true,
       "seen": 273,
       "kept": 3,
-      "ms": 572
+      "ms": 436
     },
     {
       "company": "MongoDB",
       "ats": "greenhouse",
       "ok": true,
-      "seen": 395,
+      "seen": 393,
       "kept": 3,
-      "ms": 388
+      "ms": 366
     },
     {
       "company": "Oscar Health",
@@ -1816,7 +1816,7 @@
       "ok": true,
       "seen": 231,
       "kept": 3,
-      "ms": 208
+      "ms": 217
     },
     {
       "company": "Carta",
@@ -1824,7 +1824,7 @@
       "ok": true,
       "seen": 72,
       "kept": 2,
-      "ms": 576
+      "ms": 283
     },
     {
       "company": "iCapital",
@@ -1832,15 +1832,15 @@
       "ok": true,
       "seen": 211,
       "kept": 2,
-      "ms": 276
+      "ms": 257
     },
     {
       "company": "Braze",
       "ats": "greenhouse",
       "ok": true,
-      "seen": 329,
+      "seen": 331,
       "kept": 2,
-      "ms": 669
+      "ms": 457
     },
     {
       "company": "Justworks",
@@ -1848,15 +1848,15 @@
       "ok": true,
       "seen": 91,
       "kept": 2,
-      "ms": 140
+      "ms": 241
     },
     {
       "company": "Schonfeld",
       "ats": "greenhouse",
       "ok": true,
-      "seen": 68,
+      "seen": 66,
       "kept": 2,
-      "ms": 129
+      "ms": 89
     },
     {
       "company": "Portage Point Partners",
@@ -1864,7 +1864,7 @@
       "ok": true,
       "seen": 55,
       "kept": 2,
-      "ms": 599
+      "ms": 1371
     },
     {
       "company": "PJT Partners",
@@ -1872,7 +1872,7 @@
       "ok": true,
       "seen": 35,
       "kept": 2,
-      "ms": 26688
+      "ms": 33526
     },
     {
       "company": "Ducera Partners",
@@ -1880,7 +1880,7 @@
       "ok": true,
       "seen": 7,
       "kept": 2,
-      "ms": 70
+      "ms": 48
     },
     {
       "company": "Betterment",
@@ -1888,15 +1888,15 @@
       "ok": true,
       "seen": 25,
       "kept": 1,
-      "ms": 324
+      "ms": 227
     },
     {
       "company": "Clear Street",
       "ats": "greenhouse",
       "ok": true,
-      "seen": 45,
+      "seen": 46,
       "kept": 1,
-      "ms": 17981
+      "ms": 251
     },
     {
       "company": "Alloy",
@@ -1904,7 +1904,7 @@
       "ok": true,
       "seen": 25,
       "kept": 1,
-      "ms": 117
+      "ms": 72
     },
     {
       "company": "Gemini",
@@ -1912,7 +1912,7 @@
       "ok": true,
       "seen": 35,
       "kept": 1,
-      "ms": 156
+      "ms": 89
     },
     {
       "company": "Vestwell",
@@ -1920,7 +1920,7 @@
       "ok": true,
       "seen": 21,
       "kept": 1,
-      "ms": 99
+      "ms": 65
     },
     {
       "company": "Ethic",
@@ -1928,23 +1928,23 @@
       "ok": true,
       "seen": 4,
       "kept": 1,
-      "ms": 87
+      "ms": 59
     },
     {
       "company": "Datadog",
       "ats": "greenhouse",
       "ok": true,
-      "seen": 433,
+      "seen": 436,
       "kept": 1,
-      "ms": 510
+      "ms": 486
     },
     {
       "company": "Celonis",
       "ats": "greenhouse",
       "ok": true,
-      "seen": 212,
+      "seen": 215,
       "kept": 1,
-      "ms": 230
+      "ms": 339
     },
     {
       "company": "Teneo",
@@ -1952,15 +1952,15 @@
       "ok": true,
       "seen": 53,
       "kept": 1,
-      "ms": 133
+      "ms": 97
     },
     {
       "company": "Chime",
       "ats": "greenhouse",
       "ok": true,
-      "seen": 67,
+      "seen": 66,
       "kept": 0,
-      "ms": 544
+      "ms": 322
     },
     {
       "company": "Affirm",
@@ -1968,7 +1968,7 @@
       "ok": true,
       "seen": 201,
       "kept": 0,
-      "ms": 643
+      "ms": 443
     },
     {
       "company": "SoFi",
@@ -1976,15 +1976,15 @@
       "ok": true,
       "seen": 49,
       "kept": 0,
-      "ms": 153
+      "ms": 183
     },
     {
       "company": "Coinbase",
       "ats": "greenhouse",
       "ok": true,
-      "seen": 223,
+      "seen": 225,
       "kept": 0,
-      "ms": 286
+      "ms": 317
     },
     {
       "company": "Fireblocks",
@@ -1992,23 +1992,23 @@
       "ok": true,
       "seen": 28,
       "kept": 0,
-      "ms": 142
+      "ms": 75
     },
     {
       "company": "Squarespace",
       "ats": "greenhouse",
       "ok": true,
-      "seen": 33,
+      "seen": 34,
       "kept": 0,
-      "ms": 93
+      "ms": 111
     },
     {
       "company": "Peloton",
       "ats": "greenhouse",
       "ok": true,
-      "seen": 54,
+      "seen": 53,
       "kept": 0,
-      "ms": 2094
+      "ms": 111
     },
     {
       "company": "SeatGeek",
@@ -2016,7 +2016,7 @@
       "ok": true,
       "seen": 34,
       "kept": 0,
-      "ms": 89
+      "ms": 67
     },
     {
       "company": "Yext",
@@ -2024,7 +2024,7 @@
       "ok": true,
       "seen": 20,
       "kept": 0,
-      "ms": 247
+      "ms": 68
     },
     {
       "company": "Attentive",
@@ -2032,7 +2032,7 @@
       "ok": true,
       "seen": 27,
       "kept": 0,
-      "ms": 133
+      "ms": 69
     },
     {
       "company": "Movable Ink",
@@ -2040,7 +2040,7 @@
       "ok": true,
       "seen": 31,
       "kept": 0,
-      "ms": 84
+      "ms": 63
     },
     {
       "company": "Bombas",
@@ -2048,7 +2048,7 @@
       "ok": true,
       "seen": 9,
       "kept": 0,
-      "ms": 78
+      "ms": 92
     },
     {
       "company": "Dataiku",
@@ -2056,7 +2056,7 @@
       "ok": true,
       "seen": 16,
       "kept": 0,
-      "ms": 80
+      "ms": 90
     },
     {
       "company": "Flatiron Health",
@@ -2064,7 +2064,7 @@
       "ok": true,
       "seen": 23,
       "kept": 0,
-      "ms": 78
+      "ms": 107
     },
     {
       "company": "Kraken",
@@ -2072,7 +2072,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 1315
+      "ms": 395
     },
     {
       "company": "Fundrise",
@@ -2080,7 +2080,7 @@
       "ok": true,
       "seen": 3,
       "kept": 0,
-      "ms": 321
+      "ms": 411
     },
     {
       "company": "Mercury",
@@ -2088,7 +2088,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 151
+      "ms": 252
     },
     {
       "company": "Vanta",
@@ -2096,7 +2096,7 @@
       "ok": true,
       "seen": 83,
       "kept": 0,
-      "ms": 149
+      "ms": 255
     },
     {
       "company": "Deel",
@@ -2104,7 +2104,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 28
+      "ms": 146
     },
     {
       "company": "OpenAI",
@@ -2112,7 +2112,7 @@
       "ok": true,
       "seen": 808,
       "kept": 0,
-      "ms": 555
+      "ms": 554
     },
     {
       "company": "Visa",
@@ -2120,7 +2120,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 497
+      "ms": 764
     },
     {
       "company": "Publicis Groupe",
@@ -2128,7 +2128,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 439
+      "ms": 4549
     },
     {
       "company": "WPP",
@@ -2136,7 +2136,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 413
+      "ms": 1287
     },
     {
       "company": "General Catalyst",
@@ -2144,7 +2144,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 70
+      "ms": 53
     },
     {
       "company": "Bessemer Venture Partners",
@@ -2152,7 +2152,7 @@
       "ok": true,
       "seen": 4,
       "kept": 0,
-      "ms": 75
+      "ms": 57
     },
     {
       "company": "Battery Ventures",
@@ -2160,7 +2160,7 @@
       "ok": true,
       "seen": 2,
       "kept": 0,
-      "ms": 71
+      "ms": 48
     },
     {
       "company": "Greycroft",
@@ -2168,7 +2168,7 @@
       "ok": true,
       "seen": 2,
       "kept": 0,
-      "ms": 73
+      "ms": 50
     },
     {
       "company": "Lincoln International",
@@ -2176,15 +2176,15 @@
       "ok": true,
       "seen": 41,
       "kept": 0,
-      "ms": 94
+      "ms": 83
     },
     {
       "company": "Man Group",
       "ats": "greenhouse",
       "ok": true,
-      "seen": 56,
+      "seen": 54,
       "kept": 0,
-      "ms": 115
+      "ms": 95
     },
     {
       "company": "AlixPartners",
@@ -2192,7 +2192,7 @@
       "ok": true,
       "seen": 112,
       "kept": 0,
-      "ms": 131
+      "ms": 115
     },
     {
       "company": "Interpath",
@@ -2200,7 +2200,7 @@
       "ok": true,
       "seen": 17,
       "kept": 0,
-      "ms": 79
+      "ms": 67
     },
     {
       "company": "Ankura",
@@ -2208,15 +2208,15 @@
       "ok": true,
       "seen": 51,
       "kept": 0,
-      "ms": 7389
+      "ms": 6493
     },
     {
       "company": "Riveron",
       "ats": "ashby",
       "ok": true,
-      "seen": 65,
+      "seen": 64,
       "kept": 0,
-      "ms": 135
+      "ms": 175
     },
     {
       "company": "Hilco Global",
@@ -2224,7 +2224,7 @@
       "ok": true,
       "seen": 2,
       "kept": 0,
-      "ms": 1034
+      "ms": 990
     },
     {
       "company": "KPMG",
@@ -2232,15 +2232,15 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 66
+      "ms": 104
     },
     {
       "company": "Forvis Mazars",
       "ats": "greenhouse",
       "ok": true,
-      "seen": 148,
+      "seen": 149,
       "kept": 0,
-      "ms": 112
+      "ms": 106
     },
     {
       "company": "Houlihan Lokey",
@@ -2248,15 +2248,15 @@
       "ok": true,
       "seen": 4,
       "kept": 0,
-      "ms": 1477
+      "ms": 1311
     },
     {
       "company": "Oaktree Capital Management",
       "ats": "workday",
       "ok": true,
-      "seen": 8,
+      "seen": 7,
       "kept": 0,
-      "ms": 1509
+      "ms": 1749
     },
     {
       "company": "Apollo Global Management",
@@ -2264,7 +2264,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 68
+      "ms": 56
     },
     {
       "company": "Fortress Investment Group",
@@ -2272,7 +2272,7 @@
       "ok": true,
       "seen": 0,
       "kept": 0,
-      "ms": 67
+      "ms": 101
     },
     {
       "company": "HPS Investment Partners",
@@ -2280,7 +2280,7 @@
       "ok": true,
       "seen": 1,
       "kept": 0,
-      "ms": 67
+      "ms": 59
     },
     {
       "company": "Atlas Holdings",
@@ -2288,7 +2288,7 @@
       "ok": true,
       "seen": 6,
       "kept": 0,
-      "ms": 80
+      "ms": 54
     }
   ],
   "jobs": [
@@ -2314,7 +2314,7 @@
       "applyBy": "2026-11-02T00:00:00.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-13T00:08:25.845Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2339,7 +2339,7 @@
       "applyBy": "2026-10-30T15:21:11.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-09T22:15:14.512Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2364,7 +2364,7 @@
       "applyBy": "2026-10-30T00:00:00.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-03T14:55:06.606Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2389,7 +2389,7 @@
       "applyBy": "2026-10-29T00:00:00.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-08T22:53:40.101Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2421,7 +2421,7 @@
       "applyBy": "2026-10-28T23:50:47.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-08T04:31:45.158Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2446,7 +2446,7 @@
       "applyBy": "2026-10-28T00:00:00.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-03T14:55:06.606Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2471,7 +2471,7 @@
       "applyBy": "2026-10-28T00:00:00.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-07T22:42:26.309Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2496,7 +2496,7 @@
       "applyBy": "2026-10-27T00:00:00.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-06T22:20:13.946Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2521,7 +2521,7 @@
       "applyBy": "2026-10-26T21:18:48.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-06T00:15:03.450Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2546,7 +2546,7 @@
       "applyBy": "2026-10-26T00:00:00.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-06T00:15:03.450Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2571,7 +2571,7 @@
       "applyBy": "2026-10-26T00:00:00.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-06T00:15:03.450Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2596,7 +2596,7 @@
       "applyBy": "2026-10-21T18:39:40.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-03T00:13:37.491Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2621,7 +2621,7 @@
       "applyBy": "2026-10-21T00:00:00.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-03T14:55:06.606Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2646,7 +2646,7 @@
       "applyBy": "2026-10-20T00:00:00.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-03T14:55:06.606Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2671,7 +2671,7 @@
       "applyBy": "2026-10-20T00:00:00.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-03T14:55:06.606Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2696,7 +2696,7 @@
       "applyBy": "2026-10-20T00:00:00.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-03T14:55:06.606Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2721,7 +2721,7 @@
       "applyBy": "2026-10-16T20:21:55.101Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-10-02T00:14:04.282Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     },
     {
@@ -2746,7 +2746,7 @@
       "applyBy": "2026-10-15T01:48:25.000Z",
       "deadlineSource": "estimated",
       "firstSeen": "2026-09-24T06:12:35.673Z",
-      "lastSeen": "2026-10-13T00:08:25.845Z",
+      "lastSeen": "2026-10-13T13:34:41.811Z",
       "active": true
     }
   ]
