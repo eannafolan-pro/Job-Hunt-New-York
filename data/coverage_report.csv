@@ -72,7 +72,7 @@ King Street Capital Management,,,,0,0,careers_page_missing,from cache
 Marathon Asset Management,,,,0,0,careers_page_missing,from cache; fetch:HTTP 404; careers:https://www.marathonfund.com/careers
 GoldenTree Asset Management,,,,0,0,careers_page_missing,from cache
 Bain Capital Credit,,,,0,0,careers_page_missing,from cache
-Blackstone,workday,https://blackstone.wd1.myworkdayjobs.com/wday/cxs/blackstone/Blackstone_Careers/jobs,200,66,8,ok,from cache
+Blackstone,workday,https://blackstone.wd1.myworkdayjobs.com/wday/cxs/blackstone/Blackstone_Careers/jobs,401,0,0,blocked,from cache; fetch:HTTP 401
 KKR,,,,0,0,careers_page_missing,from cache; careers:https://www.kkr.com/careers
 Carlyle,,,,0,0,careers_page_missing,from cache
 Sixth Street,,,,0,0,careers_page_missing,from cache; fetch:HTTP 404; careers:https://sixthstreet.com/careers/
